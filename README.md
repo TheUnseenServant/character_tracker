@@ -1,2 +1,5 @@
-# character_tracker
-Tools for working on characters for Scarik's BX/Chainmail game.
+# Character Tracker
+
+Tools for tracking characters in Scarik's BX/Chainmail game.
+
+
