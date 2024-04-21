@@ -32,7 +32,7 @@ class Member:
 
     def __str__(self):
         return "{} gets {} coin and {} XP.".format(
-            self.name, self.coins + self.mis, self.xps
+            self.name, self.coins + self.mis, self.xps + self.coins
         )
 
 
@@ -119,7 +119,7 @@ if __name__ == "__main__":
         total_shares["xp"] += m.share_xp
 
     print("Totals: ")
-    print("  {} tax".format(treasure.tax))
+    print("  {:.2f} tax".format(treasure.tax))
     print("  {} coin after taxes".format(treasure.coin))
     print("  {} base + (pre-tax) coin XP".format(treasure.xp))
     print("  {} total coin".format(treasure.coin + treasure.mis))
