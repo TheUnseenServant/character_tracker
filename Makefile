@@ -4,7 +4,9 @@ SHELL = /usr/bin/bash
 
 .PHONY:test
 test:
-	python -m pytest
+	python -m unittest
+	coverage run -m unittest
+	coverage report -m 
 
 clean:
 	find . -type f -name "*.pyc" -exec rm {} \;
@@ -12,7 +14,6 @@ clean:
 
 all: clean test
 	python -m black -l79 .
-	coverage run -m unittest
-	coverage report -m 
 	-flake8
+	semgrep --config "p/default"
 

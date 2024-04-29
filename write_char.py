@@ -69,26 +69,38 @@ class Career:
         ]
 
     def set_values(self, input_list):
+        """Builds the data lists based on class data provided."""
         result = []
         for v in input_list.split(","):
             result.append(v.strip())
         return result
 
     def get_hd(self, level):
+        """Returns the hit dice (hd) based on level and class."""
         return int(self.hd[level])
 
     def get_sd(self, level):
+        """Returns the spell dice (sd) based on the level and class."""
         if self.career == "fighter":
             return 0
         else:
             return int(self.sd[level])
 
     def get_level(self, xp):
+        """Returns the character level based on xp given."""
         level = 0
         for level_index, xp_min in enumerate(self.xp_required):
             if xp >= xp_min:
                 level = level_index
         return level
+
+    def get_level_hd_sd(self, xp):
+        """Returns a collection of level, hd, and sd based on xp given."""
+        data = dict()
+        data["level"] = self.get_level(xp)
+        data["hd"] = self.get_hd(data["level"])
+        data["sd"] = self.get_sd(data["level"])
+        return data
 
 
 class CareerInfo:
