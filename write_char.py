@@ -12,16 +12,61 @@ import os
 import sys
 
 
+class Character:
+    """
+    Takes the character data and returns a Character object.
+    """
+
+    def __init__(self, data={}):
+        self.name = data.get("name", None)
+        self.career = data.get("career", None)
+        self.xp = int(data.get("xp", 0))
+
+
+class CharacterBuilder:
+    """
+    Takes the data file and returns a collection of the character objects.
+    """
+
+    def build(data_file):
+        if not data_file:
+            print("Must have a data file to create the characters.")
+            sys.exit(1)
+        try:
+            characters = {}
+            with open(data_file, "r", newline="") as f:
+                reader = csv.DictReader(f, delimiter=";")
+                for line in reader:
+                    c = Character(line)
+                    characters[c.name] = c
+        except FileNotFoundError:
+            print("Exception: No such file: {}".format(data_file))
+            sys.exit(1)
+
+        return characters
+
+
 class Career:
     """
-    Tracks the current classes, how many Hit Dice (hd) and Spell Dice (sd)
-    that class gets.
+    Tracks the current careers, how many Hit Dice (hd) and Spell Dice (sd)
+    that career gets.
     """
 
     def __init__(self, data):
         self.career = data.get("career", None)
         self.hd = self.set_values(data.get("hd", None))
         self.sd = self.set_values(data.get("sd", None))
+        self.xp_required = [
+            -1000,
+            0,
+            2000,
+            4000,
+            8000,
+            16_000,
+            32_000,
+            64_000,
+            128_000,
+        ]
 
     def set_values(self, input_list):
         result = []
@@ -30,13 +75,20 @@ class Career:
         return result
 
     def get_hd(self, level):
-        return self.hd[level]
+        return int(self.hd[level])
 
     def get_sd(self, level):
         if self.career == "fighter":
             return 0
         else:
-            return self.sd[level]
+            return int(self.sd[level])
+
+    def get_level(self, xp):
+        level = 0
+        for level_index, xp_min in enumerate(self.xp_required):
+            if xp >= xp_min:
+                level = level_index
+        return level
 
 
 class CareerInfo:
@@ -117,11 +169,22 @@ def parse_args():
         "-f", "--file", default="data/adventure_party.csv", help="Intake file"
     )
     parser.add_argument("-c", "--career", default="fighter", help="Career")
-    parser.add_argument("-l", "--level", default=0, help="Level", type=int)
+    parser.add_argument(
+        "-l", "--level", default="data/levels.csv", help="Level file", type=int
+    )
     args = parser.parse_args()
     args.level_file = os.path.join(args.datadir, "levels.csv")
 
     return args
+
+
+def write_character(character, args, ci_info):
+    template = "Name  {} Class {} Level {} HD {}/SD {}"
+    print(
+        template.format(
+            args.career.title(), args.level, ci_info[0], ci_info[1]
+        )
+    )
 
 
 if __name__ == "__main__":
@@ -129,9 +192,3 @@ if __name__ == "__main__":
     ci = CareerInfoBuilder(args.level_file).build()
 
     ci_info = ci.get_info(args.career, args.level)
-    template = "Name  {} Level {} HD {}/SD {}"
-    print(
-        template.format(
-            args.career.title(), args.level, ci_info[0], ci_info[1]
-        )
-    )
