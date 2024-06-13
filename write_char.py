@@ -22,13 +22,18 @@ class Character:
         self.career = data.get("career", None)
         self.xp = int(data.get("xp", 0))
 
+    def set_level_hd_sd(self, ci_info):
+        self.level = ci_info["level"]
+        self.hd = ci_info["hd"]
+        self.sd = ci_info["sd"]
+
 
 class CharacterBuilder:
     """
     Takes the data file and returns a collection of the character objects.
     """
 
-    def build(data_file):
+    def build(data_file, ci):
         if not data_file:
             print("Must have a data file to create the characters.")
             sys.exit(1)
@@ -39,6 +44,9 @@ class CharacterBuilder:
                 for line in reader:
                     c = Character(line)
                     characters[c.name] = c
+                    career_info = ci.get_info(c.career, c.xp)
+                    c.set_level_hd_sd(career_info)
+
         except FileNotFoundError:
             print("Exception: No such file: {}".format(data_file))
             sys.exit(1)
@@ -76,11 +84,11 @@ class Career:
         return result
 
     def get_hd(self, level):
-        """Returns the hit dice (hd) based on level and class."""
+        """Returns the hit dice (hd) based on level and career."""
         return int(self.hd[level])
 
     def get_sd(self, level):
-        """Returns the spell dice (sd) based on the level and class."""
+        """Returns the spell dice (sd) based on the level and career."""
         if self.career == "fighter":
             return 0
         else:
@@ -107,10 +115,10 @@ class CareerInfo:
     def __init__(self, careers):
         self.careers = careers
 
-    def get_info(self, career, level):
+    def get_info(self, career, xp):
         """
-        Returns the Hit Dice (hd) and Spell Dice (sd) for a specific class
-        and level.
+        Returns the Level, Hit Dice (hd) and Spell Dice (sd) for a specific
+        career and xp amount.
         """
         career = career.lower()
         if career not in self.careers:
@@ -120,26 +128,7 @@ class CareerInfo:
                 output_line += "{}  ".format(c.title())
             print(output_line)
             sys.exit(0)
-        level = self.min_max_level(career, level)
-        hd = self.careers[career].get_hd(level)
-        sd = self.careers[career].get_sd(level)
-        return (int(hd), int(sd))
-
-    def min_max_level(self, career, level):
-        max_level = len(self.careers[career].hd)
-        try:
-            level = int(level)
-        except ValueError:
-            print("Sorry, levels are measured in integers from 0-14/15.")
-            sys.exit(0)
-
-        if level < 0:
-            print("Setting the level to 0, since you messed up.")
-            level = 0
-        if level > max_level:
-            print("Sorry, lowering your level so that it fits the game.")
-            level = max_level
-        return level
+        return self.careers[career].get_level_hd_sd(xp)
 
 
 class CareerInfoBuilder:
@@ -180,27 +169,28 @@ def parse_args():
     parser.add_argument(
         "-f", "--file", default="data/adventure_party.csv", help="Intake file"
     )
-    parser.add_argument("-c", "--career", default="fighter", help="Career")
-    parser.add_argument(
-        "-l", "--level", default="data/levels.csv", help="Level file", type=int
-    )
     args = parser.parse_args()
     args.level_file = os.path.join(args.datadir, "levels.csv")
 
     return args
 
 
-def write_character(character, args, ci_info):
+def write_character(character):
     template = "Name  {} Class {} Level {} HD {}/SD {}"
     print(
         template.format(
-            args.career.title(), args.level, ci_info[0], ci_info[1]
+            character.name,
+            character.career,
+            character.level,
+            character.hd,
+            character.sd,
         )
     )
 
 
 if __name__ == "__main__":
     args = parse_args()
-    ci = CareerInfoBuilder(args.level_file).build()
-
-    ci_info = ci.get_info(args.career, args.level)
+    career_info = CareerInfoBuilder(args.level_file).build()
+    characters = CharacterBuilder.build(args.file, career_info)
+    for character in characters.values():
+        write_character(character)

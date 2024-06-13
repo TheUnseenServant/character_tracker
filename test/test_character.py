@@ -35,7 +35,21 @@ class TestCharacterBuilder(unittest.TestCase):
             f.write("Jing Ji-ho;Fighter;7186\n")
             f.write("Jing Si-woo;Fighter;3709\n")
 
-        self.characters = wc.CharacterBuilder.build(self.data_file)
+        self.level_data_file = os.path.join(self.test_dir.name, "levels.csv")
+        with open(self.level_data_file, "w") as f:
+            f.write("career;hd;sd\n")
+            f.write("fighter;1,2,3,4,5,6,7,8,9,10,11,12,13,14,15;\n")
+            f.write(
+                "mage;1,1,2,2,3,3,4,4,5,5,6,6,7,7,8;0,1,1,2,2,3,3,4,4,5,5,6,6,7,7\n"
+            )
+            f.write(
+                "cleric;1,1,2,3,3,4,5,5,6,7,7,8,9,9,10;0,1,1,1,2,2,2,3,3,3,4,4,4,5,5\n"
+            )
+
+        ci_builder = wc.CareerInfoBuilder(self.level_data_file)
+        ci = ci_builder.build()
+
+        self.characters = wc.CharacterBuilder.build(self.data_file, ci)
 
     def tearDown(self):
         self.test_dir.cleanup()

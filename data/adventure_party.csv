@@ -1,28 +1,3 @@
-name;coin;xp
-ji-ho;1;1
-siwoo;0.5;0.5
-rolton;0.5;0.5
-drotik;0.5;0.5
-hemia;0.5;0.5
-morphin;0.5;0.5
-verdugo;0.5;0.5
-gar;0.25;0.25
-darfilla;0.25;0.25
-
-bofur;1;1
-balin;0.5;0.5
-dwalin;0.5;0.5
-
-barnaby;1;1
-dramm;0.5;0.5
-sengrim;0.5;0.5
-
-
-morwen;1;1
-macnav;0.5;0.5
-cuivne;0.25;0.25
-
-gurav;0;1
-borav;0;1
-hodlar;0;1
-korev;0;1
+name;career;xp;coin_multiple;xp_multiple
+Jing Ji-ho;Fighter;7186;1;1
+Jing Siwoo;Fighter;3709;0.5;0.5
