@@ -89,7 +89,7 @@ class Career:
 
     def get_sd(self, level):
         """Returns the spell dice (sd) based on the level and career."""
-        if self.career == "fighter":
+        if self.career == "fighter" or self.career == "rogue":
             return 0
         else:
             return int(self.sd[level])

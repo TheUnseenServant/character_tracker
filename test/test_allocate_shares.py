@@ -34,6 +34,11 @@ class TestShares(unittest.TestCase):
     def tearDown(self):
         self.test_dir.cleanup()
 
+    def test_bad_file_raises_error(self):
+        with self.assertRaises(FileNotFoundError):
+            a_s.members_from_csv("fred.txt")
+        self.assertRaises(FileNotFoundError, a_s.members_from_csv, "fred.txt")
+
     def test_members_from_csv(self):
         members = a_s.members_from_csv(self.data_file)
         self.assertEqual(len(members), 4)
@@ -41,7 +46,7 @@ class TestShares(unittest.TestCase):
 
     def test_share_results(self):
         t = a_s.Treasure({"coin": 100, "xp": 100, "mis": 100})
-        s = a_s.Shares({"coin": 3, "xp": 2.5})
+        s = a_s.Shares({"coin_shares": 3, "xp_shares": 2.5})
         s.one_share(t)
         self.assertEqual(s.coin, 31)
         self.assertEqual(s.mis, 33)
@@ -49,18 +54,21 @@ class TestShares(unittest.TestCase):
 
     def test_member_basic(self):
         t = a_s.Treasure({"coin": 100, "xp": 50, "mis": 100})
-        s = a_s.Shares({"coin": 3, "xp": 2.5})
+        s = a_s.Shares({"coin_shares": 3, "xp_shares": 2.5})
         s.one_share(t)
-        member = {"name": "fred", "coin": 0.5, "xp": 0.5}
+        member = {"name": "fred", "coin_shares": 0.5, "xp_shares": 0.5}
         m = a_s.Member(member)
         m.give_shares(s)
         self.assertEqual(m.name, "fred")
-        self.assertEqual(m.share_coin, 0.5)
-        self.assertEqual(m.share_xp, 0.5)
-        self.assertEqual(m.share_mis, 0.5)
+        self.assertEqual(m.coin_shares, 0.5)
+        self.assertEqual(m.xp_shares, 0.5)
+        self.assertEqual(m.mis_shares, 0.5)
         self.assertEqual(m.coins, 15)
         self.assertEqual(m.mis, 16)
         self.assertEqual(m.xps, 30)
+        self.assertEqual(
+            str(m), "fred gets 31 coin and 45 XP. he has 0.5 coin shares"
+        )
 
     def test_treasure(self):
         data = {"coin": 100, "xp": 100, "mis": 100}
@@ -72,7 +80,7 @@ class TestShares(unittest.TestCase):
 
     def test_shares(self):
         t = a_s.Treasure({"coin": 100, "xp": 100, "mis": 100})
-        s = a_s.Shares({"coin": 3, "xp": 2.5})
+        s = a_s.Shares({"coin_shares": 3, "xp_shares": 2.5})
         s.one_share(t)
         self.assertEqual(s.coin, 31)
         self.assertEqual(s.mis, 33)
