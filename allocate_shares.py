@@ -31,11 +31,10 @@ class Member:
         self.xps = int(share.xp * self.xp_shares)
 
     def __str__(self):
-        return "{} gets {} coin and {} XP. he has {} coin shares".format(
+        return "{} gets {} coin and {} XP.".format(
             self.name,
             self.coins + self.mis,
             self.xps + self.coins,
-            self.coin_shares,
         )
 
 
@@ -62,9 +61,6 @@ class Shares:
 
     def one_share(self, treasure):
         """Returns how much a share of coin and XP is."""
-        print("treasure.coin is ", treasure.coin)
-        print("coin_shares is  ", self.coin_shares)
-
         self.coin = treasure.coin // self.coin_shares
         self.xp = treasure.xp // self.xp_shares
         self.mis = treasure.mis // self.mis_shares
@@ -125,16 +121,16 @@ if __name__ == "__main__":
 
     try:
         party = members_from_csv(args.file)
-    except Exception:
-        print("Could not read file:  ", e)
+    except Exception as e:
+        print("Exception:  ", e)
         sys.exit(1)
 
     total_shares = {"coin_shares": 0.0, "xp_shares": 0.0}
     for m in party:
-        print(m)
-
         total_shares["coin_shares"] += m.coin_shares
         total_shares["xp_shares"] += m.xp_shares
+
+    shares = Shares(total_shares)
 
     print("Totals: ")
     print("  {:.2f} tax".format(treasure.tax))
@@ -148,10 +144,6 @@ if __name__ == "__main__":
             total_shares["coin_shares"], total_shares["xp_shares"]
         )
     )
-    shares = Shares(total_shares)
-    print(str(shares))
-    print(treasure)
-
     shares.one_share(treasure)
 
     for m in party:

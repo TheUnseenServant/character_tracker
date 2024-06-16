@@ -1,3 +1,28 @@
-name;career;xp;coin_share;xp_share
-Jing Ji-ho;Fighter;7186;1;1
-Jing Siwoo;Fighter;3709;0.5;0.5
+name;career;xp;coin_shares;xp_shares
+ji-ho;fighter;8000;1;1
+siwoo;fighter;4000;0.5;0.5
+rolton;fighter;4000;0.5;0.5
+drotik;fighter;4000;0.5;0.5
+hemia;cleric;4000;0.5;0.5
+morphin;fighter;2000;0.5;0.5
+verdugo;fighter;2000;0.5;0.5
+gar;fighter;2000;0.5;0.5
+darfilla;mage;0;0.5;0.5
+winifred;rogue;2000;0.5;0.5
+
+bofur;fighter;8000;1;1
+balin;cleric;2000;0.5;0.5
+dwalin;fighter;2000;0.5;0.5
+
+morwen;mage;8000;1;1
+macnav;fighter;2000;0.5;0.5
+cuivne;mage;0;0.5;0.5
+
+jared;fighter;8000;1;1
+evelyn;swordmage;4000;0.5;0.5
+robyn;spellthief;4000;0.5;0.5
+
+gurav;fighter;4000;0;0.5
+borav;cleric;2000;0;0.5
+hodlar;rogue;2000;0;0.5
+korev;fighter;2000;0;0.5

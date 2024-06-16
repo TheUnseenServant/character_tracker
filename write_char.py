@@ -100,6 +100,8 @@ class Career:
         for level_index, xp_min in enumerate(self.xp_required):
             if xp >= xp_min:
                 level = level_index
+        if self.career in ["swordmage", "spellthief"]:
+            level -= 1
         return level
 
     def get_level_hd_sd(self, xp):

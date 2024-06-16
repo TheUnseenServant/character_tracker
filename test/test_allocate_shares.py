@@ -66,9 +66,7 @@ class TestShares(unittest.TestCase):
         self.assertEqual(m.coins, 15)
         self.assertEqual(m.mis, 16)
         self.assertEqual(m.xps, 30)
-        self.assertEqual(
-            str(m), "fred gets 31 coin and 45 XP. he has 0.5 coin shares"
-        )
+        self.assertEqual(str(m), "fred gets 31 coin and 45 XP.")
 
     def test_treasure(self):
         data = {"coin": 100, "xp": 100, "mis": 100}
