@@ -18,14 +18,15 @@ class Character:
     """
 
     def __init__(self, data={}):
-        self.name = data.get("name", None)
-        self.career = data.get("career", None)
+        self.name = data.get("name", "")
+        self.career = data.get("career", "")
         self.xp = int(data.get("xp", 0))
 
-    def set_level_hd_sd(self, ci_info):
+    def set_info(self, ci_info):
         self.level = ci_info["level"]
         self.hd = ci_info["hd"]
         self.sd = ci_info["sd"]
+        self.sp = ci_info["sp"]
 
 
 class CharacterBuilder:
@@ -45,7 +46,7 @@ class CharacterBuilder:
                     c = Character(line)
                     characters[c.name] = c
                     career_info = ci.get_info(c.career, c.xp)
-                    c.set_level_hd_sd(career_info)
+                    c.set_info(career_info)
 
         except FileNotFoundError:
             print("Exception: No such file: {}".format(data_file))
@@ -64,6 +65,7 @@ class Career:
         self.career = data.get("career", None)
         self.hd = self.set_values(data.get("hd", None))
         self.sd = self.set_values(data.get("sd", None))
+        self.sp = self.set_values(data.get("sp", None))
         self.xp_required = [
             -1000,
             0,
@@ -79,6 +81,8 @@ class Career:
     def set_values(self, input_list):
         """Builds the data lists based on class data provided."""
         result = []
+        if not input_list:
+            return None
         for v in input_list.split(","):
             result.append(v.strip())
         return result
@@ -94,6 +98,13 @@ class Career:
         else:
             return int(self.sd[level])
 
+    def get_sp(self, level):
+        """Returns the spell dice (sd) based on the level and career."""
+        if self.career == "fighter" or self.career == "rogue":
+            return 0
+        else:
+            return int(self.sp[level])
+
     def get_level(self, xp):
         """Returns the character level based on xp given."""
         level = 0
@@ -104,12 +115,13 @@ class Career:
             level -= 1
         return level
 
-    def get_level_hd_sd(self, xp):
-        """Returns a collection of level, hd, and sd based on xp given."""
+    def get_info(self, xp):
+        """Returns a collection of level, hd, sd and sp based on xp given."""
         data = dict()
         data["level"] = self.get_level(xp)
         data["hd"] = self.get_hd(data["level"])
         data["sd"] = self.get_sd(data["level"])
+        data["sp"] = self.get_sp(data["level"])
         return data
 
 
@@ -119,8 +131,8 @@ class CareerInfo:
 
     def get_info(self, career, xp):
         """
-        Returns the Level, Hit Dice (hd) and Spell Dice (sd) for a specific
-        career and xp amount.
+        Returns the Level, Hit Dice (hd), Spell Dice (sd) and
+        Spell Points (sp) for a specific career and xp amount.
         """
         career = career.lower()
         if career not in self.careers:
@@ -130,7 +142,7 @@ class CareerInfo:
                 output_line += "{}  ".format(c.title())
             print(output_line)
             sys.exit(0)
-        return self.careers[career].get_level_hd_sd(xp)
+        return self.careers[career].get_info(xp)
 
 
 class CareerInfoBuilder:
@@ -178,15 +190,18 @@ def parse_args():
 
 
 def write_character(character):
-    template = "Name  {} Class {} Level {} HD {}/SD {}"
+    template = "{}\n"
+    template += "{} Level {} (hd {}/sd {}/sp {})\n"
     print(
         template.format(
-            character.name,
-            character.career,
+            character.name.title(),
+            character.career.title(),
             character.level,
             character.hd,
             character.sd,
-        )
+            character.sp,
+        ),
+        "\n",
     )
 
 
