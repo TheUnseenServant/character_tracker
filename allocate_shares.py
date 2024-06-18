@@ -31,10 +31,10 @@ class Member:
         self.xps = int(share.xp * self.xp_shares)
 
     def __str__(self):
-        return "{} gets {} coin and {} XP.".format(
+        return "{} gets {} XP and {} coin.".format(
             self.name,
+            self.xps,  # The coin xps are added in Treasure.run_changes()
             self.coins + self.mis,
-            self.xps + self.coins,
         )
 
 
@@ -61,9 +61,15 @@ class Shares:
 
     def one_share(self, treasure):
         """Returns how much a share of coin and XP is."""
-        self.coin = treasure.coin // self.coin_shares
-        self.xp = treasure.xp // self.xp_shares
-        self.mis = treasure.mis // self.mis_shares
+        self.coin = 0
+        self.xp = 0
+        self.mis = 0
+        if treasure.coin > 0:
+            self.coin = treasure.coin // self.coin_shares
+        if treasure.xp > 0:
+            self.xp = treasure.xp // self.xp_shares
+        if treasure.mis > 0:
+            self.mis = treasure.mis // self.mis_shares
 
     def __str__(self):
         return "{} coin  {} xp  {} mis shares".format(
@@ -84,17 +90,6 @@ def members_from_csv(filename):
         raise
     else:
         return members
-
-
-def one_share(total_shares, treasure):
-    """Returns how much a share of coin and XP is."""
-    coin = treasure.coin // total_shares["coin"]
-    xp = treasure.xp // total_shares["xp"]
-    results = {
-        "coin": int(coin),
-        "xp": int(xp),
-    }
-    return results
 
 
 if __name__ == "__main__":
