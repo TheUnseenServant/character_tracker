@@ -1,7 +1,5 @@
 # test/test_career.py
 
-import os.path
-import tempfile
 import unittest
 
 import write_char as wc
@@ -40,32 +38,6 @@ class TestCareer(unittest.TestCase):
             "sp": "0,2,3,5,6,8,9,11,12,14,15,17,18,20,21",
         }
         self.m = wc.Career(self.mage_info)
-
-        self.test_dir = tempfile.TemporaryDirectory()
-        self.level_data_file = os.path.join(self.test_dir.name, "levels.csv")
-        with open(self.level_data_file, "w") as f:
-            f.write("career;hd;sd;sp\n")
-            f.write("fighter;1,2,3,4,5,6,7,8,9,10,11,12,13,14,15;\n")
-            f.write("rogue;1,2,3,4,5,6,7,8,9,10,11,12,13,14,15;\n")
-
-            f.write("mage;1,1,2,2,3,3,4,4,5,5,6,6,7,7,8;")
-            f.write("0,1,1,2,2,3,3,4,4,5,5,6,6,7,7;")
-            f.write("0,2,3,5,6,8,9,11,12,14,15,17,18,20,21\n")
-
-            f.write("cleric;1,1,2,3,3,4,5,5,6,7,7,8,9,9,10;")
-            f.write("0,1,1,1,2,2,2,3,3,3,4,4,4,5,5;")
-            f.write("0,1,2,3,4,5,6,7,8,9,10,11,12,13,14\n")
-
-            f.write("swordmage;1,2,3,4,5,6,7,8,9,10,11;")
-            f.write("0,1,1,2,2,3,3,4,4,5,5;")
-            f.write("0,2,3,5,6,8,9,11,12,14,15\n")
-
-            f.write("spellthief;1,1,2,3,4,5,6,7,8,9,10;")
-            f.write("0,1,1,2,2,3,3,4,4,5,5;")
-            f.write("0,2,3,5,6,8,9,11,12,14,15\n")
-
-    def tearDown(self):
-        self.test_dir.cleanup()
 
     def test_career_get_level(self):
         self.assertEqual(self.f.get_level(7999), 3)
@@ -124,9 +96,8 @@ class TestCareer(unittest.TestCase):
         result = self.m.get_info(xp)
         self.assertEqual(expected, result)
 
-    def test_career_info_builder(self):
-        ci_builder = wc.CareerInfoBuilder(self.level_data_file)
-        ci = ci_builder.build()
+    def test_career_info(self):
+        ci = wc.CareerInfo(wc.career_data)
 
         f4_expected = {"level": 4, "hd": 5, "sd": 0, "sp": 0}
         f4_result = ci.get_info("fighter", 8000)

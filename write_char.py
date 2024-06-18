@@ -8,8 +8,46 @@
 
 import argparse
 import csv
-import os
 import sys
+
+
+career_data = dict()
+career_data["fighter"] = {
+    "career": "fighter",
+    "hd": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15",
+    "sd": "",
+    "sp": "",
+}
+career_data["mage"] = {
+    "career": "mage",
+    "hd": "1,1,2,2,3,3,4,4,5,5,6,6,7,7,8",
+    "sd": "0,1,1,2,2,3,3,4,4,5,5,6,6,7,7",
+    "sp": "0,2,3,5,6,8,9,11,12,14,15,17,18,20,21",
+}
+career_data["cleric"] = {
+    "career": "cleric",
+    "hd": "1,1,2,3,3,4,5,5,6,7,7,8,9,9,10",
+    "sd": "0,1,1,1,2,2,2,3,3,3,4,4,4,5,5",
+    "sp": "0,1,2,3,4,5,6,7,8,9,10,11,12,13,14",
+}
+career_data["rogue"] = {
+    "career": "rogue",
+    "hd": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15",
+    "sd": "",
+    "sp": "",
+}
+career_data["swordmage"] = {
+    "career": "swordmage",
+    "hd": "1,2,3,4,5,6,7,8,9,10,11",
+    "sd": "0,1,1,2,2,3,3,4,4,5,5",
+    "sp": "0,2,3,5,6,8,9,11,12,14,15",
+}
+career_data["spellthief"] = {
+    "career": "spellthief",
+    "hd": "1,1,2,3,4,5,6,7,8,9,10",
+    "sd": "0,1,1,2,2,3,3,4,4,5,5",
+    "sp": "0,2,3,5,6,8,9,11,12,14,15",
+}
 
 
 class Character:
@@ -127,8 +165,15 @@ class Career:
 
 
 class CareerInfo:
-    def __init__(self, careers):
-        self.careers = careers
+    def __init__(self, career_data):
+        self.careers = self.make_careers(career_data)
+
+    def make_careers(self, career_data):
+        careers = dict()
+        for career, data in career_data.items():
+            careers[career] = Career(data)
+
+        return careers
 
     def get_info(self, career, xp):
         """
@@ -146,46 +191,12 @@ class CareerInfo:
         return self.careers[career].get_info(xp)
 
 
-class CareerInfoBuilder:
-    def __init__(self, data_file):
-        self.careers = dict()
-        self.data_file = data_file
-        self.data_from_file()
-
-    def data_from_file(self):
-        """Sample file:
-        career;hd;sd
-        fighter;1,2,3,4,5,6,7,8,9,10,11,12,13,14,15;
-        mage;1,1,2,2,3,3,4,4,5,5,6,6,7,7,8;0,1,1,2,2,3,3,4,4,5,5,6,6,7,7
-        cleric;1,1,2,3,3,4,5,5,6,7,7,8,9,9,10;0,1,1,1,2,2,2,3,3,3,4,4,4,5,5
-        """
-        try:
-            with open(self.data_file, "r", newline="") as f:
-                reader = csv.DictReader(f, delimiter=";")
-                for line in reader:
-                    c = Career(line)
-                    self.careers[c.career] = c
-        except FileNotFoundError:
-            print("Exception: No such file")
-            sys.exit(1)
-
-    def build(self):
-        return CareerInfo(self.careers)
-
-
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        "-d",
-        "--datadir",
-        default="data",
-        help="Directory for data files",
-    )
-    parser.add_argument(
-        "-f", "--file", default="data/adventure_party.csv", help="Intake file"
+        "-f", "--file", default="adventure_party.csv", help="Intake file"
     )
     args = parser.parse_args()
-    args.level_file = os.path.join(args.datadir, "levels.csv")
 
     return args
 
@@ -208,7 +219,7 @@ def write_character(character):
 
 if __name__ == "__main__":
     args = parse_args()
-    career_info = CareerInfoBuilder(args.level_file).build()
+    career_info = CareerInfo(career_data)
     characters = CharacterBuilder.build(args.file, career_info)
     for character in characters.values():
         write_character(character)

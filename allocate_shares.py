@@ -107,7 +107,7 @@ if __name__ == "__main__":
         "-m", "--mis", default=0, help="Magic Item Sales", type=int
     )
     parser.add_argument(
-        "-f", "--file", default="data/adventure_party.csv", help="Intake file"
+        "-f", "--file", default="adventure_party.csv", help="Intake file"
     )
     args = parser.parse_args()
 
