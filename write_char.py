@@ -18,6 +18,7 @@ class Character:
     """
 
     def __init__(self, data={}):
+        self.key = data.get("key", "")
         self.name = data.get("name", "")
         self.career = data.get("career", "")
         self.xp = int(data.get("xp", 0))
@@ -44,7 +45,7 @@ class CharacterBuilder:
                 reader = csv.DictReader(f, delimiter=";")
                 for line in reader:
                     c = Character(line)
-                    characters[c.name] = c
+                    characters[c.key] = c
                     career_info = ci.get_info(c.career, c.xp)
                     c.set_info(career_info)
 
