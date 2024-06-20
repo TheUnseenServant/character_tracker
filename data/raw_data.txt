@@ -1,0 +1,169 @@
+[quote=Leitz post_id=669075 time=1692668384 user_id=2904]
+[b]Jing Ji-Ho[/b]
+
+[i]Fighter[/i] 4 (HD 5, hp 6, SD 0, sp 0). Lawful
+[i]A&AC:[/i] W(w)/W(s), Enc: Moderate (7)
+[i]Ability Scores:[/i] Charisma +1
+[i]Feats:[/i] Heroic Leader, Puissance (melee), Toughness
+[i]Skills:[/i] Captain
+[i]Weapons:[/i] sword, dagger, hatchet, spear, longbow, arrows, 11 magical selfbow arrows
+[i]Armor:[/i] Maille hauberk with coif and sallet
+[i]Gear:[/i] adventuring pack (basic), traveling clothes, quiver, rations (1wk), 2 torches, simple signet ring (made of bronze), a Dwarven honor silver ring (worth a shilling)
+[i]Silver:[/i] 
+[i]Heroic:[/i] +1 to all Saves. +1 to Morale for all mundane henchmen and followers. -1 to Morale for all mundane enemies.
+
+[b][size=150]NPCs[/size][/b] 
+
+[b]Jing Si-woo[/b] (1s/mo)
+A distant cousin who grew up in the shadow of Ji-ho's lineage. 
+[spoiler] 
+[i]Fighter[/i] 3 (HD 4, hp 4, SD 0, sp 0). Lawful
+[i]A&AC:[/i] W(w)/W(s), Enc: Moderate (7)
+[i]Ability Scores:[/i] Constitution +1
+[i]Feats:[/i] Puissance (missile), Leader, Prowess (missile)
+[i]Skills:[/i] Lieutenant
+[i]Weapons:[/i] sword, dagger, hatchet, large round shield, longbow, arrows, 10 magical arrows.
+[i]Armor:[/i] Maille hauberk with coif and sallet
+[i]Gear:[/i] adventuring pack (basic), traveling clothes, quiver, rations (1wk), 2 torches
+[i]Morale:[/i] +5
+[i]Loyalty:[/i] +4
+[/spoiler]
+
+
+[b]Morphin[/b] (1s/mo)
+Lawful  A caravan guard that met a stranger and became a leader
+[spoiler]
+[i]Fighter[/i] 2 (HD 3, hp 4, SD 0, sp 0).
+[i]A&AC:[/i] W(w)/W(s), Enc: Moderate (6)
+[i]Feats:[/i] Toughness, Leader
+[i]Skills:[/i] Sergeant
+[i]Weapons:[/i] dagger, hatchet, shield (large round), spear, sword, longbow, arrows
+[i]Armor:[/i] Maille hauberk with coif and sallet
+[i]Gear:[/i] adventuring pack (basic), traveling clothes, rations (1wk), 2 torches
+[i]Morale:[/i] +3
+[i]Loyalty:[/i] +4
+[/spoiler]
+
+
+[b]Rolton[/b] (1s/mo)
+Lawful  A noble bastard trained as a squire.
+[spoiler]
+[i]Fighter[/i] 3 (HD 4, hp 4, SD 0, sp 0).
+[i]A&AC:[/i] W(w)/W(s) Enc: Moderate (6)
+[i]Ability Scores:[/i] Strength+1, Constitution +1, Dexterity -1
+[i]Feats:[/i] Mounted Warrior, Pussiance(Melee), Prowess(Melee)
+[i]Skills:[/i] Knight
+[i]Weapons:[/i] sword, dagger, spear, mace, kite shield, longbow, arrows
+[i]Armor:[/i] Maille hauberk with coif and sallet
+[i]Gear:[/i] courtly suit, traveler's clothes, backpack
+[i]Morale:[/i] +4
+[i]Loyalty:[/i] +5
+[i]NPCs:[/i] Charger with caparison (3HD, 6hp, Decently Armed (shielded), Warhorse Skill+1), Courser (3HD, 4hp, Decently Armed, Hunt-horse Skill+1)  2x Rouncey (2HD, 4hp, Lightly Armed, Warhorse Skill), Sumpter (2HD, Poorly Armed, Packhorse Skill)
+Samwood	(Fighter 0, Essentially a squire, a bastard like Rolton himself)
+[/spoiler]
+
+
+[b]Hemia[/b] (1s/mo)
+Lawful,   She was a novice of the Church who ran away from her convent. 
+[spoiler]
+[i]Cleric[/i] 3 (HD 3, hp 3, SD 1, sp 3)
+[i]Ability Scores:[/i] Wisdom +1
+[i]A&AC:[/i] W(u)/W(s), Enc: Moderate (6)
+[i]Feats:[/i] Toughess, Leader
+[i]Divine Magic:[/i] Channel Divinity (Turn Undead, Harness Power), Mastered Spells (Cure Wounds, Protection from Evil)
+[i]Skills:[/i] Healer
+[i]Weapons:[/i] Mace, cudgel, dagger, large round shield
+[i]Armor:[/i]  Maille hauberk with coif and sallet
+[i]Gear:[/i] adventurers pack, acolyte's clothes, wooden holy symbol, holy symbol (nice)
+[i]Morale:[/i] +5
+[i]Loyalty:[/i] +4
+[/spoiler]
+
+
+[b]Gar[/b] (6p/mo)
+Neutral, an ex-con hoping for a second chance.
+[spoiler]
+[i]Fighter[/i] 2 (HD 3, hp 3, SD 0, sp 0).
+[i]A&AC:[/i] W(w)/W(s), Enc: Moderate (6)
+[i]Ability Scores:[/i] Constitution +1
+[i]Feats:[/i] Prowess(Melee), Pussiance (Melee)
+[i]Skills:[/i] Guard
+[i]Weapons:[/i] dagger, hatchet, shield (large round), spear, sword, longbow, arrows
+[i]Armor:[/i] Maille hauberk with coif and sallet
+[i]Gear:[/i] adventuring pack (basic), traveling clothes
+[i]Morale:[/i] +4
+[i]Loyalty:[/i] +3
+[/spoiler]
+
+
+[b]Darfilla[/b] (6p/mo)
+Chaotic, a reckless but surprisingly pious alchemist.
+[spoiler]
+[i]Mage[/i] 1 (HD 1, hp 1, SD 1, sp 1).
+[i]A&AC:[/i] P(p)/U(-), Enc: Light (2)
+[i]Ability Scores:[/i] Intelligence +1
+[i]Feats:[/i] 
+[i]Skills:[/i] Alchemist
+[i]Mage:[/i] Arcane Magic, Secret (Brew Potions)
+[i]Spells:[/i] Cantrip, Detect Magic, Burning Hands, Sharpness
+[i]Weapons:[/i] dagger
+[i]Armor:[/i] None
+[i]Gear:[/i] adventuring pack (basic), traveling clothes, alchemists' tools
+[i]Morale:[/i] +2
+[i]Loyalty:[/i] +2
+[/spoiler]
+
+
+[b]Verdugo[/b] (12p/mo)
+Neutral, a mercenary from the south
+[spoiler]
+[i]Fighter[/i] 2 (HD 3, hp 3, SD 0, sp 0).
+[i]A&AC:[/i] W(w)/W(s), Enc: Moderate (6)
+[i]Feats:[/i] Endurance, Pussiance(Melee)
+[i]Skills:[/i] Soldier
+[i]Weapons:[/i] dagger, sword, large round shield, spear, longbow, arrows
+[i]Armor:[/i] Maille hauberk with coif and sallet
+[i]Gear:[/i] adventuring pack (basic), traveling clothes, rations (1wk), 2 torches
+[i]Morale:[/i] +5
+[i]Loyalty:[/i] +1
+[/spoiler]
+
+[hr]
+
+[b]Drotik[/b] (1s,6p/mo) (Currently Questing)
+Lawful  A cottars son conscripted last season and discharged. 
+[spoiler]
+[i]Fighter[/i] 3 (HD 4, hp 5, SD 0, sp 0).
+[i]A&AC:[/i] W(h)/W(s), Enc: Moderate (8)
+[i]Ability Scores:[/i] Strength +1
+[i]Feats:[/i] Pussiance (Missile), Toughness, Marshall
+[i]Skills:[/i] Cottar
+[i]Weapons:[/i] sword, dagger, arbalest and winch, small round shield
+[i]Armor:[/i] Maille hauberk with coif and sallet
+[i]Gear:[/i] quiver, traveler's clothes, backpack
+[i]Morale:[/i] +4
+[i]Loyalty:[/i] +4
+[/spoiler]
+
+Winifred
+Half-orc Rogue 2 (HD 2, hp 2, SD 0, sp 0). Neutral
+A&AC: P/p, Enc:
+Ability Scores: Strength +1, Wisdom +1, Charisma -1
+Feats: Prowess (melee), Strider
+Skills: Burglar, Spy
+Weapons: 2 daggers
+Armor: none
+Gear: urchin's clothes
+
+
+[hr]
+
+[b]Mercenaries[/b]
+LI (11)
+Sk (4) (Archers/Hunstmen)
+HI (4)
+HXb (4)
+
+Laborers (8)
+[/quote]
+
