@@ -48,7 +48,7 @@ class TestShares(unittest.TestCase):
         t = a_s.Treasure({"coin": 100, "xp": 100, "mis": 100})
         s = a_s.Shares({"coin_shares": 3, "xp_shares": 2.5})
         s.one_share(t)
-        self.assertEqual(s.coin, 31)
+        self.assertEqual(s.coin, 33)
         self.assertEqual(s.mis, 33)
         self.assertEqual(s.xp, 80)
 
@@ -63,23 +63,31 @@ class TestShares(unittest.TestCase):
         self.assertEqual(m.coin_shares, 0.5)
         self.assertEqual(m.xp_shares, 0.5)
         self.assertEqual(m.mis_shares, 0.5)
-        self.assertEqual(m.coins, 15)
+        self.assertEqual(m.coins, 16)
         self.assertEqual(m.mis, 16)
         self.assertEqual(m.xps, 30)
-        self.assertEqual(str(m), "fred gets 30 XP and 31 coin.")
+        self.assertEqual(str(m), "fred gets 30 XP and 32 coin.")
 
     def test_treasure(self):
-        data = {"coin": 100, "xp": 100, "mis": 100}
+        data = {"coin": 100, "xp": 100, "mis": 100, "tax_rate": 5}
         t = a_s.Treasure(data)
         self.assertEqual(t.tax, 5)
         self.assertEqual(t.xp, 200)
         self.assertEqual(t.coin, 95)
         self.assertEqual(t.mis, 100)
 
+    def test_treasure_no_tax(self):
+        data = {"coin": 100, "xp": 100, "mis": 100}
+        t = a_s.Treasure(data)
+        self.assertEqual(t.tax, 0)
+        self.assertEqual(t.xp, 200)
+        self.assertEqual(t.coin, 100)
+        self.assertEqual(t.mis, 100)
+
     def test_shares(self):
         t = a_s.Treasure({"coin": 100, "xp": 100, "mis": 100})
         s = a_s.Shares({"coin_shares": 3, "xp_shares": 2.5})
         s.one_share(t)
-        self.assertEqual(s.coin, 31)
+        self.assertEqual(s.coin, 33)
         self.assertEqual(s.mis, 33)
         self.assertEqual(s.xp, 80)

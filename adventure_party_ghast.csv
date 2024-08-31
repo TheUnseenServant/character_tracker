@@ -1,12 +1,7 @@
 key;name;career;xp;coin_shares;xp_shares
 jiho;Jing Ji-ho;fighter;8000;1;1
-siwoo;Jing Si-woo;fighter;4000;0.5;0.5
-rolton;Sir Rolton of Jing;fighter;4000;0.5;0.5
-drotik;Lord Drotik;fighter;4000;0.5;0.5
-hemia;The Lady Hemia, Priestess;cleric;4000;0.5;0.5
 morphin;Lord Morphin;fighter;2000;0.5;0.5
 verdugo;Verdugo;fighter;2000;0.5;0.5
-gar;Gar;fighter;2000;0.5;0.5
 darfilla;The Wizardess Darfilla;mage;0;0.5;0.5
 
 bofur;Bofur;fighter;8000;1;1
@@ -16,8 +11,3 @@ dwalin;Dwalin;fighter;2000;0.5;0.5
 morwen;Morwen;mage;8000;1;1
 macnav;Macnav;fighter;2000;0.5;0.5
 cuivne;Cuivne;mage;0;0.5;0.5
-
-gurav;Thane Gurav Graka;fighter;4000;0;0.5
-borav;Borav Kograk;cleric;2000;0;0.5
-hodlar;Hodlar Morrgrak;rogue;2000;0;0.5
-korev;Korev Graker;fighter;2000;0;0.5
