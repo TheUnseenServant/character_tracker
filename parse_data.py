@@ -6,33 +6,30 @@
 # author  :  Leam Hall
 # desc    :  Remove markup and parse data.
 
+import re
 
 input_file = "data/raw_data.txt"
-
-markup = ["[hr]", "[i]", "[/i]", "[spoiler]", "[/spoiler]", "[b]", "[/b]", "."]
 
 def list_from_file(file):
     """ Take a file, return the valid lines as a list """
     data = []
     with open(file, 'r') as f:
        for line in f:
-            line = scrub_line(line, markup)
+            line = scrub_line(line)
             if line:
                 data.append(line) 
     return data
 
 
-def scrub_line(line, markup = markup):
-    """ Remove specified markup. """
-    for mark in markup:
-        if mark.lower() in line.lower():
-            line = line.replace(mark, "")
-
+def scrub_line(line):
+    """ Remove markup. """
+    line = re.sub("\\[\\/?[\\w]+\\]", '', line)
+    line = " ".join(line.split())
     return line.strip()
 
 
 if __name__ == "__main__":
-    data = list_from_file(imput_file, markup)
+    data = list_from_file(imput_file)
     
     for line in data:
         print(line)

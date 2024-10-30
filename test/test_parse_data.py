@@ -21,7 +21,7 @@ class TestScrub(unittest.TestCase):
         expected_line_1 = "Drotik (1s,6p/mo) (Currently Questing)"
         self.assertEqual(expected_line_1, pd.scrub_line(line_in_1))
 
-        line_in_2 = "[spoiler] [i]Fighter[/i] 3 (HD 4, hp 5, SD 0, sp 0)."
+        line_in_2 = "[spoiler] [i]Fighter[/i] 3 (HD 4, hp 5, SD 0, sp 0)"
         expected_line_2 = "Fighter 3 (HD 4, hp 5, SD 0, sp 0)"
         self.assertEqual(expected_line_2, pd.scrub_line(line_in_2))
 
