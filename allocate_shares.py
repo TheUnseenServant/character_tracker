@@ -17,6 +17,13 @@ import csv
 import sys
 
 
+class Group:
+    def __init__(self, data):
+        self.key = data.get("key", "")
+        self.hp = int(data.get("hp", 0))
+        self.count = int(data.get("count", 0))
+
+
 class Member:
     def __init__(self, data={}):
         self.name = data.get("name", "")
@@ -35,6 +42,19 @@ class Member:
             self.name,
             self.xps,  # The coin xps are added in Treasure.run_changes()
             self.coins + self.mis,
+        )
+
+
+class Monster:
+    def __init__(self, data={}):
+        self.key = data.get("key", "")
+        self.name = data.get("name", "")
+        self.base_xp = int(data.get("base_xp", 0))
+        self.hp_xp = int(data.get("hp_xp", 0))
+
+    def __str__(self):
+        return "{} ({}) Base {} + {} per HP".format(
+            self.name, self.key, self.base_xp, self.hp_xp
         )
 
 
@@ -92,6 +112,43 @@ def members_from_csv(filename):
         return members
 
 
+def something_from_csv(filename, klass, return_object=dict()):
+    """Returns a dict of objects from a csv file."""
+
+    something = return_object
+
+    try:
+        with open(filename, "r", newline="") as f:
+            reader = csv.DictReader(f, delimiter=";")
+            for line in reader:
+                if isinstance(something, list):
+                    something.append(klass(line))
+                else:
+                    something[line["key"]] = klass(line)
+    except FileNotFoundError:
+        raise
+    else:
+        return something
+
+
+def xp_for_monsters(data, monsters):
+    """Calculates XP based on monster type, HP, and count."""
+    monster = monsters.get(data.key, False)
+    if monster:
+        return (monster.base_xp + (monster.hp_xp * data.hp)) * data.count
+    else:
+        return 0
+
+
+def get_total_xp(groups, monsters):
+    """Interate over the groups and totals the xp."""
+    total_xp = 0
+    for group in groups:
+        total_xp += xp_for_monsters(group, monsters)
+
+    return total_xp
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument(
@@ -102,12 +159,19 @@ if __name__ == "__main__":
         "-m", "--mis", default=0, help="Magic Item Sales", type=int
     )
     parser.add_argument(
+        "--monster_manual",
+        default="data/monster_manual.csv",
+        help="Monster Manual",
+    )
+    parser.add_argument(
         "-f", "--file", default="adventure_party.csv", help="Intake file"
     )
     parser.add_argument(
         "-t", "--tax_rate", default=0.0, type=float, help="Percent Tax Rate"
     )
     args = parser.parse_args()
+
+    monsters = something_from_csv(args.monster_manual, Monster, dict())
 
     treasure = Treasure(
         {
