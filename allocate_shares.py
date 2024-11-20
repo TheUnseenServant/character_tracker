@@ -19,16 +19,16 @@ import sys
 
 class Member:
     def __init__(self, data={}):
-        self.name           = data.get("name", "")
-        self.coin_shares    = float(data.get("coin_shares", 0.0))
-        self.xp_shares      = float(data.get("xp_shares", 0))
-        self.mis_shares     = self.coin_shares
+        self.name = data.get("name", "")
+        self.coin_shares = float(data.get("coin_shares", 0.0))
+        self.xp_shares = float(data.get("xp_shares", 0))
+        self.mis_shares = self.coin_shares
 
     def give_shares(self, share):
         """Assigns coin and XP based on one share times share rate."""
-        self.mis    = int(share.mis * self.mis_shares)
-        self.coins  = int(share.coin * self.coin_shares)
-        self.xps    = int(share.xp * self.xp_shares)
+        self.mis = int(share.mis * self.mis_shares)
+        self.coins = int(share.coin * self.coin_shares)
+        self.xps = int(share.xp * self.xp_shares)
 
     def __str__(self):
         return "{} gets {} XP and {} coin.".format(
@@ -40,30 +40,30 @@ class Member:
 
 class Treasure:
     def __init__(self, data={}):
-        self.coin       = data.get("coin", 0)
-        self.coin_xp    = self.coin
-        self.xp         = data.get("xp", 0)
-        self.mis        = data.get("mis", 0)
-        self.tax_rate   = data.get("tax_rate", 0.0)
+        self.coin = data.get("coin", 0)
+        self.coin_xp = self.coin
+        self.xp = data.get("xp", 0)
+        self.mis = data.get("mis", 0)
+        self.tax_rate = data.get("tax_rate", 0.0)
         self.run_changes()
 
     def run_changes(self):
-        self.xp     += self.coin_xp
-        self.tax    = self.coin * (self.tax_rate / 100)
-        self.coin   -= self.tax
+        self.xp += self.coin_xp
+        self.tax = self.coin * (self.tax_rate / 100)
+        self.coin -= self.tax
 
 
 class Shares:
     def __init__(self, data={}):
-        self.coin_shares    = data.get("coin_shares", 0)
-        self.xp_shares      = data.get("xp_shares", 0)
-        self.mis_shares     = self.coin_shares
+        self.coin_shares = data.get("coin_shares", 0)
+        self.xp_shares = data.get("xp_shares", 0)
+        self.mis_shares = self.coin_shares
 
     def one_share(self, treasure):
         """Returns how much a share of coin and XP is."""
-        self.coin   = 0
-        self.xp     = 0
-        self.mis    = 0
+        self.coin = 0
+        self.xp = 0
+        self.mis = 0
         if treasure.coin > 0:
             self.coin = treasure.coin // self.coin_shares
         if treasure.xp > 0:
@@ -111,9 +111,9 @@ if __name__ == "__main__":
 
     treasure = Treasure(
         {
-            "coin":      args.coin,
-            "xp":       args.xp,
-            "mis":      args.mis,
+            "coin": args.coin,
+            "xp": args.xp,
+            "mis": args.mis,
             "tax_rate": args.tax_rate,
         }
     )

@@ -13,5 +13,6 @@ clean:
 	find . -type f -name "*.swp" -exec rm {} \;
 
 all: clean test
-	-flake8
+	python -m black -l 79 .
+	-flake8 --ignore E251,E266,W391,W503
 

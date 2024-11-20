@@ -46,4 +46,4 @@ class TestListFromFile(unittest.TestCase):
     def test_has_content(self):
         result = pd.list_from_file(self.data_file)
         self.assertIn("Drotik", result[0])
-        self.assertIn("Combat", result[1]) 
+        self.assertIn("Combat", result[1])
