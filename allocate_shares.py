@@ -154,14 +154,19 @@ if __name__ == "__main__":
     parser.add_argument(
         "-c", "--coin", default=0, help="Cash intake in unified coin", type=int
     )
-    parser.add_argument("-x", "--xp", default=0, help="XP intake", type=int)
+    parser.add_argument("-x", "--xp", default=0, help="Bonus XP", type=int)
     parser.add_argument(
         "-m", "--mis", default=0, help="Magic Item Sales", type=int
     )
     parser.add_argument(
+        "--monster_groups",
+        default="data/monster_groups.csv",
+        help="Monster Groups file",
+    )
+    parser.add_argument(
         "--monster_manual",
         default="data/monster_manual.csv",
-        help="Monster Manual",
+        help="Monster Manual file",
     )
     parser.add_argument(
         "-f", "--file", default="adventure_party.csv", help="Intake file"
@@ -171,7 +176,18 @@ if __name__ == "__main__":
     )
     args = parser.parse_args()
 
-    monsters = something_from_csv(args.monster_manual, Monster, dict())
+
+    
+    try:
+        party = something_from_csv(args.file, Member, dict())
+        monster_manual = something_from_csv(args.monster_manual, Monster, dict())
+        monsters = something_from_csv(args.monster_groups, Group, list())
+    except Exception as e:
+        print("Exception:  ", e)
+        sys.exit(1)
+
+    
+    base_xp = get_total_xp(monsters, monster_manual)
 
     treasure = Treasure(
         {
@@ -182,14 +198,10 @@ if __name__ == "__main__":
         }
     )
 
-    try:
-        party = members_from_csv(args.file)
-    except Exception as e:
-        print("Exception:  ", e)
-        sys.exit(1)
+    treasure.xp += base_xp
 
     total_shares = {"coin_shares": 0.0, "xp_shares": 0.0}
-    for m in party:
+    for m in party.values():
         total_shares["coin_shares"] += m.coin_shares
         total_shares["xp_shares"] += m.xp_shares
 
@@ -198,7 +210,8 @@ if __name__ == "__main__":
     print("Totals: ")
     print("  {:.2f} tax".format(treasure.tax))
     print("  {} coin after taxes".format(treasure.coin))
-    print("  {} base + (pre-tax) coin XP".format(treasure.xp))
+    print("  {} base XP".format(base_xp))
+    print("  {} base XP + (pre-tax) coin XP".format(treasure.xp))
     print("  {} total coin".format(treasure.coin + treasure.mis))
     print("")
 
@@ -209,6 +222,6 @@ if __name__ == "__main__":
     )
     shares.one_share(treasure)
 
-    for m in party:
+    for m in party.values():
         m.give_shares(shares)
         print(m)

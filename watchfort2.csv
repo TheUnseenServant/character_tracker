@@ -1,10 +1,10 @@
 key;name;career;xp;coin_shares;xp_shares
 jiho;Jing Ji-ho;fighter;8000;1;1
 siwoo;Jing Si-woo;fighter;4000;0.5;0.5
-hemia;The Lady Hemia, Priestess;cleric;4000;0.5;0.5
+hemia;Hemia;cleric;4000;0.5;0.5
 morwen;Morwen;mage;8000;1;1
 macnav;Macnav;fighter;2000;0.5;0.5
-cuivne;Cuivne;mage;0;0.5;0.5
+earnan;Earnan;elf;0;1;1
 dramm;Dramm;fightger;;1;1
 barnaby;Barnaby;bard;;0.5;0.5
 gurav;Thane Gurav Graka;fighter;4000;0;0.5
