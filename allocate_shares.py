@@ -17,6 +17,13 @@ import csv
 import sys
 
 
+class Group:
+    def __init__(self, data):
+        self.key = data.get("key", "")
+        self.hp = int(data.get("hp", 0))
+        self.count = int(data.get("count", 0))
+
+
 class Member:
     def __init__(self, data={}):
         self.name = data.get("name", "")
@@ -35,6 +42,19 @@ class Member:
             self.name,
             self.xps,  # The coin xps are added in Treasure.run_changes()
             self.coins + self.mis,
+        )
+
+
+class Monster:
+    def __init__(self, data={}):
+        self.key = data.get("key", "")
+        self.name = data.get("name", "")
+        self.base_xp = int(data.get("base_xp", 0))
+        self.hp_xp = int(data.get("hp_xp", 0))
+
+    def __str__(self):
+        return "{} ({}) Base {} + {} per HP".format(
+            self.name, self.key, self.base_xp, self.hp_xp
         )
 
 
@@ -77,6 +97,38 @@ class Shares:
         )
 
 
+def usage():
+    """Extended help message."""
+    string = """
+    Note that the files are semi-colon delimted. They are plain text
+      and you can edit them as you see fit. You own any errors...
+
+
+    allocate_shares.py looks for adventurers with the -f opion
+        -f data/watchfort2.csv    # as an example
+
+        The format is:
+        key;name;career;xp;coin_shares;xp_shares
+        'career' and 'xp' are not currently used.
+
+    data/monster_manual.csv has the monster data in the format:
+      key;name;base_xp;hp_xp
+
+      The key is the same in the monsters file, and the math is such
+        that total XP is base_xp + (hp_xp * hp)
+
+    data/watchfort_monsters.csv has a list of monsters encountered:
+      key;hp;count
+
+      The key here is as above, and the hp is how many HP each of
+        those monster types had. The count is how many of them there
+        were. You can duplicate monsters of the same type or add them
+        all up.
+
+    """
+    return string
+
+
 def members_from_csv(filename):
     """Returns a list of members from a csv file."""
     members = []
@@ -92,14 +144,63 @@ def members_from_csv(filename):
         return members
 
 
+def something_from_csv(filename, klass, return_object=dict()):
+    """Returns a dict of objects from a csv file."""
+
+    something = return_object
+
+    try:
+        with open(filename, "r", newline="") as f:
+            reader = csv.DictReader(f, delimiter=";")
+            for line in reader:
+                if isinstance(something, list):
+                    something.append(klass(line))
+                else:
+                    something[line["key"]] = klass(line)
+    except FileNotFoundError:
+        raise
+    else:
+        return something
+
+
+def xp_for_monsters(data, monsters):
+    """Calculates XP based on monster type, HP, and count."""
+    monster = monsters.get(data.key, False)
+    if monster:
+        return (monster.base_xp + (monster.hp_xp * data.hp)) * data.count
+    else:
+        return 0
+
+
+def get_total_xp(groups, monsters):
+    """Interate over the groups and totals the xp."""
+    total_xp = 0
+    for group in groups:
+        total_xp += xp_for_monsters(group, monsters)
+
+    return total_xp
+
+
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(
+        epilog=usage(), formatter_class=argparse.RawDescriptionHelpFormatter
+    )
     parser.add_argument(
         "-c", "--coin", default=0, help="Cash intake in unified coin", type=int
     )
-    parser.add_argument("-x", "--xp", default=0, help="XP intake", type=int)
+    parser.add_argument("-x", "--xp", default=0, help="Bonus XP", type=int)
     parser.add_argument(
         "-m", "--mis", default=0, help="Magic Item Sales", type=int
+    )
+    parser.add_argument(
+        "--monster_groups",
+        default="data/monster_groups.csv",
+        help="Monster Groups file",
+    )
+    parser.add_argument(
+        "--monster_manual",
+        default="data/monster_manual.csv",
+        help="Monster Manual file",
     )
     parser.add_argument(
         "-f", "--file", default="adventure_party.csv", help="Intake file"
@@ -108,6 +209,18 @@ if __name__ == "__main__":
         "-t", "--tax_rate", default=0.0, type=float, help="Percent Tax Rate"
     )
     args = parser.parse_args()
+
+    try:
+        party = something_from_csv(args.file, Member, dict())
+        monster_manual = something_from_csv(
+            args.monster_manual, Monster, dict()
+        )
+        monsters = something_from_csv(args.monster_groups, Group, list())
+    except Exception as e:
+        print("Exception:  ", e)
+        sys.exit(1)
+
+    base_xp = get_total_xp(monsters, monster_manual)
 
     treasure = Treasure(
         {
@@ -118,14 +231,10 @@ if __name__ == "__main__":
         }
     )
 
-    try:
-        party = members_from_csv(args.file)
-    except Exception as e:
-        print("Exception:  ", e)
-        sys.exit(1)
+    treasure.xp += base_xp
 
     total_shares = {"coin_shares": 0.0, "xp_shares": 0.0}
-    for m in party:
+    for m in party.values():
         total_shares["coin_shares"] += m.coin_shares
         total_shares["xp_shares"] += m.xp_shares
 
@@ -134,7 +243,8 @@ if __name__ == "__main__":
     print("Totals: ")
     print("  {:.2f} tax".format(treasure.tax))
     print("  {} coin after taxes".format(treasure.coin))
-    print("  {} base + (pre-tax) coin XP".format(treasure.xp))
+    print("  {} base XP".format(base_xp))
+    print("  {} base XP + (pre-tax) coin XP".format(treasure.xp))
     print("  {} total coin".format(treasure.coin + treasure.mis))
     print("")
 
@@ -145,6 +255,8 @@ if __name__ == "__main__":
     )
     shares.one_share(treasure)
 
-    for m in party:
+    for m in party.values():
         m.give_shares(shares)
         print(m)
+
+    usage()
