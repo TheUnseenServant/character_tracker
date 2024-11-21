@@ -97,6 +97,38 @@ class Shares:
         )
 
 
+def usage():
+    """Extended help message."""
+    string = """
+    Note that the files are semi-colon delimted. They are plain text
+      and you can edit them as you see fit. You own any errors...
+
+
+    allocate_shares.py looks for adventurers with the -f opion
+        -f data/watchfort2.csv    # as an example
+
+        The format is:
+        key;name;career;xp;coin_shares;xp_shares
+        'career' and 'xp' are not currently used.
+
+    data/monster_manual.csv has the monster data in the format:
+      key;name;base_xp;hp_xp
+
+      The key is the same in the monsters file, and the math is such
+        that total XP is base_xp + (hp_xp * hp)
+
+    data/watchfort_monsters.csv has a list of monsters encountered:
+      key;hp;count
+
+      The key here is as above, and the hp is how many HP each of
+        those monster types had. The count is how many of them there
+        were. You can duplicate monsters of the same type or add them
+        all up.
+
+    """
+    return string
+
+
 def members_from_csv(filename):
     """Returns a list of members from a csv file."""
     members = []
@@ -150,7 +182,9 @@ def get_total_xp(groups, monsters):
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(
+        epilog=usage(), formatter_class=argparse.RawDescriptionHelpFormatter
+    )
     parser.add_argument(
         "-c", "--coin", default=0, help="Cash intake in unified coin", type=int
     )
@@ -176,17 +210,16 @@ if __name__ == "__main__":
     )
     args = parser.parse_args()
 
-
-    
     try:
         party = something_from_csv(args.file, Member, dict())
-        monster_manual = something_from_csv(args.monster_manual, Monster, dict())
+        monster_manual = something_from_csv(
+            args.monster_manual, Monster, dict()
+        )
         monsters = something_from_csv(args.monster_groups, Group, list())
     except Exception as e:
         print("Exception:  ", e)
         sys.exit(1)
 
-    
     base_xp = get_total_xp(monsters, monster_manual)
 
     treasure = Treasure(
@@ -225,3 +258,5 @@ if __name__ == "__main__":
     for m in party.values():
         m.give_shares(shares)
         print(m)
+
+    usage()
