@@ -13,7 +13,7 @@
 
 import argparse
 import csv
-
+import os.path
 import sys
 
 
@@ -212,15 +212,23 @@ if __name__ == "__main__":
 
     try:
         party = something_from_csv(args.file, Member, dict())
-        monster_manual = something_from_csv(
-            args.monster_manual, Monster, dict()
-        )
-        monsters = something_from_csv(args.monster_groups, Group, list())
     except Exception as e:
         print("Exception:  ", e)
         sys.exit(1)
 
-    base_xp = get_total_xp(monsters, monster_manual)
+    base_xp = 0
+    if os.path.exists(args.monster_manual) and os.path.exists(
+        args.monster_groups
+    ):
+        try:
+            monster_manual = something_from_csv(
+                args.monster_manual, Monster, dict()
+            )
+            monsters = something_from_csv(args.monster_groups, Group, list())
+            base_xp += get_total_xp(monsters, monster_manual)
+        except Exception as e:
+            print("Exception:  ", e)
+            sys.exit(1)
 
     treasure = Treasure(
         {
@@ -243,7 +251,7 @@ if __name__ == "__main__":
     print("Totals: ")
     print("  {:.2f} tax".format(treasure.tax))
     print("  {} coin after taxes".format(treasure.coin))
-    print("  {} base XP".format(base_xp))
+    print("  {} base XP".format(args.xp))
     print("  {} base XP + (pre-tax) coin XP".format(treasure.xp))
     print("  {} total coin".format(treasure.coin + treasure.mis))
     print("")
