@@ -188,7 +188,9 @@ def get_total_xp(groups, monsters):
     return total_xp
 
 
-if __name__ == "__main__":
+def parse_args(args):
+    """Parse args and return a parser object with args as attributes."""
+
     parser = argparse.ArgumentParser(
         epilog=usage(), formatter_class=argparse.RawDescriptionHelpFormatter
     )
@@ -221,7 +223,13 @@ if __name__ == "__main__":
     parser.add_argument(
         "-t", "--tax_rate", default=0.0, type=float, help="Percent Tax Rate"
     )
-    args = parser.parse_args()
+
+    return parser.parse_args(args)
+
+
+if __name__ == "__main__":
+
+    args = parse_args(sys.argv[1:])
 
     try:
         party = something_from_csv(args.file, Member, dict())
