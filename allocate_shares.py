@@ -129,21 +129,6 @@ def usage():
     return string
 
 
-def members_from_csv(filename):
-    """Returns a list of members from a csv file."""
-    members = []
-
-    try:
-        with open(filename, "r", newline="") as f:
-            reader = csv.DictReader(f, delimiter=";")
-            for line in reader:
-                members.append(Member(line))
-    except FileNotFoundError:
-        raise
-    else:
-        return members
-
-
 def something_from_csv(filename, klass, return_object=dict()):
     """Returns a dict of objects from a csv file."""
 
@@ -170,6 +155,28 @@ def xp_for_monsters(data, monsters):
         return (monster.base_xp + (monster.hp_xp * data.hp)) * data.count
     else:
         return 0
+
+
+def get_monster_xp(monster_manual, monster_groups):
+    """
+    Read the monster manual and list of monster groups, return XP.
+    Returns 0 if either file does not exist, or is empty.
+    """
+    base_xp = 0
+    if os.path.exists(args.monster_manual) and os.path.exists(
+        args.monster_groups
+    ):
+        try:
+            monster_manual = something_from_csv(
+                args.monster_manual, Monster, dict()
+            )
+            monsters = something_from_csv(args.monster_groups, Group, list())
+            base_xp += get_total_xp(monsters, monster_manual)
+        except Exception as e:
+            print("Exception:  ", e)
+            sys.exit(1)
+
+    return base_xp
 
 
 def get_total_xp(groups, monsters):
@@ -203,7 +210,13 @@ if __name__ == "__main__":
         help="Monster Manual file",
     )
     parser.add_argument(
-        "-f", "--file", default="adventure_party.csv", help="Intake file"
+        "-M",
+        "--monsters",
+        action="store_true",
+        help="If monster files are relevant.",
+    )
+    parser.add_argument(
+        "-f", "--file", default="data/adventure_party.csv", help="Intake file"
     )
     parser.add_argument(
         "-t", "--tax_rate", default=0.0, type=float, help="Percent Tax Rate"
@@ -212,23 +225,9 @@ if __name__ == "__main__":
 
     try:
         party = something_from_csv(args.file, Member, dict())
-    except Exception as e:
-        print("Exception:  ", e)
+    except FileNotFoundError:
+        print("Could not find {}, exiting.".format(args.file))
         sys.exit(1)
-
-    base_xp = 0
-    if os.path.exists(args.monster_manual) and os.path.exists(
-        args.monster_groups
-    ):
-        try:
-            monster_manual = something_from_csv(
-                args.monster_manual, Monster, dict()
-            )
-            monsters = something_from_csv(args.monster_groups, Group, list())
-            base_xp += get_total_xp(monsters, monster_manual)
-        except Exception as e:
-            print("Exception:  ", e)
-            sys.exit(1)
 
     treasure = Treasure(
         {
@@ -239,7 +238,11 @@ if __name__ == "__main__":
         }
     )
 
-    treasure.xp += base_xp
+    if args.monsters:
+        treasure.xp += get_monster_xp(
+            monster_manual=args.monster_manual,
+            monster_groups=args.monster_groups,
+        )
 
     total_shares = {"coin_shares": 0.0, "xp_shares": 0.0}
     for m in party.values():
@@ -266,5 +269,3 @@ if __name__ == "__main__":
     for m in party.values():
         m.give_shares(shares)
         print(m)
-
-    usage()

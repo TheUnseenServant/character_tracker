@@ -18,11 +18,11 @@ class TestShares(unittest.TestCase):
         self.test_dir = tempfile.TemporaryDirectory()
         self.data_file = os.path.join(self.test_dir.name, "data.csv")
         with open(self.data_file, "w") as f:
-            f.write("name;coin;xp\n")
-            f.write("pc1;1;1\n")
-            f.write("pc2;1;1\n")
-            f.write("npc1;0.5;0.5\n")
-            f.write("npc2;0;0.5\n")
+            f.write("key;name;coin;xp\n")
+            f.write("pc1;PC 1;1;1\n")
+            f.write("pc2;PC 2;1;1\n")
+            f.write("npc1;NPC 1;0.5;0.5\n")
+            f.write("npc2;NPC 2;0;0.5\n")
 
         self.data = {
             "pc1": [1, 1],
@@ -36,13 +36,15 @@ class TestShares(unittest.TestCase):
 
     def test_bad_file_raises_error(self):
         with self.assertRaises(FileNotFoundError):
-            a_s.members_from_csv("fred.txt")
-        self.assertRaises(FileNotFoundError, a_s.members_from_csv, "fred.txt")
+            a_s.something_from_csv("fred.txt", a_s.Member, dict())
+        self.assertRaises(
+            FileNotFoundError, a_s.something_from_csv, "fred.txt", a_s.Member
+        )
 
-    def test_members_from_csv(self):
-        members = a_s.members_from_csv(self.data_file)
+    def test_something_from_csv(self):
+        members = a_s.something_from_csv(self.data_file, a_s.Member, dict())
         self.assertEqual(len(members), 4)
-        self.assertEqual(members[0].name, "pc1")
+        self.assertEqual(members["pc1"].name, "PC 1")
 
     def test_share_results(self):
         t = a_s.Treasure({"coin": 100, "xp": 100, "mis": 100})
