@@ -27,15 +27,14 @@ class Group:
 class Member:
     def __init__(self, data={}):
         self.name = data.get("name", "")
-        self.coin_shares = float(data.get("coin_shares", 0.0))
-        self.xp_shares = float(data.get("xp_shares", 0))
-        self.mis_shares = self.coin_shares
+        self.shares = float(data.get("shares", 0.0))
+        self.mis_shares = self.shares
 
     def give_shares(self, share):
         """Assigns coin and XP based on one share times share rate."""
         self.mis = int(share.mis * self.mis_shares)
-        self.coins = int(share.coin * self.coin_shares)
-        self.xps = int(share.xp * self.xp_shares)
+        self.coins = int(share.coin * self.shares)
+        self.xps = int(share.xp * self.shares)
 
     def __str__(self):
         return "{} gets {} XP and {} coin.".format(
@@ -75,9 +74,8 @@ class Treasure:
 
 class Shares:
     def __init__(self, data={}):
-        self.coin_shares = data.get("coin_shares", 0)
-        self.xp_shares = data.get("xp_shares", 0)
-        self.mis_shares = self.coin_shares
+        self.shares = data.get("shares", 0)
+        self.mis_shares = self.shares
 
     def one_share(self, treasure):
         """Returns how much a share of coin and XP is."""
@@ -85,16 +83,14 @@ class Shares:
         self.xp = 0
         self.mis = 0
         if treasure.coin > 0:
-            self.coin = treasure.coin // self.coin_shares
+            self.coin = treasure.coin // self.shares
         if treasure.xp > 0:
-            self.xp = treasure.xp // self.xp_shares
+            self.xp = treasure.xp // self.shares
         if treasure.mis > 0:
             self.mis = treasure.mis // self.mis_shares
 
     def __str__(self):
-        return "{} coin  {} xp  {} mis shares".format(
-            self.coin_shares, self.xp_shares, self.mis_shares
-        )
+        return "{} shares".format(self.shares)
 
 
 def usage():
@@ -108,8 +104,7 @@ def usage():
         -f data/watchfort2.csv    # as an example
 
         The format is:
-        key;name;career;xp;coin_shares;xp_shares
-        'career' and 'xp' are not currently used.
+        key;name;career;shares
 
     data/monster_manual.csv has the monster data in the format:
       key;name;base_xp;hp_xp
@@ -252,10 +247,9 @@ if __name__ == "__main__":
             monster_groups=args.monster_groups,
         )
 
-    total_shares = {"coin_shares": 0.0, "xp_shares": 0.0}
+    total_shares = {"shares": 0.0}
     for m in party.values():
-        total_shares["coin_shares"] += m.coin_shares
-        total_shares["xp_shares"] += m.xp_shares
+        total_shares["shares"] += m.shares
 
     shares = Shares(total_shares)
 
@@ -267,11 +261,8 @@ if __name__ == "__main__":
     print("  {} total coin".format(treasure.coin + treasure.mis))
     print("")
 
-    print(
-        "There are {} coin and {} xp shares.\n".format(
-            total_shares["coin_shares"], total_shares["xp_shares"]
-        )
-    )
+    print( "There are {} shares.\n".format(total_shares["shares"]))
+
     shares.one_share(treasure)
 
     for m in party.values():

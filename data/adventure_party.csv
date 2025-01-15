@@ -1,23 +1,37 @@
-key;name;career;xp;coin_shares;xp_shares
-jiho;Jing Ji-ho;fighter;8000;1;1
-siwoo;Jing Si-woo;fighter;4000;0.5;0.5
-rolton;Sir Rolton of Jing;fighter;4000;0.5;0.5
-drotik;Lord Drotik;fighter;4000;0.5;0.5
-hemia;The Lady Hemia, Priestess;cleric;4000;0.5;0.5
-morphin;Lord Morphin;fighter;2000;0.5;0.5
-verdugo;Verdugo;fighter;2000;0.5;0.5
-gar;Gar;fighter;2000;0.5;0.5
-darfilla;The Wizardess Darfilla;mage;0;0.5;0.5
+key;name;career;shares
+jiho;Ji-ho;fighter;1
+siwoo;Si-woo;fighter;0.5
+rolton;Rolton;fighter;0.5
+drotik;Drotik;fighter;0.5
+hemia;Hemia;cleric;0.5
+morphin;Morphin;fighter;0.5
+gar;Gar;fighter;0.5
+darfilla;Darfilla;mage;0.5
+winifred;Winifred;rogue;0.5
+erikir;Erikir;ranger;0.5
+toth;Toth;ranger;0.5
+jonas;Jonas;ranger;0.5
+laszlo;Laszlo;ranger;0.5
+malte;Malte;venturer;0.5
+maja;Maja;unk;0.5
 
-bofur;Bofur;fighter;8000;1;1
-balin;Balin;cleric;2000;0.5;0.5
-dwalin;Dwalin;fighter;2000;0.5;0.5
+morwen;Morwen;mage;1
+macnav;Macnav;fighter;0.5
+cuivne;Cuivne;mage;0.5
+morrig;Morrig;mage;0.5
+hraefi;Hraefi;fighter;0.5
+baeyik;Baeyik;rogue;0.5
 
-morwen;Morwen;mage;8000;1;1
-macnav;Macnav;fighter;2000;0.5;0.5
-cuivne;Cuivne;mage;0;0.5;0.5
+dramm;Dramm;paladin;1
+barnaby;Barnaby;bard;0.5
 
-gurav;Thane Gurav Graka;fighter;4000;0;0.5
-borav;Borav Kograk;cleric;2000;0;0.5
-hodlar;Hodlar Morrgrak;rogue;2000;0;0.5
-korev;Korev Graker;fighter;2000;0;0.5
+earnan;Earnan;spellthief;1
+
+maggara;Maggara;fighter;1
+beletreda;Beletreda;fighter;0.5
+bardin;Bardin;rogue;0.5
+grimnir;Grimnir;fighter;0.5
+gurav;Gurav;fighter;0.5
+borav;Borav Kograk;cleric;0.5
+hodlar;Hodlar Morrgrak;rogue;0.5
+korev;Korev Graker;fighter;0.5
