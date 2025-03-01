@@ -62,6 +62,7 @@ class Treasure:
         self.coin = data.get("coin", 0)
         self.coin_xp = self.coin
         self.xp = data.get("xp", 0)
+        self.base_xp = data.get("xp", 0)
         self.mis = data.get("mis", 0)
         self.tax_rate = data.get("tax_rate", 0.0)
         self.run_changes()
@@ -69,6 +70,8 @@ class Treasure:
     def run_changes(self):
         self.xp += self.coin_xp
         self.tax = self.coin * (self.tax_rate / 100)
+        self.coin = int(self.coin)
+        self.tax = int(self.tax)
         self.coin -= self.tax
 
 
@@ -125,7 +128,7 @@ def usage():
 
 
 def something_from_csv(filename, klass, return_object=dict()):
-    """Returns a dict of objects from a csv file."""
+    """Returns a dict or list of objects from a csv file."""
 
     something = return_object
 
@@ -221,6 +224,25 @@ def parse_args(args):
 
     return parser.parse_args(args)
 
+def share_header(shares, treasure):
+    """ Returns the share header as a string. """
+
+    line = "\nTotals:"
+
+    if treasure.tax_rate > 0:
+        line += "\n  {:.2f} Tax".format(treasure.tax)
+        line += "\n  {} coin after taxes".format(treasure.coin)
+    else:
+        line += "\n  {} coin".format(treasure.coin)
+    line += "\n  {} base XP".format(treasure.base_xp)
+    line += "\n  {} base XP + total coin XP".format(treasure.xp)
+    line += "\n  {} total coin".format(treasure.coin + treasure.mis)
+    line += "\n"
+    line += "There are {} shares.\n".format(shares.shares)
+    line += "\n"
+
+    return line
+
 
 if __name__ == "__main__":
 
@@ -252,17 +274,7 @@ if __name__ == "__main__":
         total_shares["shares"] += m.shares
 
     shares = Shares(total_shares)
-
-    print("Totals: ")
-    print("  {:.2f} tax".format(treasure.tax))
-    print("  {} coin after taxes".format(treasure.coin))
-    print("  {} base XP".format(args.xp))
-    print("  {} base XP + (pre-tax) coin XP".format(treasure.xp))
-    print("  {} total coin".format(treasure.coin + treasure.mis))
-    print("")
-
-    print( "There are {} shares.\n".format(total_shares["shares"]))
-
+    print(share_header(shares, treasure))
     shares.one_share(treasure)
 
     for m in party.values():

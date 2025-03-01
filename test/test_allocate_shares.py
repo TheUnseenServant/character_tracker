@@ -72,7 +72,17 @@ class TestShares(unittest.TestCase):
         t = a_s.Treasure(data)
         self.assertEqual(t.tax, 5)
         self.assertEqual(t.xp, 200)
+        self.assertEqual(t.base_xp, 100)
         self.assertEqual(t.coin, 95)
+        self.assertEqual(t.mis, 100)
+
+    def test_treasure_high_tax(self):
+        data = {"coin": 100, "xp": 100, "mis": 100, "tax_rate": 50}
+        t = a_s.Treasure(data)
+        self.assertEqual(t.tax, 50)
+        self.assertEqual(t.xp, 200)
+        self.assertEqual(t.base_xp, 100)
+        self.assertEqual(t.coin, 50)
         self.assertEqual(t.mis, 100)
 
     def test_treasure_no_tax(self):
@@ -90,3 +100,22 @@ class TestShares(unittest.TestCase):
         self.assertEqual(s.coin, 33)
         self.assertEqual(s.mis, 33)
         self.assertEqual(s.xp, 66)
+
+
+    def test_share_header_with_tax(self):
+        treasure = a_s.Treasure({"coin": 100, "xp": 100, "mis": 100, "tax_rate": 0.5})
+        shares = a_s.Shares({"shares": 3})
+        result = a_s.share_header(shares, treasure)
+        self.assertIn("Tax", result)
+        self.assertIn("tax", result)
+
+    def test_share_header_without_tax(self):
+        treasure = a_s.Treasure({"coin": 100, "xp": 100, "mis": 100})
+        shares = a_s.Shares({"shares": 3})
+        result = a_s.share_header(shares, treasure)
+        self.assertNotIn("Tax", result)
+        self.assertNotIn("tax", result)
+        self.assertIn("base XP", result)
+        self.assertIn("base XP +", result)
+        self.assertIn("total coin", result)
+
