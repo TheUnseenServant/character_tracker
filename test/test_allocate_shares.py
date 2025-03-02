@@ -30,6 +30,7 @@ class TestShares(unittest.TestCase):
             "npc1": [0.5],
             "npc2": [0],
         }
+        self.party = a_s.something_from_csv(self.data_file, a_s.Member, dict())
 
     def tearDown(self):
         self.test_dir.cleanup()
@@ -118,4 +119,9 @@ class TestShares(unittest.TestCase):
         self.assertIn("base XP", result)
         self.assertIn("base XP +", result)
         self.assertIn("total coin", result)
+
+    def test_keys(self):
+        result = a_s.keys(self.party)
+        self.assertIn("pc1", result)
+        self.assertEqual("PC 1", result["pc1"])
 

@@ -186,6 +186,14 @@ def get_total_xp(groups, monsters):
     return total_xp
 
 
+def keys(data):
+    """ Get the key and name of each object in the dict. """
+    new_data = dict()
+    for k in data.keys():
+        new_data[k] = data[k].name
+    return new_data
+    
+
 def parse_args(args):
     """Parse args and return a parser object with args as attributes."""
 
@@ -217,6 +225,9 @@ def parse_args(args):
     )
     parser.add_argument(
         "-f", "--file", default="data/adventure_party.csv", help="Intake file"
+    )
+    parser.add_argument(
+        "-k", "--keys", action="store_true"
     )
     parser.add_argument(
         "-t", "--tax_rate", default=0.0, type=float, help="Percent Tax Rate"
@@ -253,6 +264,12 @@ if __name__ == "__main__":
     except FileNotFoundError:
         print("Could not find {}, exiting.".format(args.file))
         sys.exit(1)
+
+    if args.keys:
+        key_data = keys(party)
+        for key, name in key_data.items():
+            print("{:<8}: {}".format(key, name))
+        sys.exit(0)
 
     treasure = Treasure(
         {

@@ -6,8 +6,8 @@ drotik;Drotik;fighter;0.5
 hemia;Hemia;cleric;0.5
 morphin;Morphin;fighter;0.5
 gar;Gar;fighter;0.5
-darfilla;Darfilla;mage;0.5
-winifred;Winifred;rogue;0.5
+darf;Darfilla;mage;0.5
+win;Winifred;rogue;0.5
 erikir;Erikir;ranger;0.5
 toth;Toth;ranger;0.5
 jonas;Jonas;ranger;0.5
@@ -28,7 +28,7 @@ barnaby;Barnaby;bard;0.5
 earnan;Earnan;spellthief;1
 
 maggara;Maggara;fighter;1
-beletreda;Beletreda;fighter;0.5
+bele;Beletreda;fighter;0.5
 bardin;Bardin;rogue;0.5
 grimnir;Grimnir;fighter;0.5
 gurav;Gurav;fighter;0.5
