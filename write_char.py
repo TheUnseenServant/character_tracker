@@ -48,7 +48,25 @@ career_data["spellthief"] = {
     "sd": "0,1,1,2,2,3,3,4,4,5,5",
     "sp": "0,2,3,5,6,8,9,11,12,14,15",
 }
+career_data["unk"] = {
+    "career":   "unknown",
+    "hd": "1,1,1,1,1,1,1,1,1,1,1",
+    "sd": "",
+    "sp": "",
+}
 
+subcareers = {
+    "ranger":       "fighter",
+    "barbarian":    "fighter",
+    "paladin":      "fighter",
+    "venturer":     "rogue",
+    "sorcerer":     "mage",
+    "bard":         "cleric",
+    "druid":        "cleric",
+    "warlock":      "cleric",
+}
+
+spellcaster_careers = ["mage", "cleric", "spellthief", "swordmage"]
 
 class Character:
     """
@@ -132,14 +150,14 @@ class Career:
 
     def get_sd(self, level):
         """Returns the spell dice (sd) based on the level and career."""
-        if self.career == "fighter" or self.career == "rogue":
+        if self.career not in spellcaster_careers:
             return 0
         else:
             return int(self.sd[level])
 
     def get_sp(self, level):
         """Returns the spell dice (sd) based on the level and career."""
-        if self.career == "fighter" or self.career == "rogue":
+        if self.career not in spellcaster_careers:
             return 0
         else:
             return int(self.sp[level])
@@ -181,7 +199,11 @@ class CareerInfo:
         Spell Points (sp) for a specific career and xp amount.
         """
         career = career.lower()
+        if career in subcareers:
+            career = subcareers[career]
+
         if career not in self.careers:
+            print("The career {} is not known.".format(career)) 
             print("Sorry, you must use one of the established meta-careers:")
             output_line = "  "
             for c in self.careers.keys():

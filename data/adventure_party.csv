@@ -1,37 +1,37 @@
-key;name;career;shares
-jiho;Ji-ho;fighter;1
-siwoo;Si-woo;fighter;0.5
-rolton;Rolton;fighter;0.5
-drotik;Drotik;fighter;0.5
-hemia;Hemia;cleric;0.5
-morphin;Morphin;fighter;0.5
-gar;Gar;fighter;0.5
-darf;Darfilla;mage;0.5
-win;Winifred;rogue;0.5
-erikir;Erikir;ranger;0.5
-toth;Toth;ranger;0.5
-jonas;Jonas;ranger;0.5
-laszlo;Laszlo;ranger;0.5
-malte;Malte;venturer;0.5
-maja;Maja;unk;0.5
+key;name;career;shares;xp
+jiho;Ji-ho;fighter;1;10000
+siwoo;Si-woo;fighter;0.5;0
+rolton;Rolton;fighter;0.5;0
+drotik;Drotik;fighter;0.5;0
+hemia;Hemia;cleric;0.5;0
+morphin;Morphin;fighter;0.5;0
+gar;Gar;fighter;0.5;0
+darf;Darfilla;mage;0.5;0
+win;Winifred;rogue;0.5;0
+erikir;Erikir;ranger;0.5;0
+toth;Toth;ranger;0.5;0
+jonas;Jonas;ranger;0.5;0
+laszlo;Laszlo;ranger;0.5;0
+malte;Malte;venturer;0.5;0
+maja;Maja;unk;0.5;0
 
-morwen;Morwen;mage;1
-macnav;Macnav;fighter;0.5
-cuivne;Cuivne;mage;0.5
-morrig;Morrig;mage;0.5
-hraefi;Hraefi;fighter;0.5
-baeyik;Baeyik;rogue;0.5
+morwen;Morwen;mage;1;0
+macnav;Macnav;fighter;0.5;0
+cuivne;Cuivne;mage;0.5;0
+morrig;Morrig;mage;0.5;0
+hraefi;Hraefi;fighter;0.5;0
+baeyik;Baeyik;rogue;0.5;0
 
-dramm;Dramm;paladin;1
-barnaby;Barnaby;bard;0.5
+dramm;Dramm;paladin;1;0
+barnaby;Barnaby;bard;0.5;0
 
-earnan;Earnan;spellthief;1
+earnan;Earnan;spellthief;1;0
 
-maggara;Maggara;fighter;1
-bele;Beletreda;fighter;0.5
-bardin;Bardin;rogue;0.5
-grimnir;Grimnir;fighter;0.5
-gurav;Gurav;fighter;0.5
-borav;Borav Kograk;cleric;0.5
-hodlar;Hodlar Morrgrak;rogue;0.5
-korev;Korev Graker;fighter;0.5
+maggara;Maggara;fighter;1;0
+bele;Beletreda;fighter;0.5;0
+bardin;Bardin;rogue;0.5;0
+grimnir;Grimnir;fighter;0.5;0
+gurav;Gurav;fighter;0.5;0
+borav;Borav Kograk;cleric;0.5;0
+hodlar;Hodlar Morrgrak;rogue;0.5;0
+korev;Korev Graker;fighter;0.5;0
