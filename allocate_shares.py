@@ -187,12 +187,12 @@ def get_total_xp(groups, monsters):
 
 
 def keys(data):
-    """ Get the key and name of each object in the dict. """
+    """Get the key and name of each object in the dict."""
     new_data = dict()
     for k in data.keys():
         new_data[k] = data[k].name
     return new_data
-    
+
 
 def parse_args(args):
     """Parse args and return a parser object with args as attributes."""
@@ -226,17 +226,16 @@ def parse_args(args):
     parser.add_argument(
         "-f", "--file", default="data/adventure_party.csv", help="Intake file"
     )
-    parser.add_argument(
-        "-k", "--keys", action="store_true"
-    )
+    parser.add_argument("-k", "--keys", action="store_true")
     parser.add_argument(
         "-t", "--tax_rate", default=0.0, type=float, help="Percent Tax Rate"
     )
 
     return parser.parse_args(args)
 
+
 def share_header(shares, treasure):
-    """ Returns the share header as a string. """
+    """Returns the share header as a string."""
 
     line = "\nTotals:"
 

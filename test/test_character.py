@@ -6,8 +6,6 @@
 # author  :  Leam Hall
 # desc    :  Tests of the character and character builder objects
 
-import os.path
-import tempfile
 import unittest
 
 import write_char as wc
@@ -27,9 +25,9 @@ class TestCharacter(unittest.TestCase):
         self.assertEqual(self.char_1.key, "jiho")
         self.assertEqual(self.char_1.name, "Jing Ji-ho")
         self.assertEqual(self.char_1.career, "Fighter")
-        
+
     def test_update_character(self):
-        empty_data = {"level": 1, "hd":1, "hp":1, "sd":0, "sp":0}
+        empty_data = {"level": 1, "hd": 1, "hp": 1, "sd": 0, "sp": 0}
         self.char_2 = wc.update_character(self.char_2, empty_data)
         self.assertTrue(hasattr(self.char_2, "level"))
         self.assertEqual(self.char_2.level, 1)
@@ -68,4 +66,3 @@ class TestCharacterBuilder(unittest.TestCase):
         self.assertEqual(jjh.career, "Fighter")
         self.assertEqual(jjh.xp, 7186)
 """
-

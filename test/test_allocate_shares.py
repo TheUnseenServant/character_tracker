@@ -102,9 +102,10 @@ class TestShares(unittest.TestCase):
         self.assertEqual(s.mis, 33)
         self.assertEqual(s.xp, 66)
 
-
     def test_share_header_with_tax(self):
-        treasure = a_s.Treasure({"coin": 100, "xp": 100, "mis": 100, "tax_rate": 0.5})
+        treasure = a_s.Treasure(
+            {"coin": 100, "xp": 100, "mis": 100, "tax_rate": 0.5}
+        )
         shares = a_s.Shares({"shares": 3})
         result = a_s.share_header(shares, treasure)
         self.assertIn("Tax", result)
@@ -124,4 +125,3 @@ class TestShares(unittest.TestCase):
         result = a_s.keys(self.party)
         self.assertIn("pc1", result)
         self.assertEqual("PC 1", result["pc1"])
-

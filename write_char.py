@@ -50,24 +50,25 @@ career_data["spellthief"] = {
     "sp": "0,2,3,5,6,8,9,11,12,14,15",
 }
 career_data["unk"] = {
-    "career":   "unknown",
+    "career": "unknown",
     "hd": "1,1,1,1,1,1,1,1,1,1,1",
     "sd": "",
     "sp": "",
 }
 
 subcareers = {
-    "ranger":       "fighter",
-    "barbarian":    "fighter",
-    "paladin":      "fighter",
-    "venturer":     "rogue",
-    "sorcerer":     "mage",
-    "bard":         "cleric",
-    "druid":        "cleric",
-    "warlock":      "cleric",
+    "ranger": "fighter",
+    "barbarian": "fighter",
+    "paladin": "fighter",
+    "venturer": "rogue",
+    "sorcerer": "mage",
+    "bard": "cleric",
+    "druid": "cleric",
+    "warlock": "cleric",
 }
 
 spellcaster_careers = ["mage", "cleric", "spellthief", "swordmage"]
+
 
 class Character:
     """
@@ -97,7 +98,7 @@ class Character:
         self.silver = data.get("silver", 0)
 
 
-#class CharacterBuilder:
+# class CharacterBuilder:
 #    """
 #    Takes the data file and returns a collection of the character objects.
 #    """
@@ -122,8 +123,9 @@ class Character:
 #
 #        return characters
 
+
 def build_party(character_file):
-    """ Takes the base character file and starts the characters. """
+    """Takes the base character file and starts the characters."""
     if not character_file:
         print("Must have a data file to create the characters.")
         sys.exit(1)
@@ -134,21 +136,23 @@ def build_party(character_file):
             for line in reader:
                 c = Character(line)
                 characters[c.key] = c
-                #career_info = ci.get_info(c.career, c.xp)
-                #c.set_info(career_info)
+                # career_info = ci.get_info(c.career, c.xp)
+                # c.set_info(career_info)
 
     except FileNotFoundError:
         print("Exception: No such file: {}".format(character_file))
         sys.exit(1)
     return characters
-        
+
+
 def key_to_string(string):
-    """ Makes the first item in the string the key, and the rest data. """
-    line_data = string.split(':')
+    """Makes the first item in the string the key, and the rest data."""
+    line_data = string.split(":")
     key = line_data[0].strip()
     line_data[-1] = line_data[-1].strip()
     data = " ".join(line_data[1:])
     return key, data
+
 
 def data_from_file(character_file):
     """
@@ -162,6 +166,7 @@ def data_from_file(character_file):
             data[key.lower()] = data_string
     return data
 
+
 def update_character(character, update_data):
     """
     Takes a data dict and returns an update character object.
@@ -169,6 +174,7 @@ def update_character(character, update_data):
     for key, value in update_data.items():
         setattr(character, key, value)
     return character
+
 
 class Career:
     """
@@ -261,7 +267,7 @@ class CareerInfo:
             career = subcareers[career]
 
         if career not in self.careers:
-            print("The career {} is not known.".format(career)) 
+            print("The career {} is not known.".format(career))
             print("Sorry, you must use one of the established meta-careers:")
             output_line = "  "
             for c in self.careers.keys():
@@ -277,9 +283,10 @@ def parse_args():
         "-c", "--chardir", default="characters", help="Character directory"
     )
     parser.add_argument(
-        "-f", "--file", 
-        default=os.path.join("data","adventure_party.csv"), 
-        help="Intake file"
+        "-f",
+        "--file",
+        default=os.path.join("data", "adventure_party.csv"),
+        help="Intake file",
     )
     parser.add_argument(
         "-o", "--output", default="output", help="Output directory"
@@ -306,26 +313,26 @@ def format_character(character):
     template += "Armor: {}\n".format(character.armor)
     template += "Gear: {}\n".format(character.gear)
     template += "Silver: {}\n".format(character.silver)
-    
+
     return template.format(
-            character.name.title(),
-            character.career.title(),
-            character.level,
-            character.hd,
-            character.hp,
-            character.sd,
-            character.sp,
-            character.alignment.title(),
-            character.aac,
-            character.enc,
-            character.stats,
-            character.feats,
-            character.skills,
-            character.weapons,
-            character.armor,
-            character.gear,
-            character.silver,
-        )
+        character.name.title(),
+        character.career.title(),
+        character.level,
+        character.hd,
+        character.hp,
+        character.sd,
+        character.sp,
+        character.alignment.title(),
+        character.aac,
+        character.enc,
+        character.stats,
+        character.feats,
+        character.skills,
+        character.weapons,
+        character.armor,
+        character.gear,
+        character.silver,
+    )
 
 
 if __name__ == "__main__":
@@ -341,7 +348,7 @@ if __name__ == "__main__":
 
     output_text = os.path.join(output_dir, "characters.txt")
 
-    empty_data = {"level": 1, "hd":1, "hp":1, "sd":0, "sp":0}
+    empty_data = {"level": 1, "hd": 1, "hp": 1, "sd": 0, "sp": 0}
 
     characters = build_party(args.file)
     with open(output_text, "w") as text_out:
@@ -356,5 +363,3 @@ if __name__ == "__main__":
             else:
                 character = update_character(character, empty_data)
             text_out.write(format_character(character))
-
-
