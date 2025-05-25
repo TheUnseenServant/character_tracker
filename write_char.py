@@ -8,6 +8,7 @@
 
 import argparse
 import csv
+import os
 import sys
 
 
@@ -77,40 +78,97 @@ class Character:
         self.key = data.get("key", "")
         self.name = data.get("name", "")
         self.career = data.get("career", "")
-        self.xp = int(data.get("xp", 0))
+        self.level = data.get("level", 0)
+        self.hd = data.get("hd", 1)
+        self.hp = data.get("hp", 1)
+        self.sd = data.get("sd", 0)
+        self.sp = data.get("sp", 0)
+        self.xp = data.get("xp", 0)
+        self.hench_to = data.get("hench_to", "")
+        self.alignment = data.get("alignment", "")
+        self.aac = data.get("aac", "")
+        self.enc = data.get("enc", "")
+        self.stats = data.get("stats", "")
+        self.feats = data.get("feats", "")
+        self.skills = data.get("skills", "")
+        self.weapons = data.get("weapons", "")
+        self.armor = data.get("armor", "")
+        self.gear = data.get("gear", "")
+        self.silver = data.get("silver", 0)
 
-    def set_info(self, ci_info):
-        self.level = ci_info["level"]
-        self.hd = ci_info["hd"]
-        self.sd = ci_info["sd"]
-        self.sp = ci_info["sp"]
 
+#class CharacterBuilder:
+#    """
+#    Takes the data file and returns a collection of the character objects.
+#    """
+#
+#    def build(data_file, ci):
+#        if not data_file:
+#            print("Must have a data file to create the characters.")
+#            sys.exit(1)
+#        try:
+#            characters = {}
+#            with open(data_file, "r", newline="") as f:
+#                reader = csv.DictReader(f, delimiter=";")
+#                for line in reader:
+#                    c = Character(line)
+#                    characters[c.key] = c
+#                    career_info = ci.get_info(c.career, c.xp)
+#                    c.set_info(career_info)
+#
+#        except FileNotFoundError:
+#            print("Exception: No such file: {}".format(data_file))
+#            sys.exit(1)
+#
+#        return characters
 
-class CharacterBuilder:
+def build_party(character_file):
+    """ Takes the base character file and starts the characters. """
+    if not character_file:
+        print("Must have a data file to create the characters.")
+        sys.exit(1)
+    try:
+        characters = {}
+        with open(character_file, "r", newline="") as f:
+            reader = csv.DictReader(f, delimiter=";")
+            for line in reader:
+                c = Character(line)
+                characters[c.key] = c
+                #career_info = ci.get_info(c.career, c.xp)
+                #c.set_info(career_info)
+
+    except FileNotFoundError:
+        print("Exception: No such file: {}".format(character_file))
+        sys.exit(1)
+    return characters
+        
+def key_to_string(string):
+    """ Makes the first item in the string the key, and the rest data. """
+    line_data = string.split(':')
+    key = line_data[0].strip()
+    line_data[-1] = line_data[-1].strip()
+    data = " ".join(line_data[1:])
+    return key, data
+
+def data_from_file(character_file):
     """
-    Takes the data file and returns a collection of the character objects.
+    Takes a data file and returns a character update dict.
     """
+    data = dict()
+    with open(character_file, "r") as in_f:
+        data_lines = in_f.readlines()
+        for line in data_lines:
+            key, data_string = key_to_string(line)
+            data[key.lower()] = data_string
+    return data
 
-    def build(data_file, ci):
-        if not data_file:
-            print("Must have a data file to create the characters.")
-            sys.exit(1)
-        try:
-            characters = {}
-            with open(data_file, "r", newline="") as f:
-                reader = csv.DictReader(f, delimiter=";")
-                for line in reader:
-                    c = Character(line)
-                    characters[c.key] = c
-                    career_info = ci.get_info(c.career, c.xp)
-                    c.set_info(career_info)
-
-        except FileNotFoundError:
-            print("Exception: No such file: {}".format(data_file))
-            sys.exit(1)
-
-        return characters
-
+def update_character(character, update_data):
+    """
+    Takes a data dict and returns an update character object.
+    """
+    for key, value in update_data.items():
+        setattr(character, key, value)
+    return character
 
 class Career:
     """
@@ -216,32 +274,87 @@ class CareerInfo:
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        "-f", "--file", default="adventure_party.csv", help="Intake file"
+        "-c", "--chardir", default="characters", help="Character directory"
+    )
+    parser.add_argument(
+        "-f", "--file", 
+        default=os.path.join("data","adventure_party.csv"), 
+        help="Intake file"
+    )
+    parser.add_argument(
+        "-o", "--output", default="output", help="Output directory"
     )
     args = parser.parse_args()
 
     return args
 
 
-def write_character(character):
+def format_character(character):
     template = "{}\n"
-    template += "{} Level {} (hd {}/sd {}/sp {})\n"
-    print(
-        template.format(
+    template += "{} {} (HD {} HP {}"
+    if hasattr(character, "sd"):
+        template += "/sd {}/sp {})\n"
+    else:
+        template += ")\n"
+    template += "Aligment: {}\n".format(character.alignment)
+    template += "A&AC: {}\n".format(character.aac)
+    template += "Encumberance: {}\n".format(character.enc)
+    template += "Stats: {}\n".format(character.stats)
+    template += "Feats: {}\n".format(character.feats)
+    template += "Skills: {}\n".format(character.skills)
+    template += "Weapons: {}\n".format(character.weapons)
+    template += "Armor: {}\n".format(character.armor)
+    template += "Gear: {}\n".format(character.gear)
+    template += "Silver: {}\n".format(character.silver)
+    
+    return template.format(
             character.name.title(),
             character.career.title(),
             character.level,
             character.hd,
+            character.hp,
             character.sd,
             character.sp,
-        ),
-        "\n",
-    )
+            character.alignment.title(),
+            character.aac,
+            character.enc,
+            character.stats,
+            character.feats,
+            character.skills,
+            character.weapons,
+            character.armor,
+            character.gear,
+            character.silver,
+        )
 
 
 if __name__ == "__main__":
+    data_dir = os.path.join(os.getcwd(), "data")
     args = parse_args()
-    career_info = CareerInfo(career_data)
-    characters = CharacterBuilder.build(args.file, career_info)
-    for character in characters.values():
-        write_character(character)
+
+    output_dir = os.path.join(os.getcwd(), args.output)
+    if os.path.exists(args.output) and not os.path.isdir(args.output):
+        print("{} exists but is not a directory.".format(args.output))
+        sys.exit(1)
+    if not os.path.exists(args.output):
+        os.makedirs(args.output)
+
+    output_text = os.path.join(output_dir, "characters.txt")
+
+    empty_data = {"level": 1, "hd":1, "hp":1, "sd":0, "sp":0}
+
+    characters = build_party(args.file)
+    with open(output_text, "w") as text_out:
+        for key, character in characters.items():
+            print(key)
+            character_filename = "{}.txt".format(key)
+            character_filepath = os.path.join(args.chardir, character_filename)
+            if os.path.exists(character_filepath):
+                update_data = data_from_file(character_filepath)
+                character = update_character(character, update_data)
+                print("{}  Level {}".format(character.name, character.level))
+            else:
+                character = update_character(character, empty_data)
+            text_out.write(format_character(character))
+
+

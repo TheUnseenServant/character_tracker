@@ -1,0 +1,18 @@
+name: Jing Ji-ho
+hench_to:
+career: Fighter
+alignment: Lawful
+level: 4 
+hd: 4
+hp: 5
+sd: 0
+sp: 0
+aac: W(w)/W(s) 
+enc: Moderate (7)
+stats: Charisma +1
+feats: Heroic Leader, Puissance (melee), Toughness
+skills: Captain
+weapons: sword, dagger, hatchet, spear, longbow, arrows, 11 magical selfbow arrows
+armor: Maille hauberk with coif and sallet
+gear: adventuring pack (basic), traveling clothes, quiver, rations (1wk), 2 torches, simple signet ring (made of bronze), a Dwarven honor silver ring (worth a shilling)
+silver:

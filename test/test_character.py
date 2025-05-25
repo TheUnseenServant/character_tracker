@@ -21,13 +21,23 @@ class TestCharacter(unittest.TestCase):
             "career": "Fighter",
         }
         self.char_1 = wc.Character(char_1_data)
+        self.char_2 = wc.Character(char_1_data)
 
     def test_character(self):
         self.assertEqual(self.char_1.key, "jiho")
         self.assertEqual(self.char_1.name, "Jing Ji-ho")
         self.assertEqual(self.char_1.career, "Fighter")
+        
+    def test_update_character(self):
+        empty_data = {"level": 1, "hd":1, "hp":1, "sd":0, "sp":0}
+        self.char_2 = wc.update_character(self.char_2, empty_data)
+        self.assertTrue(hasattr(self.char_2, "level"))
+        self.assertEqual(self.char_2.level, 1)
+        self.assertTrue(hasattr(self.char_2, "sp"))
+        self.assertEqual(self.char_2.sp, 0)
 
 
+"""
 class TestCharacterBuilder(unittest.TestCase):
     def setUp(self):
         self.test_dir = tempfile.TemporaryDirectory()
@@ -57,3 +67,5 @@ class TestCharacterBuilder(unittest.TestCase):
         self.assertEqual(jjh.name, "Jing Ji-ho")
         self.assertEqual(jjh.career, "Fighter")
         self.assertEqual(jjh.xp, 7186)
+"""
+
