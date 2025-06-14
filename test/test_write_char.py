@@ -10,6 +10,26 @@ import unittest
 
 import write_char as wc
 
+data = {
+    "name": "Smiles",
+    "title": "",
+    "career": "Rogue",
+    "level":    1,
+    "hd":       1,
+    "hp":       1,
+    "sd":       0,
+    "sp":       0,
+    "alignment": "Lawful",
+    "aac":      "",
+    "enc":      "",
+    "stats":    ["int +1"],
+    "feats":    ["Ciphers"],
+    "skills":   ["Spy"],
+    "weapons":  ["Short sword", "Self bow"],
+    "armor":    ["Leather", "Shield"],
+    "gear":     ["Rogue's tools"],
+    "silver":   5,
+}
 
 class TestCharacter(unittest.TestCase):
     def setUp(self):
@@ -33,6 +53,18 @@ class TestCharacter(unittest.TestCase):
         self.assertEqual(self.char_2.level, 1)
         self.assertTrue(hasattr(self.char_2, "sp"))
         self.assertEqual(self.char_2.sp, 0)
+
+class TestRenderTemplate(unittest.TestCase):
+
+    def setUp(self):
+
+        self.character = wc.Character(data)
+         
+    def test_render_template_base(self):
+        base_template = "${name} ${career}"
+        expected = "Smiles Rogue"
+        result = wc.render_template(base_template, self.character)
+        self.assertEqual(expected, result)
 
 
 """

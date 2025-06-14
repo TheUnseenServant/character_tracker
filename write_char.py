@@ -85,7 +85,7 @@ class Character:
         self.sd = data.get("sd", 0)
         self.sp = data.get("sp", 0)
         self.xp = data.get("xp", 0)
-        self.hench_to = data.get("hench_to", "")
+        self.leige = data.get("leige", "")
         self.alignment = data.get("alignment", "")
         self.aac = data.get("aac", "")
         self.enc = data.get("enc", "")
@@ -334,6 +334,13 @@ def format_character(character):
         character.silver,
     )
 
+def render_template(template, character):
+    """ Takes a template and a character and returns the formatted data."""
+    from string import Template
+    return Template(template).substitute(**character.__dict__)
+
+with open("templates/text.tmpl") as tt:
+    text_template = tt.read()
 
 if __name__ == "__main__":
     data_dir = os.path.join(os.getcwd(), "data")
@@ -346,20 +353,24 @@ if __name__ == "__main__":
     if not os.path.exists(args.output):
         os.makedirs(args.output)
 
-    output_text = os.path.join(output_dir, "characters.txt")
+    output_text = ""
+    output_text_file = os.path.join(output_dir, "characters.txt")
 
     empty_data = {"level": 1, "hd": 1, "hp": 1, "sd": 0, "sp": 0}
 
     characters = build_party(args.file)
-    with open(output_text, "w") as text_out:
-        for key, character in characters.items():
-            print(key)
-            character_filename = "{}.txt".format(key)
-            character_filepath = os.path.join(args.chardir, character_filename)
-            if os.path.exists(character_filepath):
-                update_data = data_from_file(character_filepath)
-                character = update_character(character, update_data)
-                print("{}  Level {}".format(character.name, character.level))
-            else:
-                character = update_character(character, empty_data)
-            text_out.write(format_character(character))
+    for key, character in characters.items():
+        print(key)
+        character_filename = "{}.txt".format(key)
+        character_filepath = os.path.join(args.chardir, character_filename)
+        if os.path.exists(character_filepath):
+            update_data = data_from_file(character_filepath)
+            character = update_character(character, update_data)
+        else:
+            character = update_character(character, empty_data)
+        output_text += render_template(text_template, character)
+        output_text += "\n\n"
+
+
+    with open(output_text_file, "w") as text_out_file:
+        text_out_file.write(output_text)
