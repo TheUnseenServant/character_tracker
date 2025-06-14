@@ -9,6 +9,7 @@
 import argparse
 import csv
 import os
+from string import Template
 import sys
 
 
@@ -114,8 +115,6 @@ def parse_args():
 
 def render_template(template, character):
     """Takes a template and a character and returns the formatted data."""
-    from string import Template
-
     return Template(template).substitute(**character.__dict__)
 
 
@@ -175,7 +174,6 @@ if __name__ == "__main__":
 
     characters = build_party(args.file)
     for key, character in characters.items():
-        print(key)
         character_filename = "{}.txt".format(key)
         character_filepath = os.path.join(args.chardir, character_filename)
         if os.path.exists(character_filepath):

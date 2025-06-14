@@ -1,0 +1,11 @@
+Malte Tilson  
+  1 (HD 1 HP 1 SD 0 SP 0) 
+A&AC: 
+Encumbrance: 
+Stats: []
+Feats: ['Insight']
+Skills: []
+Weapons: []
+Armor:  []
+Gear: []
+Silver: 0

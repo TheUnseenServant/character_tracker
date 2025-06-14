@@ -15,12 +15,12 @@ Si-woo
 fighter  0 (HD 1 HP 1 SD 0 SP 0) 
 A&AC: 
 Encumbrance: 
-Stats: 
-Feats: 
-Skills: 
-Weapons: 
-Armor:  
-Gear: 
+Stats: []
+Feats: ['Heroic Puissance', 'Leader', 'Heroic Prowess', 'Toughness']
+Skills: []
+Weapons: []
+Armor:  []
+Gear: []
 Silver: 0
 
 
@@ -28,12 +28,12 @@ Rolton
 fighter  0 (HD 1 HP 1 SD 0 SP 0) 
 A&AC: 
 Encumbrance: 
-Stats: 
-Feats: 
-Skills: 
-Weapons: 
-Armor:  
-Gear: 
+Stats: []
+Feats: ['Heroic Mounted Warrior', 'Pussiance', 'Prowess', 'Leader']
+Skills: []
+Weapons: []
+Armor:  []
+Gear: []
 Silver: 0
 
 
@@ -41,12 +41,12 @@ Drotik
 fighter  0 (HD 1 HP 1 SD 0 SP 0) 
 A&AC: 
 Encumbrance: 
-Stats: 
-Feats: 
-Skills: 
-Weapons: 
-Armor:  
-Gear: 
+Stats: []
+Feats: ['Pussiance', 'Toughness', 'Heroic Marshall', 'Leader']
+Skills: []
+Weapons: []
+Armor:  []
+Gear: []
 Silver: 0
 
 
@@ -54,12 +54,12 @@ Hemia
 cleric  0 (HD 1 HP 1 SD 0 SP 0) 
 A&AC: 
 Encumbrance: 
-Stats: 
-Feats: 
-Skills: 
-Weapons: 
-Armor:  
-Gear: 
+Stats: []
+Feats: ['Toughess', 'Leader', 'Divine Power (Master Spells(Bless))', 'Divine Power (Greater Channeling', 'Empowered Channeling)']
+Skills: []
+Weapons: []
+Armor:  []
+Gear: []
 Silver: 0
 
 
@@ -67,12 +67,12 @@ Morphin
 fighter  0 (HD 1 HP 1 SD 0 SP 0) 
 A&AC: 
 Encumbrance: 
-Stats: 
-Feats: 
-Skills: 
-Weapons: 
-Armor:  
-Gear: 
+Stats: []
+Feats: ['Toughness', 'Heroic Leader', 'Pussiance', 'Prowess']
+Skills: []
+Weapons: []
+Armor:  []
+Gear: []
 Silver: 0
 
 
@@ -80,12 +80,12 @@ Gar
 fighter  0 (HD 1 HP 1 SD 0 SP 0) 
 A&AC: 
 Encumbrance: 
-Stats: 
-Feats: 
-Skills: 
-Weapons: 
-Armor:  
-Gear: 
+Stats: []
+Feats: ['Prowess', 'Pussiance', 'Lucky (+1 all saves)', 'Insight']
+Skills: []
+Weapons: []
+Armor:  []
+Gear: []
 Silver: 0
 
 
@@ -119,12 +119,12 @@ Erikir
 ranger  0 (HD 1 HP 1 SD 0 SP 0) 
 A&AC: 
 Encumbrance: 
-Stats: 
-Feats: 
-Skills: 
-Weapons: 
-Armor:  
-Gear: 
+Stats: []
+Feats: ['Strider', 'Prowess', 'Endurance', 'Beastfriend']
+Skills: []
+Weapons: []
+Armor:  []
+Gear: []
 Silver: 0
 
 
@@ -132,12 +132,12 @@ Toth
 ranger  0 (HD 1 HP 1 SD 0 SP 0) 
 A&AC: 
 Encumbrance: 
-Stats: 
-Feats: 
-Skills: 
-Weapons: 
-Armor:  
-Gear: 
+Stats: []
+Feats: ['Strider', 'Beastfriend', 'Endurance']
+Skills: []
+Weapons: []
+Armor:  []
+Gear: []
 Silver: 0
 
 
@@ -145,12 +145,12 @@ Jonas
 ranger  0 (HD 1 HP 1 SD 0 SP 0) 
 A&AC: 
 Encumbrance: 
-Stats: 
-Feats: 
-Skills: 
-Weapons: 
-Armor:  
-Gear: 
+Stats: []
+Feats: ['Strider', 'Endurance']
+Skills: []
+Weapons: []
+Armor:  []
+Gear: []
 Silver: 0
 
 
@@ -158,12 +158,12 @@ Laszlo
 ranger  0 (HD 1 HP 1 SD 0 SP 0) 
 A&AC: 
 Encumbrance: 
-Stats: 
-Feats: 
-Skills: 
-Weapons: 
-Armor:  
-Gear: 
+Stats: []
+Feats: ['Strider', 'Endurance']
+Skills: []
+Weapons: []
+Armor:  []
+Gear: []
 Silver: 0
 
 
@@ -171,12 +171,12 @@ Malte
 venturer  0 (HD 1 HP 1 SD 0 SP 0) 
 A&AC: 
 Encumbrance: 
-Stats: 
-Feats: 
-Skills: 
-Weapons: 
-Armor:  
-Gear: 
+Stats: []
+Feats: ['Insight']
+Skills: []
+Weapons: []
+Armor:  []
+Gear: []
 Silver: 0
 
 
@@ -184,12 +184,12 @@ Maja
 unk  0 (HD 1 HP 1 SD 0 SP 0) 
 A&AC: 
 Encumbrance: 
-Stats: 
-Feats: 
-Skills: 
-Weapons: 
-Armor:  
-Gear: 
+Stats: []
+Feats: ['']
+Skills: []
+Weapons: []
+Armor:  []
+Gear: []
 Silver: 0
 
 

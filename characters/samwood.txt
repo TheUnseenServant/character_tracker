@@ -1,0 +1,11 @@
+Squire Samwood (Fighter 1 (HD 2, HP 2, W(w)/W(w)) Warhorse. A bastard like Rolton himself)  
+  1 (HD 1 HP 1 SD 0 SP 0) 
+A&AC: 
+Encumbrance: 
+Stats: []
+Feats: []
+Skills: []
+Weapons: []
+Armor:  []
+Gear: []
+Silver: 0

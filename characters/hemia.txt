@@ -1,0 +1,11 @@
+Reverend Hemia, Chaplain of the Order of the Black Sword, Templar of the Law  
+  1 (HD 1 HP 1 SD 0 SP 0) 
+A&AC: 
+Encumbrance: 
+Stats: []
+Feats: ['Toughess', 'Leader', 'Divine Power (Master Spells(Bless))', 'Divine Power (Greater Channeling', 'Empowered Channeling)']
+Skills: []
+Weapons: []
+Armor:  []
+Gear: []
+Silver: 0
