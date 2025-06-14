@@ -12,7 +12,7 @@ Silver:
 
 
 Si-woo  
-fighter  1 (HD 1 HP 1 SD 0 SP 0) 
+fighter  0 (HD 1 HP 1 SD 0 SP 0) 
 A&AC: 
 Encumbrance: 
 Stats: 
@@ -25,7 +25,7 @@ Silver: 0
 
 
 Rolton  
-fighter  1 (HD 1 HP 1 SD 0 SP 0) 
+fighter  0 (HD 1 HP 1 SD 0 SP 0) 
 A&AC: 
 Encumbrance: 
 Stats: 
@@ -38,7 +38,7 @@ Silver: 0
 
 
 Drotik  
-fighter  1 (HD 1 HP 1 SD 0 SP 0) 
+fighter  0 (HD 1 HP 1 SD 0 SP 0) 
 A&AC: 
 Encumbrance: 
 Stats: 
@@ -51,7 +51,7 @@ Silver: 0
 
 
 Hemia  
-cleric  1 (HD 1 HP 1 SD 0 SP 0) 
+cleric  0 (HD 1 HP 1 SD 0 SP 0) 
 A&AC: 
 Encumbrance: 
 Stats: 
@@ -64,7 +64,7 @@ Silver: 0
 
 
 Morphin  
-fighter  1 (HD 1 HP 1 SD 0 SP 0) 
+fighter  0 (HD 1 HP 1 SD 0 SP 0) 
 A&AC: 
 Encumbrance: 
 Stats: 
@@ -77,7 +77,7 @@ Silver: 0
 
 
 Gar  
-fighter  1 (HD 1 HP 1 SD 0 SP 0) 
+fighter  0 (HD 1 HP 1 SD 0 SP 0) 
 A&AC: 
 Encumbrance: 
 Stats: 
@@ -90,7 +90,7 @@ Silver: 0
 
 
 Darfilla  
-mage  1 (HD 1 HP 1 SD 0 SP 0) 
+mage  0 (HD 1 HP 1 SD 0 SP 0) 
 A&AC: 
 Encumbrance: 
 Stats: 
@@ -103,7 +103,7 @@ Silver: 0
 
 
 Winifred  
-rogue  1 (HD 1 HP 1 SD 0 SP 0) 
+rogue  0 (HD 1 HP 1 SD 0 SP 0) 
 A&AC: 
 Encumbrance: 
 Stats: 
@@ -116,7 +116,7 @@ Silver: 0
 
 
 Erikir  
-ranger  1 (HD 1 HP 1 SD 0 SP 0) 
+ranger  0 (HD 1 HP 1 SD 0 SP 0) 
 A&AC: 
 Encumbrance: 
 Stats: 
@@ -129,7 +129,7 @@ Silver: 0
 
 
 Toth  
-ranger  1 (HD 1 HP 1 SD 0 SP 0) 
+ranger  0 (HD 1 HP 1 SD 0 SP 0) 
 A&AC: 
 Encumbrance: 
 Stats: 
@@ -142,7 +142,7 @@ Silver: 0
 
 
 Jonas  
-ranger  1 (HD 1 HP 1 SD 0 SP 0) 
+ranger  0 (HD 1 HP 1 SD 0 SP 0) 
 A&AC: 
 Encumbrance: 
 Stats: 
@@ -155,7 +155,7 @@ Silver: 0
 
 
 Laszlo  
-ranger  1 (HD 1 HP 1 SD 0 SP 0) 
+ranger  0 (HD 1 HP 1 SD 0 SP 0) 
 A&AC: 
 Encumbrance: 
 Stats: 
@@ -168,7 +168,7 @@ Silver: 0
 
 
 Malte  
-venturer  1 (HD 1 HP 1 SD 0 SP 0) 
+venturer  0 (HD 1 HP 1 SD 0 SP 0) 
 A&AC: 
 Encumbrance: 
 Stats: 
@@ -181,7 +181,7 @@ Silver: 0
 
 
 Maja  
-unk  1 (HD 1 HP 1 SD 0 SP 0) 
+unk  0 (HD 1 HP 1 SD 0 SP 0) 
 A&AC: 
 Encumbrance: 
 Stats: 
@@ -194,7 +194,7 @@ Silver: 0
 
 
 Morwen  
-mage  1 (HD 1 HP 1 SD 0 SP 0) 
+mage  0 (HD 1 HP 1 SD 0 SP 0) 
 A&AC: 
 Encumbrance: 
 Stats: 
@@ -207,7 +207,7 @@ Silver: 0
 
 
 Macnav  
-fighter  1 (HD 1 HP 1 SD 0 SP 0) 
+fighter  0 (HD 1 HP 1 SD 0 SP 0) 
 A&AC: 
 Encumbrance: 
 Stats: 
@@ -220,7 +220,7 @@ Silver: 0
 
 
 Cuivne  
-mage  1 (HD 1 HP 1 SD 0 SP 0) 
+mage  0 (HD 1 HP 1 SD 0 SP 0) 
 A&AC: 
 Encumbrance: 
 Stats: 
@@ -233,7 +233,7 @@ Silver: 0
 
 
 Morrig  
-mage  1 (HD 1 HP 1 SD 0 SP 0) 
+mage  0 (HD 1 HP 1 SD 0 SP 0) 
 A&AC: 
 Encumbrance: 
 Stats: 
@@ -246,7 +246,7 @@ Silver: 0
 
 
 Hraefi  
-fighter  1 (HD 1 HP 1 SD 0 SP 0) 
+fighter  0 (HD 1 HP 1 SD 0 SP 0) 
 A&AC: 
 Encumbrance: 
 Stats: 
@@ -259,7 +259,7 @@ Silver: 0
 
 
 Baeyik  
-rogue  1 (HD 1 HP 1 SD 0 SP 0) 
+rogue  0 (HD 1 HP 1 SD 0 SP 0) 
 A&AC: 
 Encumbrance: 
 Stats: 
@@ -272,7 +272,7 @@ Silver: 0
 
 
 Dramm  
-paladin  1 (HD 1 HP 1 SD 0 SP 0) 
+paladin  0 (HD 1 HP 1 SD 0 SP 0) 
 A&AC: 
 Encumbrance: 
 Stats: 
@@ -285,7 +285,7 @@ Silver: 0
 
 
 Barnaby  
-bard  1 (HD 1 HP 1 SD 0 SP 0) 
+bard  0 (HD 1 HP 1 SD 0 SP 0) 
 A&AC: 
 Encumbrance: 
 Stats: 
@@ -298,7 +298,7 @@ Silver: 0
 
 
 Earnan  
-spellthief  1 (HD 1 HP 1 SD 0 SP 0) 
+spellthief  0 (HD 1 HP 1 SD 0 SP 0) 
 A&AC: 
 Encumbrance: 
 Stats: 
@@ -311,7 +311,7 @@ Silver: 0
 
 
 Maggara  
-fighter  1 (HD 1 HP 1 SD 0 SP 0) 
+fighter  0 (HD 1 HP 1 SD 0 SP 0) 
 A&AC: 
 Encumbrance: 
 Stats: 
@@ -324,7 +324,7 @@ Silver: 0
 
 
 Beletreda  
-fighter  1 (HD 1 HP 1 SD 0 SP 0) 
+fighter  0 (HD 1 HP 1 SD 0 SP 0) 
 A&AC: 
 Encumbrance: 
 Stats: 
@@ -337,7 +337,7 @@ Silver: 0
 
 
 Bardin  
-rogue  1 (HD 1 HP 1 SD 0 SP 0) 
+rogue  0 (HD 1 HP 1 SD 0 SP 0) 
 A&AC: 
 Encumbrance: 
 Stats: 
@@ -350,7 +350,7 @@ Silver: 0
 
 
 Grimnir  
-fighter  1 (HD 1 HP 1 SD 0 SP 0) 
+fighter  0 (HD 1 HP 1 SD 0 SP 0) 
 A&AC: 
 Encumbrance: 
 Stats: 
@@ -363,7 +363,7 @@ Silver: 0
 
 
 Gurav  
-fighter  1 (HD 1 HP 1 SD 0 SP 0) 
+fighter  0 (HD 1 HP 1 SD 0 SP 0) 
 A&AC: 
 Encumbrance: 
 Stats: 
@@ -376,7 +376,7 @@ Silver: 0
 
 
 Borav Kograk  
-cleric  1 (HD 1 HP 1 SD 0 SP 0) 
+cleric  0 (HD 1 HP 1 SD 0 SP 0) 
 A&AC: 
 Encumbrance: 
 Stats: 
@@ -389,7 +389,7 @@ Silver: 0
 
 
 Hodlar Morrgrak  
-rogue  1 (HD 1 HP 1 SD 0 SP 0) 
+rogue  0 (HD 1 HP 1 SD 0 SP 0) 
 A&AC: 
 Encumbrance: 
 Stats: 
@@ -402,7 +402,7 @@ Silver: 0
 
 
 Korev Graker  
-fighter  1 (HD 1 HP 1 SD 0 SP 0) 
+fighter  0 (HD 1 HP 1 SD 0 SP 0) 
 A&AC: 
 Encumbrance: 
 Stats: 

@@ -15,7 +15,7 @@ clean:
 	find . -type f -name "*.swp" -exec rm {} \;
 
 all: clean coverage
-	python -m black -l 79 .
+	#python -m black -l 79 .
 	-flake8 --ignore E251,E266,W391,W503 --exclude venv
 	semgrep --config "p/default"
 

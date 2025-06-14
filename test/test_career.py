@@ -2,7 +2,7 @@
 
 import unittest
 
-import write_char as wc
+import careers as wc
 
 
 class TestCareer(unittest.TestCase):

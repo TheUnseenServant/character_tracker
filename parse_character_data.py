@@ -3,8 +3,8 @@
 # name    :  parse_character_data.py
 # version :  0.0.1
 # date    :  20250602
-# author  :  
-# desc    :  
+# author  :
+# desc    :
 
 
 import argparse
@@ -13,38 +13,40 @@ import re
 
 character_base = {
     "key": "",
-    "name":     "",
-    "career":   "",
-    "level":    1,
-    "hd":       1,
-    "hp":       1,
-    "sd":       0,
-    "sp":       0,
-    "xp":       0,
+    "name": "",
+    "career": "",
+    "level": 1,
+    "hd": 1,
+    "hp": 1,
+    "sd": 0,
+    "sp": 0,
+    "xp": 0,
     "hench_to": "",
-    "alignment":    "",
-    "aac":          "",
-    "enc":          "",
-    "stats":        list(),
-    "feats":        list(),
-    "skills":       list(),
-    "weapons":      list(),
-    "armor":        list(),
-    "gear":         list(),
-    "silver":       0,
-    "morale":       "",
-    "loyalty":      "",
-    "combat":       list(),
-    "notes":        list(),
+    "alignment": "",
+    "aac": "",
+    "enc": "",
+    "stats": list(),
+    "feats": list(),
+    "skills": list(),
+    "weapons": list(),
+    "armor": list(),
+    "gear": list(),
+    "silver": 0,
+    "morale": "",
+    "loyalty": "",
+    "combat": list(),
+    "notes": list(),
 }
 
+
 def remove_cost(string):
-    """ Removes the (12sp/mo) type annotation """
+    """Removes the (12sp/mo) type annotation"""
     result = re.search("\(\s*\d+.*\)", string, re.IGNORECASE)
     if result is None:
         return string.strip()
     else:
         return string.replace(result.group(), "").strip()
+
 
 def parse_data(file, character):
     character["key"] = basename(args.file)
@@ -61,15 +63,16 @@ def parse_data(file, character):
             if line.lower().startswith("notes"):
                 in_notes = True
             if line.lower().startswith("morale"):
-                character["morale"] = line.split(':')[-1]  
+                character["morale"] = line.split(":")[-1]
             if line.lower().startswith("loyalty"):
-                character["loyalty"] = line.split(':')[-1]  
+                character["loyalty"] = line.split(":")[-1]
             if line.lower().startswith("feats"):
-                data = line.split(':')[-1].strip()
-                for datum in data.split(','):
+                data = line.split(":")[-1].strip()
+                for datum in data.split(","):
                     character["feats"].append(datum.strip())
-                character["loyalty"] = line.split(':')[-1]  
+                character["loyalty"] = line.split(":")[-1]
     return character
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -80,5 +83,3 @@ if __name__ == "__main__":
     character = character_base.copy()
     c = parse_data(args.file, character)
     print(c)
-
-
