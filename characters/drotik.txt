@@ -1,11 +1,16 @@
 Drotik  
-  1 (HD 1 HP 1 SD 0 SP 0) 
-A&AC: 
-Encumbrance: 
-Stats: []
+Lawful Human Male
+Fighter  4 (HD 5 HP 6 SD 0 SP 0)
+A&AC: W(h)/W(s)
+Encumbrance: Moderate
+Stats: ['Strength +1']
 Feats: ['Pussiance', 'Toughness', 'Heroic Marshall', 'Leader']
-Skills: []
+Skills: ['Cottar']
 Weapons: []
 Armor:  []
 Gear: []
 Silver: 0
+Liege: 
+Morale:  +4
+Loyalty:  +4
+

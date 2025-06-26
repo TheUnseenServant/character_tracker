@@ -1,11 +1,16 @@
 Erikir  
-  1 (HD 1 HP 1 SD 0 SP 0) 
-A&AC: 
-Encumbrance: 
-Stats: []
+Lawful Human Male
+Fighter  3 (HD 4 HP 4 SD 0 SP 0)
+A&AC: W(w)/W(s)
+Encumbrance: Moderate
+Stats: ['Constitution +1', 'Wisdom +1', 'Intelligence -1']
 Feats: ['Strider', 'Prowess', 'Endurance', 'Beastfriend']
-Skills: []
+Skills: ['Houndmaster']
 Weapons: []
 Armor:  []
 Gear: []
 Silver: 0
+Liege: 
+Morale:  +4
+Loyalty:  +3
+

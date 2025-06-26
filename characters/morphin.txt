@@ -1,11 +1,16 @@
 Morphin  
-  1 (HD 1 HP 1 SD 0 SP 0) 
-A&AC: 
+Lawful Human Male
+Fighter  4 (HD 5 HP 6 SD 0 SP 0)
+A&AC: Moderate
 Encumbrance: 
-Stats: []
+Stats: ['Strength +1', 'Constitution +1', 'Intelligence -1']
 Feats: ['Toughness', 'Heroic Leader', 'Pussiance', 'Prowess']
-Skills: []
+Skills: ['Sergeant']
 Weapons: []
 Armor:  []
 Gear: []
 Silver: 0
+Liege: 
+Morale:  +3
+Loyalty:  +4
+

@@ -1,6 +1,6 @@
-Aniko  
-Neutral Human Female
-Rogue  1 (HD 1 HP 1 SD 0 SP 0)
+Varda Biermeister  
+Lawful Human Female
+Venturer  0 (HD 1 HP 1 SD 0 SP 0)
 A&AC: 
 Encumbrance: 
 Stats: ['']

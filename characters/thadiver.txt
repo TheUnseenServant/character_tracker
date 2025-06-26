@@ -1,0 +1,16 @@
+Thadiver  
+Human Lawful Male
+Fighter  2 (HD 3 HP 3 SD 0 SP 0)
+A&AC: ,
+Encumbrance: 
+Stats: ['Intelligence +2']
+Feats: ['Insight', 'Marksman', 'Ability Score (Intelligence)']
+Skills: ['Engineer']
+Weapons: []
+Armor:  []
+Gear: []
+Silver: 0
+Liege: 
+Morale: 
+Loyalty: 
+

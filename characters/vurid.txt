@@ -1,11 +1,16 @@
 King Vuird of Goblintown  
-  1 (HD 1 HP 1 SD 0 SP 0) 
+Neutal Goblin Male
+Fighter  4 (HD 5 HP 5 SD 0 SP 0)
 A&AC: 
 Encumbrance: 
-Stats: []
-Feats: []
-Skills: []
+Stats: ['']
+Feats: ['']
+Skills: ['']
 Weapons: []
 Armor:  []
 Gear: []
 Silver: 0
+Liege: 
+Morale: 
+Loyalty: 
+

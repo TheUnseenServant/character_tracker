@@ -1,0 +1,16 @@
+Kurdu Hammermail  
+Dwarf Neutral Male
+Fighter  3 (HD 4 HP 4 SD 0 SP 0)
+A&AC: ,
+Encumbrance: 
+Stats: ['Constitution +1']
+Feats: ['Dwarven Racial Abilities', 'Marksman', 'Marshall', 'Puissance']
+Skills: ['Artillerist']
+Weapons: []
+Armor:  []
+Gear: []
+Silver: 0
+Liege: 
+Morale: 
+Loyalty: 
+

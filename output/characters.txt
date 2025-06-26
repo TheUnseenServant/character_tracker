@@ -1,5 +1,6 @@
 Jing Ji-ho  
-Fighter  4 (HD 4 HP 5 SD 0 SP 0) Lawful
+Lawful
+Fighter  4 (HD 4 HP 5 SD 0 SP 0)
 A&AC: W(w)/W(s)
 Encumbrance: Moderate (7)
 Stats: Charisma +1
@@ -9,10 +10,15 @@ Weapons: sword, dagger, hatchet, spear, longbow, arrows, 11 magical selfbow arro
 Armor:  Maille hauberk with coif and sallet
 Gear: adventuring pack (basic), traveling clothes, quiver, rations (1wk), 2 torches, simple signet ring (made of bronze), a Dwarven honor silver ring (worth a shilling)
 Silver: 
+Liege: 
+Morale: 
+Loyalty: 
+
 
 
 Si-woo  
-fighter  0 (HD 1 HP 1 SD 0 SP 0) 
+
+fighter  0 (HD 1 HP 1 SD 0 SP 0)
 A&AC: 
 Encumbrance: 
 Stats: []
@@ -22,10 +28,15 @@ Weapons: []
 Armor:  []
 Gear: []
 Silver: 0
+Liege: 
+Morale: +5
+Loyalty: +4
+
 
 
 Rolton  
-fighter  0 (HD 1 HP 1 SD 0 SP 0) 
+
+fighter  0 (HD 1 HP 1 SD 0 SP 0)
 A&AC: 
 Encumbrance: 
 Stats: []
@@ -35,10 +46,15 @@ Weapons: []
 Armor:  []
 Gear: []
 Silver: 0
+Liege: 
+Morale: +4
+Loyalty: +5
+
 
 
 Drotik  
-fighter  0 (HD 1 HP 1 SD 0 SP 0) 
+
+fighter  0 (HD 1 HP 1 SD 0 SP 0)
 A&AC: 
 Encumbrance: 
 Stats: []
@@ -48,10 +64,15 @@ Weapons: []
 Armor:  []
 Gear: []
 Silver: 0
+Liege: 
+Morale: +4
+Loyalty: +4
+
 
 
 Hemia  
-cleric  0 (HD 1 HP 1 SD 0 SP 0) 
+
+cleric  0 (HD 1 HP 1 SD 0 SP 0)
 A&AC: 
 Encumbrance: 
 Stats: []
@@ -61,10 +82,15 @@ Weapons: []
 Armor:  []
 Gear: []
 Silver: 0
+Liege: 
+Morale: +5
+Loyalty: +4
+
 
 
 Morphin  
-fighter  0 (HD 1 HP 1 SD 0 SP 0) 
+
+fighter  0 (HD 1 HP 1 SD 0 SP 0)
 A&AC: 
 Encumbrance: 
 Stats: []
@@ -74,10 +100,15 @@ Weapons: []
 Armor:  []
 Gear: []
 Silver: 0
+Liege: 
+Morale: +3
+Loyalty: +4
+
 
 
 Gar  
-fighter  0 (HD 1 HP 1 SD 0 SP 0) 
+
+fighter  0 (HD 1 HP 1 SD 0 SP 0)
 A&AC: 
 Encumbrance: 
 Stats: []
@@ -87,10 +118,15 @@ Weapons: []
 Armor:  []
 Gear: []
 Silver: 0
+Liege: 
+Morale: +4
+Loyalty: +3
+
 
 
 Darfilla  
-mage  0 (HD 1 HP 1 SD 0 SP 0) 
+
+mage  0 (HD 1 HP 1 SD 0 SP 0)
 A&AC: 
 Encumbrance: 
 Stats: 
@@ -100,10 +136,15 @@ Weapons:
 Armor:  
 Gear: 
 Silver: 0
+Liege: 
+Morale: 
+Loyalty: 
+
 
 
 Winifred  
-rogue  0 (HD 1 HP 1 SD 0 SP 0) 
+
+rogue  0 (HD 1 HP 1 SD 0 SP 0)
 A&AC: 
 Encumbrance: 
 Stats: 
@@ -113,10 +154,15 @@ Weapons:
 Armor:  
 Gear: 
 Silver: 0
+Liege: 
+Morale: 
+Loyalty: 
+
 
 
 Erikir  
-ranger  0 (HD 1 HP 1 SD 0 SP 0) 
+
+ranger  0 (HD 1 HP 1 SD 0 SP 0)
 A&AC: 
 Encumbrance: 
 Stats: []
@@ -126,10 +172,15 @@ Weapons: []
 Armor:  []
 Gear: []
 Silver: 0
+Liege: 
+Morale: +4
+Loyalty: +3
+
 
 
 Toth  
-ranger  0 (HD 1 HP 1 SD 0 SP 0) 
+
+ranger  0 (HD 1 HP 1 SD 0 SP 0)
 A&AC: 
 Encumbrance: 
 Stats: []
@@ -139,10 +190,15 @@ Weapons: []
 Armor:  []
 Gear: []
 Silver: 0
+Liege: 
+Morale: 
+Loyalty: 
+
 
 
 Jonas  
-ranger  0 (HD 1 HP 1 SD 0 SP 0) 
+
+ranger  0 (HD 1 HP 1 SD 0 SP 0)
 A&AC: 
 Encumbrance: 
 Stats: []
@@ -152,10 +208,15 @@ Weapons: []
 Armor:  []
 Gear: []
 Silver: 0
+Liege: 
+Morale: 
+Loyalty: 
+
 
 
 Laszlo  
-ranger  0 (HD 1 HP 1 SD 0 SP 0) 
+
+ranger  0 (HD 1 HP 1 SD 0 SP 0)
 A&AC: 
 Encumbrance: 
 Stats: []
@@ -165,10 +226,15 @@ Weapons: []
 Armor:  []
 Gear: []
 Silver: 0
+Liege: 
+Morale: 
+Loyalty: 
+
 
 
 Malte  
-venturer  0 (HD 1 HP 1 SD 0 SP 0) 
+
+venturer  0 (HD 1 HP 1 SD 0 SP 0)
 A&AC: 
 Encumbrance: 
 Stats: []
@@ -178,10 +244,15 @@ Weapons: []
 Armor:  []
 Gear: []
 Silver: 0
+Liege: 
+Morale: -1
+Loyalty: +3
+
 
 
 Maja  
-unk  0 (HD 1 HP 1 SD 0 SP 0) 
+
+unk  0 (HD 1 HP 1 SD 0 SP 0)
 A&AC: 
 Encumbrance: 
 Stats: []
@@ -191,10 +262,15 @@ Weapons: []
 Armor:  []
 Gear: []
 Silver: 0
+Liege: 
+Morale: -1
+Loyalty: +4
+
 
 
 Morwen  
-mage  0 (HD 1 HP 1 SD 0 SP 0) 
+
+mage  0 (HD 1 HP 1 SD 0 SP 0)
 A&AC: 
 Encumbrance: 
 Stats: 
@@ -204,10 +280,15 @@ Weapons:
 Armor:  
 Gear: 
 Silver: 0
+Liege: 
+Morale: 
+Loyalty: 
+
 
 
 Macnav  
-fighter  0 (HD 1 HP 1 SD 0 SP 0) 
+
+fighter  0 (HD 1 HP 1 SD 0 SP 0)
 A&AC: 
 Encumbrance: 
 Stats: 
@@ -217,10 +298,15 @@ Weapons:
 Armor:  
 Gear: 
 Silver: 0
+Liege: 
+Morale: 
+Loyalty: 
+
 
 
 Cuivne  
-mage  0 (HD 1 HP 1 SD 0 SP 0) 
+
+mage  0 (HD 1 HP 1 SD 0 SP 0)
 A&AC: 
 Encumbrance: 
 Stats: 
@@ -230,10 +316,15 @@ Weapons:
 Armor:  
 Gear: 
 Silver: 0
+Liege: 
+Morale: 
+Loyalty: 
+
 
 
 Morrig  
-mage  0 (HD 1 HP 1 SD 0 SP 0) 
+
+mage  0 (HD 1 HP 1 SD 0 SP 0)
 A&AC: 
 Encumbrance: 
 Stats: 
@@ -243,10 +334,15 @@ Weapons:
 Armor:  
 Gear: 
 Silver: 0
+Liege: 
+Morale: 
+Loyalty: 
+
 
 
 Hraefi  
-fighter  0 (HD 1 HP 1 SD 0 SP 0) 
+
+fighter  0 (HD 1 HP 1 SD 0 SP 0)
 A&AC: 
 Encumbrance: 
 Stats: 
@@ -256,10 +352,15 @@ Weapons:
 Armor:  
 Gear: 
 Silver: 0
+Liege: 
+Morale: 
+Loyalty: 
+
 
 
 Baeyik  
-rogue  0 (HD 1 HP 1 SD 0 SP 0) 
+
+rogue  0 (HD 1 HP 1 SD 0 SP 0)
 A&AC: 
 Encumbrance: 
 Stats: 
@@ -269,10 +370,15 @@ Weapons:
 Armor:  
 Gear: 
 Silver: 0
+Liege: 
+Morale: 
+Loyalty: 
+
 
 
 Dramm  
-paladin  0 (HD 1 HP 1 SD 0 SP 0) 
+
+paladin  0 (HD 1 HP 1 SD 0 SP 0)
 A&AC: 
 Encumbrance: 
 Stats: 
@@ -282,10 +388,15 @@ Weapons:
 Armor:  
 Gear: 
 Silver: 0
+Liege: 
+Morale: 
+Loyalty: 
+
 
 
 Barnaby  
-bard  0 (HD 1 HP 1 SD 0 SP 0) 
+
+bard  0 (HD 1 HP 1 SD 0 SP 0)
 A&AC: 
 Encumbrance: 
 Stats: 
@@ -295,10 +406,15 @@ Weapons:
 Armor:  
 Gear: 
 Silver: 0
+Liege: 
+Morale: 
+Loyalty: 
+
 
 
 Earnan  
-spellthief  0 (HD 1 HP 1 SD 0 SP 0) 
+
+spellthief  0 (HD 1 HP 1 SD 0 SP 0)
 A&AC: 
 Encumbrance: 
 Stats: 
@@ -308,10 +424,15 @@ Weapons:
 Armor:  
 Gear: 
 Silver: 0
+Liege: 
+Morale: 
+Loyalty: 
+
 
 
 Maggara  
-fighter  0 (HD 1 HP 1 SD 0 SP 0) 
+
+fighter  0 (HD 1 HP 1 SD 0 SP 0)
 A&AC: 
 Encumbrance: 
 Stats: 
@@ -321,10 +442,15 @@ Weapons:
 Armor:  
 Gear: 
 Silver: 0
+Liege: 
+Morale: 
+Loyalty: 
+
 
 
 Beletreda  
-fighter  0 (HD 1 HP 1 SD 0 SP 0) 
+
+fighter  0 (HD 1 HP 1 SD 0 SP 0)
 A&AC: 
 Encumbrance: 
 Stats: 
@@ -334,10 +460,15 @@ Weapons:
 Armor:  
 Gear: 
 Silver: 0
+Liege: 
+Morale: 
+Loyalty: 
+
 
 
 Bardin  
-rogue  0 (HD 1 HP 1 SD 0 SP 0) 
+
+rogue  0 (HD 1 HP 1 SD 0 SP 0)
 A&AC: 
 Encumbrance: 
 Stats: 
@@ -347,10 +478,15 @@ Weapons:
 Armor:  
 Gear: 
 Silver: 0
+Liege: 
+Morale: 
+Loyalty: 
+
 
 
 Grimnir  
-fighter  0 (HD 1 HP 1 SD 0 SP 0) 
+
+fighter  0 (HD 1 HP 1 SD 0 SP 0)
 A&AC: 
 Encumbrance: 
 Stats: 
@@ -360,10 +496,15 @@ Weapons:
 Armor:  
 Gear: 
 Silver: 0
+Liege: 
+Morale: 
+Loyalty: 
+
 
 
 Gurav  
-fighter  0 (HD 1 HP 1 SD 0 SP 0) 
+
+fighter  0 (HD 1 HP 1 SD 0 SP 0)
 A&AC: 
 Encumbrance: 
 Stats: 
@@ -373,10 +514,15 @@ Weapons:
 Armor:  
 Gear: 
 Silver: 0
+Liege: 
+Morale: 
+Loyalty: 
+
 
 
 Borav Kograk  
-cleric  0 (HD 1 HP 1 SD 0 SP 0) 
+
+cleric  0 (HD 1 HP 1 SD 0 SP 0)
 A&AC: 
 Encumbrance: 
 Stats: 
@@ -386,10 +532,15 @@ Weapons:
 Armor:  
 Gear: 
 Silver: 0
+Liege: 
+Morale: 
+Loyalty: 
+
 
 
 Hodlar Morrgrak  
-rogue  0 (HD 1 HP 1 SD 0 SP 0) 
+
+rogue  0 (HD 1 HP 1 SD 0 SP 0)
 A&AC: 
 Encumbrance: 
 Stats: 
@@ -399,10 +550,15 @@ Weapons:
 Armor:  
 Gear: 
 Silver: 0
+Liege: 
+Morale: 
+Loyalty: 
+
 
 
 Korev Graker  
-fighter  0 (HD 1 HP 1 SD 0 SP 0) 
+
+fighter  0 (HD 1 HP 1 SD 0 SP 0)
 A&AC: 
 Encumbrance: 
 Stats: 
@@ -412,5 +568,9 @@ Weapons:
 Armor:  
 Gear: 
 Silver: 0
+Liege: 
+Morale: 
+Loyalty: 
+
 
 

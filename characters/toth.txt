@@ -1,11 +1,16 @@
 Toth  
-  1 (HD 1 HP 1 SD 0 SP 0) 
-A&AC: 
-Encumbrance: 
-Stats: []
+Lawful Human Female
+Ranger  2 (HD 3 HP 3 SD 0 SP 0)
+A&AC: W(w)/W(s)
+Encumbrance: Moderate
+Stats: ['Wisdom +1']
 Feats: ['Strider', 'Beastfriend', 'Endurance']
-Skills: []
+Skills: ['Falconer']
 Weapons: []
 Armor:  []
 Gear: []
 Silver: 0
+Liege: 
+Morale: 
+Loyalty: 
+

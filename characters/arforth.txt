@@ -1,11 +1,16 @@
 Arforth  
-  1 (HD 1 HP 1 SD 0 SP 0) 
-A&AC: 
+Neutral Human Male
+Mage  1 (HD 1 HP 1 SD 1 SP 2)
+A&AC: Light
 Encumbrance: 
-Stats: []
-Feats: ['+1']
-Skills: []
+Stats: ['']
+Feats: ['+1', 'Arcane Magic', 'Secret(?)']
+Skills: ['+1']
 Weapons: []
 Armor:  []
 Gear: []
 Silver: 0
+Liege: 
+Morale: 
+Loyalty: 
+

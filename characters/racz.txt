@@ -1,11 +1,16 @@
 Racz  
-  1 (HD 1 HP 1 SD 0 SP 0) 
+Lawful Human Male
+Cleric  1 (HD 1 HP 1 SD 1 SP 1)
 A&AC: 
 Encumbrance: 
-Stats: []
+Stats: ['Wisdom +2']
 Feats: ['Ability Score (Wis)']
-Skills: []
+Skills: ['Acolyte']
 Weapons: []
 Armor:  []
 Gear: []
 Silver: 0
+Liege: 
+Morale: 
+Loyalty: 
+

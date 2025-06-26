@@ -1,11 +1,16 @@
 Olgle  
-  1 (HD 1 HP 1 SD 0 SP 0) 
+Neutral Halfling Male
+Ranger  1 (HD 2 HP 2 SD 0 SP 0)
 A&AC: 
 Encumbrance: 
-Stats: []
-Feats: []
-Skills: []
+Stats: ['']
+Feats: ['']
+Skills: ['']
 Weapons: []
 Armor:  []
 Gear: []
 Silver: 0
+Liege: 
+Morale: 
+Loyalty: 
+

@@ -26,6 +26,8 @@ character_base = {
     "xp": 0,
     "hench_to": "",
     "alignment": "",
+    "species": "",
+    "gender": "",
     "aac": "",
     "enc": "",
     "stats": list(),
@@ -35,11 +37,14 @@ character_base = {
     "armor": list(),
     "gear": list(),
     "silver": 0,
+    "liege": "",
     "morale": "",
     "loyalty": "",
     "combat": list(),
     "notes": list(),
 }
+
+
 
 
 def remove_cost(string):
@@ -50,32 +55,84 @@ def remove_cost(string):
     else:
         return string.replace(result.group(), "").strip()
 
+def parse_career_line(line):
+    """ Takes the career/class line and returns a dict to be merged. """
+    updates = dict()
+    line    = line.strip()
+    line    = line.replace("(", "")
+    line    = line.replace(")", "")
+    line    = line.replace(",", "")
+    line_data = line.split()
+    updates["career"] = line_data[0].title()
+    updates["level"] = line_data[1]
+    updates["hd"] = line_data[3]
+    updates["hp"] = line_data[5]
+    if len(line_data) < 7:
+        updates["sd"] = 0
+        updates["sp"] = 0
+    else:
+        updates["sd"] = line_data[7]
+        updates["sp"] = line_data[9]
+    
+    return updates
 
+def parse_basic_line(line):
+    """ Takes the alignment/species/gender line and returns a dict to be merged. """
+    updates = dict()
+    line    = line.strip()
+    line_data = line.split()
+    updates["alignment"] = line_data[0].title()
+    updates["species"] = line_data[1].title()
+    updates["gender"] = line_data[2].title()
+    return updates
+    
 def parse_data(file, character):
-    #character["key"] = basename(args.file)
+    """ Parse the file and build the character. """
     character["key"] = basename(file)
+    # Used for testing
+    #print(character["key"])
     with open(file, "r") as in_f:
         has_name = False
         in_notes = False
+        align    = False
+        counter  = 0
         for line in in_f:
             line = line.strip()
             line = remove_cost(line)
+            counter += 1
             if in_notes and len(line):
                 character["notes"].append(line)
             if not has_name:
                 character["name"] = line
                 has_name = True
-            if line.lower().startswith("notes"):
+            elif counter == 2:
+                character.update(parse_basic_line(line))
+            elif counter == 3:
+                character.update(parse_career_line(line))
+            elif line.lower().startswith("notes"):
                 in_notes = True
-            if line.lower().startswith("morale"):
+            elif line.lower().startswith("morale"):
                 character["morale"] = line.split(":")[-1]
-            if line.lower().startswith("loyalty"):
+            elif line.lower().startswith("loyalty"):
                 character["loyalty"] = line.split(":")[-1]
-            if line.lower().startswith("feats"):
+            elif line.lower().startswith("feats"):
                 data = line.split(":")[-1].strip()
                 for datum in data.split(","):
                     character["feats"].append(datum.strip())
-                character["loyalty"] = line.split(":")[-1]
+            elif line.lower().startswith("skills"):
+                data = line.split(":")[-1].strip()
+                for datum in data.split(","):
+                    character["skills"].append(datum.strip())
+            elif line.lower().startswith("a&ac"):
+                character["aac"] = line.split(":")[-1].strip()
+            elif line.lower().startswith("combat"):
+                character["combat"] = line.split(":")[-1].strip()
+            elif line.lower().startswith("enc"):
+                character["enc"] = line.split(":")[-1].strip()
+            elif line.lower().startswith("ability scores"):
+                data = line.split(":")[-1].strip()
+                for datum in data.split(","):
+                    character["stats"].append(datum.strip())
     return character
 
 def render_template(template, character):

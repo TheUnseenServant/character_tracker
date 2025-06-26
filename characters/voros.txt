@@ -1,11 +1,16 @@
 Sir Voros  
-  1 (HD 1 HP 1 SD 0 SP 0) 
-A&AC: 
+Lawful Human Male
+Fighter  2 (HD 3 HP 3 SD 0 SP 0)
+A&AC: W(W)/W(W)
 Encumbrance: 
-Stats: []
-Feats: []
-Skills: []
+Stats: ['']
+Feats: ['']
+Skills: ['']
 Weapons: []
 Armor:  []
 Gear: []
 Silver: 0
+Liege: 
+Morale: 
+Loyalty: 
+

@@ -1,6 +1,6 @@
-Olgle
-Neutral Halfling Male
-Ranger 1 (hd 2, hp 2)
+name
+align species
+career level (HD 1, hp 1, SD 0, sp 0)
 Combat:
 A&AC:
 Enc:
@@ -10,8 +10,8 @@ Skills:
 Weapons:
 Armor:
 Gear:
-Liege: Toth
+Liege:
 Morale:
 Loyalty:
 Notes:
-Halfling slinger on walkabout
+

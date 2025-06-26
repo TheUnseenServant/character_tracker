@@ -1,6 +1,6 @@
-Aniko  
+Varda  
 Neutral Human Female
-Rogue  1 (HD 1 HP 1 SD 0 SP 0)
+Mage  1 (HD 1 HP 1 SD 1 SP 1)
 A&AC: 
 Encumbrance: 
 Stats: ['']

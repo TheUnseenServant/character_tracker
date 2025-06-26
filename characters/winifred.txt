@@ -1,11 +1,16 @@
 Winifred  
-  1 (HD 1 HP 1 SD 0 SP 0) 
-A&AC: 
+Neutral Half-Orc Female
+Rogue  2 (HD 2 HP 2 SD 0 SP 0)
+A&AC: D(d)/D(d)
 Encumbrance: 
-Stats: []
+Stats: ['Strength +1', 'Wisdom +1', 'Charisma -1']
 Feats: ['Prowess', 'Strider']
-Skills: []
+Skills: ['Burglar', 'Expertise(Spy)', 'Trickery(Ciphers)']
 Weapons: []
 Armor:  []
 Gear: []
 Silver: 0
+Liege: 
+Morale:  +2
+Loyalty:  +2
+

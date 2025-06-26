@@ -1,11 +1,16 @@
 Darfilla  
-  1 (HD 1 HP 1 SD 0 SP 0) 
-A&AC: 
+Neutral Human Female
+Mage  4 (HD 3 HP 3 SD 2 SP 6)
+A&AC: Light
 Encumbrance: 
-Stats: []
+Stats: ['Intelligence +2']
 Feats: ['Intelligence +1', 'Insight', 'Firearms and Explosives']
-Skills: []
+Skills: ['Alchemist']
 Weapons: []
 Armor:  []
 Gear: []
 Silver: 0
+Liege: 
+Morale:  +2
+Loyalty:  +3
+

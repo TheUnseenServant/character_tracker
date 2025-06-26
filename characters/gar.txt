@@ -1,11 +1,16 @@
 Gar  
-  1 (HD 1 HP 1 SD 0 SP 0) 
-A&AC: 
-Encumbrance: 
-Stats: []
+Neutral Human Male
+Fighter  3 (HD 4 HP 4 SD 0 SP 0)
+A&AC: W(w)/W(s)
+Encumbrance: Moderate
+Stats: ['Constitution +1']
 Feats: ['Prowess', 'Pussiance', 'Lucky (+1 all saves)', 'Insight']
-Skills: []
+Skills: ['Guard']
 Weapons: []
 Armor:  []
 Gear: []
 Silver: 0
+Liege: 
+Morale:  +4
+Loyalty:  +3
+

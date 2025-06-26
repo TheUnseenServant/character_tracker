@@ -1,11 +1,16 @@
 Reverend Hemia, Chaplain of the Order of the Black Sword, Templar of the Law  
-  1 (HD 1 HP 1 SD 0 SP 0) 
-A&AC: 
+Lawful Human Female
+Cleric  5 (HD 4 HP 5 SD 2 SP 5)
+A&AC: Moderate
 Encumbrance: 
-Stats: []
+Stats: ['Wisdom +1']
 Feats: ['Toughess', 'Leader', 'Divine Power (Master Spells(Bless))', 'Divine Power (Greater Channeling', 'Empowered Channeling)']
-Skills: []
+Skills: ['Healer']
 Weapons: []
 Armor:  []
 Gear: []
 Silver: 0
+Liege: 
+Morale:  +5
+Loyalty:  +4
+

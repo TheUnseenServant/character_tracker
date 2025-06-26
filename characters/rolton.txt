@@ -1,11 +1,16 @@
 Sir Rolton Forester  
-  1 (HD 1 HP 1 SD 0 SP 0) 
-A&AC: 
-Encumbrance: 
-Stats: []
+Lawful Human Male
+Fighter  4 (HD 5 HP 5 SD 0 SP 0)
+A&AC: H(w)/H(s)
+Encumbrance: Moderate
+Stats: ['Strength+1', 'Constitution +1', 'Dexterity -1']
 Feats: ['Heroic Mounted Warrior', 'Pussiance', 'Prowess', 'Leader']
-Skills: []
+Skills: ['Knight']
 Weapons: []
 Armor:  []
 Gear: []
 Silver: 0
+Liege: 
+Morale:  +4
+Loyalty:  +5
+

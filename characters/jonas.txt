@@ -1,11 +1,16 @@
 Jonas  
-  1 (HD 1 HP 1 SD 0 SP 0) 
-A&AC: 
+Lawful Human Male
+Ranger  1 (HD 2 HP 2 SD 0 SP 0)
+A&AC: Moderate
 Encumbrance: 
-Stats: []
+Stats: ['Dexterity +1', 'Constitution +1', 'Intelligence -1']
 Feats: ['Strider', 'Endurance']
-Skills: []
+Skills: ['Hunter']
 Weapons: []
 Armor:  []
 Gear: []
 Silver: 0
+Liege: 
+Morale: 
+Loyalty: 
+

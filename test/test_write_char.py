@@ -30,6 +30,9 @@ data = {
     "armor": ["Leather", "Shield"],
     "gear": ["Rogue's tools"],
     "silver": 5,
+    "liege": "Gar",
+    "morale": 0,
+    "loyalty": 0,
 }
 
 

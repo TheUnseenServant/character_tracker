@@ -1,11 +1,16 @@
 Maja Tilsdotter  
-  1 (HD 1 HP 1 SD 0 SP 0) 
-A&AC: 
+Lawful Human Female
+Venturer  1 (HD 1 HP 1 SD 0 SP 0)
+A&AC: None
 Encumbrance: 
-Stats: []
+Stats: ['Int +1', 'Cha +1', 'Str -1']
 Feats: ['']
-Skills: []
+Skills: ['Merchant']
 Weapons: []
 Armor:  []
 Gear: []
 Silver: 0
+Liege: 
+Morale:  -1
+Loyalty:  +4
+

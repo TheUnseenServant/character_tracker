@@ -1,0 +1,16 @@
+Mordu  
+Human (Mostly) Lawful
+Fighter  3 (HD 4 HP 4 SD 0 SP 0)
+A&AC: ,
+Encumbrance: 
+Stats: ['Strength +1', 'Constitution +1', 'Intelligence +1', 'Dexterity -1', 'Charisma -1']
+Feats: ['Insight', 'Beastfriend', 'Puissance', 'Prowess']
+Skills: ['Engineer']
+Weapons: []
+Armor:  []
+Gear: []
+Silver: 0
+Liege: 
+Morale: 
+Loyalty: 
+
