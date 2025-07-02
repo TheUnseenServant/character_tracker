@@ -1,16 +1,17 @@
 Thordar  
 Lawful Dawi Male
 Fighter  2 (HD 1 HP 2 SD 0 SP 0)
-A&AC: 
+AAC: 
 Encumbrance: 
-Stats: ['']
-Feats: ['']
-Skills: ['']
-Weapons: []
-Armor:  []
-Gear: []
+Stats: []
+Feats: 
+Skills: 
+Weapons: 
+Armor:  
+Gear: 
 Silver: 0
 Liege: 
 Morale: 
 Loyalty: 
 
+Notes: ['Brother to Murig', 'dawi crossbowman who survived a massacre by Orcs. He and his brother seek vengeance.']

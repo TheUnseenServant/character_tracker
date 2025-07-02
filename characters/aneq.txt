@@ -1,16 +1,17 @@
 Aneq  
 Lawful Human Male
 Fighter  1 (HD 2 HP 2 SD 0 SP 0)
-A&AC: 
+AAC: 
 Encumbrance: 
-Stats: ['']
-Feats: ['Mounted Warrior']
-Skills: ['']
-Weapons: []
-Armor:  []
-Gear: []
+Stats: []
+Feats: Mounted Warrior
+Skills: 
+Weapons: 
+Armor:  
+Gear: 
 Silver: 0
-Liege: 
+Liege: jiho
 Morale: 
 Loyalty: 
 
+Notes: ['Plains nomad; good with bow and riding. Leads 16 others.']

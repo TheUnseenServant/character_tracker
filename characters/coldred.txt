@@ -1,16 +1,17 @@
 Coldred  
 Neutral Human Male
 Mage  1 (HD 1 HP 1 SD 1 SP 1)
-A&AC: 
+AAC: 
 Encumbrance: 
-Stats: ['']
-Feats: ['']
-Skills: ['']
-Weapons: []
-Armor:  []
-Gear: []
+Stats: []
+Feats: 
+Skills: 
+Weapons: 
+Armor:  
+Gear: 
 Silver: 0
 Liege: 
 Morale: 
 Loyalty: 
 
+Notes: ['A clumsy, magic using miner (Mage 1) with a sword bearing unknown script.']

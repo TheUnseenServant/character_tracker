@@ -1,16 +1,17 @@
 Racz  
 Lawful Human Male
 Cleric  1 (HD 1 HP 1 SD 1 SP 1)
-A&AC: 
+AAC: 
 Encumbrance: 
-Stats: ['Wisdom +2']
-Feats: ['Ability Score (Wis)']
-Skills: ['Acolyte']
-Weapons: []
-Armor:  []
-Gear: []
+Stats: []
+Feats: Ability Score (Wis)
+Skills: Acolyte
+Weapons: 
+Armor:  
+Gear: 
 Silver: 0
 Liege: 
 Morale: 
 Loyalty: 
 
+Notes: ['Powers: Extra SP', "Racz was a priest in training in Springkeep. He is defined by an intuitive understanding of the faith (ie Wisdom) rather than a scholastic one. He isn't beholden to theology or philosophy and often finds his compatriots to be too passive and theoretical. He isn't content to sit in the church and preach to those who come to service. He spends his free time out in the fields with the farmers and drovers digging ditches and clearing land.", "If not chosen he has even odds of leaving before he is ordained to follow his own path (and possibly being a rival) or of becoming a Paladin. If chosen he becomes a Cleric and Hemia's first full disciple."]

@@ -1,16 +1,17 @@
 Laszlo  
 Lawful Human Male
 Ranger  1 (HD 2 HP 2 SD 0 SP 0)
-A&AC: W(w)/W(s)
+AAC: 
 Encumbrance: Moderate
-Stats: ['Strength +1', 'Wisdom +1', 'Charisma -1']
+Stats: []
 Feats: ['Strider', 'Endurance']
-Skills: ['Trapper']
-Weapons: []
-Armor:  []
-Gear: []
+Skills: Trapper
+Weapons: 
+Armor:  
+Gear: 
 Silver: 0
 Liege: 
 Morale: 
 Loyalty: 
 
+Notes: ["Eirikr's nephew, 20s."]

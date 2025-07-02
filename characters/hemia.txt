@@ -1,16 +1,17 @@
 Reverend Hemia, Chaplain of the Order of the Black Sword, Templar of the Law  
 Lawful Human Female
 Cleric  5 (HD 4 HP 5 SD 2 SP 5)
-A&AC: Moderate
-Encumbrance: 
-Stats: ['Wisdom +1']
+AAC: 
+Encumbrance: Moderate
+Stats: []
 Feats: ['Toughess', 'Leader', 'Divine Power (Master Spells(Bless))', 'Divine Power (Greater Channeling', 'Empowered Channeling)']
-Skills: ['Healer']
-Weapons: []
-Armor:  []
-Gear: []
+Skills: Healer
+Weapons: ['Blessed Mace (magical', 'divine implement)', 'walking stick/cudgel', 'dagger', 'large round shield']
+Armor:  Archaic armor with permanent Protection from Evil (attracts undead)
+Gear: ['Adventurers pack', "acolyte's clothes", 'wooden holy symbol', 'holy symbol (nice)', '(former) Maille hauberk with coif and sallet']
 Silver: 0
-Liege: 
-Morale:  +5
-Loyalty:  +4
+Liege: Si-woo
+Morale: +5
+Loyalty: +4
 
+Notes: ['She was a novice of the Church who ran away from her convent.', 'Divine Magic: Channel Divinity (Turn Undead, Harness Power), Mastered Spells (Cure Wounds, Protection from Evil, Light, Bless)']

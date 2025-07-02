@@ -1,16 +1,17 @@
 Toth  
 Lawful Human Female
 Ranger  2 (HD 3 HP 3 SD 0 SP 0)
-A&AC: W(w)/W(s)
+AAC: 
 Encumbrance: Moderate
-Stats: ['Wisdom +1']
+Stats: []
 Feats: ['Strider', 'Beastfriend', 'Endurance']
-Skills: ['Falconer']
-Weapons: []
-Armor:  []
-Gear: []
+Skills: Falconer
+Weapons: ['dagger', 'hatchet', 'shield (large round)', 'spear', 'sword', 'longbow', 'arrows']
+Armor:  Maille hauberk with coif and sallet
+Gear: ['adventuring pack (basic)', 'traveling clothes']
 Silver: 0
-Liege: 
+Liege: Morphin
 Morale: 
 Loyalty: 
 
+Notes: ["Erikir's daughter, 30's."]

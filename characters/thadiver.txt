@@ -1,16 +1,17 @@
 Thadiver  
 Human Lawful Male
 Fighter  2 (HD 3 HP 3 SD 0 SP 0)
-A&AC: ,
+AAC: 
 Encumbrance: 
-Stats: ['Intelligence +2']
+Stats: []
 Feats: ['Insight', 'Marksman', 'Ability Score (Intelligence)']
-Skills: ['Engineer']
-Weapons: []
-Armor:  []
+Skills: Engineer
+Weapons: 
+Armor:  
 Gear: []
 Silver: 0
 Liege: 
 Morale: 
 Loyalty: 
 
+Notes: ['Attended the College* but lacked the necessary piety to be ordained and the gift needed to master the arcane. He has a keen mind though and took up arms to compliment his engineering talent.', "*There's only one. Its run by the church and is where most mages are trained."]

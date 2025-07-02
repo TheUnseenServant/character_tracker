@@ -1,16 +1,17 @@
 Murig  
 Neutral Dawi Male
 Fighter  1 (HD 2 HP 2 SD 0 SP 0)
-A&AC: 
+AAC: 
 Encumbrance: 
-Stats: ['']
-Feats: ['']
-Skills: ['']
-Weapons: []
-Armor:  []
-Gear: []
+Stats: []
+Feats: 
+Skills: 
+Weapons: 
+Armor:  
+Gear: 
 Silver: 0
-Liege: 
+Liege: Drotik
 Morale: 
 Loyalty: 
 
+Notes: ['Notes:', 'Brother to Thordar.', 'A dwarven warrior (Fighter 1) who survived a massacre by Orcs. Has a map to a hidden treasure and is seeking companions.']

@@ -1,16 +1,17 @@
 Sir Voros  
 Lawful Human Male
 Fighter  2 (HD 3 HP 3 SD 0 SP 0)
-A&AC: W(W)/W(W)
+AAC: 
 Encumbrance: 
-Stats: ['']
-Feats: ['']
-Skills: ['']
-Weapons: []
-Armor:  []
-Gear: []
+Stats: []
+Feats: 
+Skills: 
+Weapons: 
+Armor:  
+Gear: 
 Silver: 0
-Liege: 
+Liege: Rolton
 Morale: 
 Loyalty: 
 
+Notes: []

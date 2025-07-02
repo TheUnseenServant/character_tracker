@@ -1,16 +1,17 @@
 Aniko  
 Neutral Human Female
 Rogue  1 (HD 1 HP 1 SD 0 SP 0)
-A&AC: 
+AAC: 
 Encumbrance: 
-Stats: ['']
-Feats: ['']
-Skills: ['']
-Weapons: []
-Armor:  []
-Gear: []
+Stats: []
+Feats: 
+Skills: 
+Weapons: 
+Armor:  
+Gear: 
 Silver: 0
-Liege: 
+Liege: Winifred
 Morale: 
 Loyalty: 
 
+Notes: ['Ran into hard times, sold her body to earn a living']

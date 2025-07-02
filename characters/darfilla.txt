@@ -1,16 +1,17 @@
 Darfilla  
 Neutral Human Female
 Mage  4 (HD 3 HP 3 SD 2 SP 6)
-A&AC: Light
-Encumbrance: 
-Stats: ['Intelligence +2']
+AAC: 
+Encumbrance: Light
+Stats: []
 Feats: ['Intelligence +1', 'Insight', 'Firearms and Explosives']
-Skills: ['Alchemist']
-Weapons: []
-Armor:  []
-Gear: []
+Skills: Alchemist
+Weapons: dagger
+Armor:  None
+Gear: ['adventuring pack (basic)', 'traveling clothes', "alchemists' tools"]
 Silver: 0
-Liege: 
-Morale:  +2
-Loyalty:  +3
+Liege: Rolton
+Morale: +2
+Loyalty: +3
 
+Notes: ['a reckless but surprisingly pious alchemist (formerly Chaotic)', 'Formulae: Potions (Fire Breathing, Sharpness, Healing)', 'Mage: Arcane Magic, Secret (Brew Potions), Secret (Craft Mystic Trinkets)', 'Spells: Cantrip, Detect Magic, Burning Hands, Sharpness, Stinking Cloud']

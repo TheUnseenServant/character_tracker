@@ -1,16 +1,17 @@
 Jonas  
 Lawful Human Male
 Ranger  1 (HD 2 HP 2 SD 0 SP 0)
-A&AC: Moderate
-Encumbrance: 
-Stats: ['Dexterity +1', 'Constitution +1', 'Intelligence -1']
+AAC: 
+Encumbrance: Moderate
+Stats: []
 Feats: ['Strider', 'Endurance']
-Skills: ['Hunter']
-Weapons: []
-Armor:  []
-Gear: []
+Skills: Hunter
+Weapons: ['dagger', 'hatchet', 'shield (large round)', 'spear', 'sword', 'longbow', 'arrows']
+Armor:  Maille hauberk with coif and sallet
+Gear: ['adventuring pack (basic)', 'traveling clothes']
 Silver: 0
-Liege: 
+Liege: Samwood
 Morale: 
 Loyalty: 
 
+Notes: ["Erikir's nephew, 30's"]

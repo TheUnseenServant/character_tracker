@@ -1,16 +1,17 @@
 Sengrim  
 Halfling Neutral Male
 Rogue  3 (HD 3 HP 3 SD 0 SP 0)
-A&AC: ,
+AAC: 
 Encumbrance: 
-Stats: ['Dexterity +1']
+Stats: []
 Feats: ['Halfling Racial Abilities', 'Marksman', 'Strider']
 Skills: ['Hunter', 'Machinist']
-Weapons: []
-Armor:  []
+Weapons: 
+Armor:  
 Gear: []
 Silver: 0
 Liege: 
 Morale: 
 Loyalty: 
 
+Notes: ["You already know this wanderer. His quest to find his brother has ended in tragedy. He is dour now but found that he enjoys the company of goblins. He has developed a knack for crossbows of all sizes and puts his huntsman's eyes to good use in choosing and preparing firing positions like few others."]

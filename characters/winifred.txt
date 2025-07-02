@@ -1,16 +1,17 @@
 Winifred  
 Neutral Half-Orc Female
 Rogue  2 (HD 2 HP 2 SD 0 SP 0)
-A&AC: D(d)/D(d)
+AAC: 
 Encumbrance: 
-Stats: ['Strength +1', 'Wisdom +1', 'Charisma -1']
+Stats: []
 Feats: ['Prowess', 'Strider']
 Skills: ['Burglar', 'Expertise(Spy)', 'Trickery(Ciphers)']
-Weapons: []
-Armor:  []
-Gear: []
+Weapons: ['sword', 'self bow', 'arrows', '2 daggers', 'hatchet']
+Armor:  Leather armor
+Gear: ['decent clothes', 'backpack', "thieve's tools"]
 Silver: 0
-Liege: 
-Morale:  +2
-Loyalty:  +2
+Liege: Gar
+Morale: +2
+Loyalty: +2
 
+Notes: []

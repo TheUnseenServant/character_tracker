@@ -1,16 +1,17 @@
 Drotik  
 Lawful Human Male
 Fighter  4 (HD 5 HP 6 SD 0 SP 0)
-A&AC: W(h)/W(s)
+AAC: 
 Encumbrance: Moderate
-Stats: ['Strength +1']
+Stats: []
 Feats: ['Pussiance', 'Toughness', 'Heroic Marshall', 'Leader']
-Skills: ['Cottar']
-Weapons: []
-Armor:  []
-Gear: []
+Skills: Cottar
+Weapons: ['sword', 'dagger', 'arbalest and winch', 'small round shield']
+Armor:  Maille hauberk with coif and sallet
+Gear: ['quiver', "traveler's clothes", 'backpack']
 Silver: 0
-Liege: 
-Morale:  +4
-Loyalty:  +4
+Liege: Si-Woo
+Morale: +4
+Loyalty: +4
 
+Notes: ['A cottars son conscripted last season and discharged.']

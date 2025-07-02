@@ -44,9 +44,12 @@ class TestParseData(unittest.TestCase):
                 f.write("{} (12p/mo) \n".format(file.title()))
                 f.write("Neutral Half-Orc Female\n")
                 f.write("Rogue 3 (HD 1, HP 1, SD 0, SP 0)\n")
+                f.write("Combat: +1 backstab, +1 Morale\n")
                 f.write("A&AC: D(D)/D(D)\n")
                 f.write("Feats: Prowess, Strider\n")
                 f.write("Skills: Spy\n")
+                f.write("Weapons: Short sword, self bow, several knives\n")
+                f.write("Armor: Leather armor, helm, shield\n")
 
     def tearDown(self):
         self.test_dir.cleanup()
@@ -60,9 +63,12 @@ class TestParseData(unittest.TestCase):
         self.assertEqual(character["alignment"], "Neutral")
         self.assertEqual(character["species"], "Half-Orc")
         self.assertEqual(character["gender"], "Female")
-        self.assertEqual(character["aac"], "D(D)/D(D)")
+        self.assertEqual(character["a&ac"], "D(D)/D(D)")
         self.assertEqual(character["feats"], ["Prowess", "Strider"])
-        self.assertEqual(character["skills"], ["Spy"])
+        self.assertEqual(character["skills"], "Spy")
+        self.assertEqual(character["weapons"], ["Short sword", "self bow", "several knives"])
+        self.assertEqual(character["armor"], ["Leather armor", "helm", "shield"])
+        self.assertEqual(character["combat"], ["+1 backstab", "+1 Morale"])
 
 class TestParseCareerLine(unittest.TestCase):
     def test_parse_career_line(self):
@@ -83,10 +89,11 @@ class TestParseBasicLine(unittest.TestCase):
         line    = "Neutral Half-orc Female"
         result  = pcd.parse_basic_line(line)
         expected    = {
-            'align': 'Neutral',
-            'species': 'Half-orc',
+            'alignment': 'Neutral',
+            'species': 'Half-Orc',
             'gender': 'Female',
         }
+        self.assertEqual(expected, result)
 
 
 class TestRenderTemplate(unittest.TestCase):
@@ -99,4 +106,10 @@ class TestRenderTemplate(unittest.TestCase):
         self.assertEqual(expected, result)
 
 
+class TestLineToList(unittest.TestCase):
 
+    def test_weapons(self):
+        line = "Short sword, self bow, several knives\n"
+        expected = ["Short sword", "self bow", "several knives"]
+        result = pcd.line_to_list(line)
+        self.assertEqual(expected, result)

@@ -1,16 +1,17 @@
 Kurdu Hammermail  
 Dwarf Neutral Male
 Fighter  3 (HD 4 HP 4 SD 0 SP 0)
-A&AC: ,
+AAC: 
 Encumbrance: 
-Stats: ['Constitution +1']
+Stats: []
 Feats: ['Dwarven Racial Abilities', 'Marksman', 'Marshall', 'Puissance']
-Skills: ['Artillerist']
-Weapons: []
-Armor:  []
+Skills: Artillerist
+Weapons: 
+Armor:  
 Gear: []
 Silver: 0
 Liege: 
 Morale: 
 Loyalty: 
 
+Notes: ['Some call him a bandit, but he considers himself merely a freeman too stubborn to be complacent. He grew up in Vornhill but he is from Kraka Grak. His parentage is unknown and so his Clan status is likewise in question.']

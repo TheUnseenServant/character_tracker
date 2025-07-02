@@ -1,16 +1,17 @@
 Morphin  
 Lawful Human Male
 Fighter  4 (HD 5 HP 6 SD 0 SP 0)
-A&AC: Moderate
-Encumbrance: 
-Stats: ['Strength +1', 'Constitution +1', 'Intelligence -1']
+AAC: 
+Encumbrance: Moderate
+Stats: []
 Feats: ['Toughness', 'Heroic Leader', 'Pussiance', 'Prowess']
-Skills: ['Sergeant']
-Weapons: []
-Armor:  []
-Gear: []
+Skills: Sergeant
+Weapons: ['dagger', 'hatchet', 'shield (large round)', 'spear', 'sword', 'longbow', 'arrows']
+Armor:  Full maille and closed helm (in storage for Rodrik - maille hauberk with coif and sallet)
+Gear: ['adventuring pack (basic)', 'traveling clothes', 'rations', '2 torches', 'oil of sharpness']
 Silver: 0
-Liege: 
-Morale:  +3
-Loyalty:  +4
+Liege: Ji-ho
+Morale: +3
+Loyalty: +4
 
+Notes: ['A caravan guard that met a stranger and became a leader']
