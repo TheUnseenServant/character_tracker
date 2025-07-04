@@ -1,17 +1,26 @@
-Squire Samwood  
-Lawful Human Male
-Fighter  1 (HD 2 HP 2 SD 0 SP 0)
-AAC: 
+Name: Squire Samwood  
+Alignment: Lawful
+Species: Human
+Gender: Male
+Career: Fighter
+Level:  1
+HD: 2
+HP: 2
+SD: 0
+SP: 0
+AAC: W(w)/W(w)
 Encumbrance: 
-Stats: []
-Feats: 
-Skills: 
-Weapons: 
-Armor:  
-Gear: 
+Stats: ['']
+Feats: ['']
+Spells: []
+Skills: ['']
+Weapons: ['']
+Armor:  ['']
+Gear: ['']
 Silver: 0
 Liege: Rolton
 Morale: 
 Loyalty: 
+NPCs: []
 
 Notes: ['Warhorse. A bastard like Rolton himself']

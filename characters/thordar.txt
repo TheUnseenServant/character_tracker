@@ -1,17 +1,26 @@
-Thordar  
-Lawful Dawi Male
-Fighter  2 (HD 1 HP 2 SD 0 SP 0)
+Name: Thordar  
+Alignment: Lawful
+Species: Dawi
+Gender: Male
+Career: Fighter
+Level:  2
+HD: 1
+HP: 2
+SD: 0
+SP: 0
 AAC: 
 Encumbrance: 
-Stats: []
-Feats: 
-Skills: 
-Weapons: 
-Armor:  
-Gear: 
+Stats: ['']
+Feats: ['']
+Spells: []
+Skills: ['']
+Weapons: ['']
+Armor:  ['']
+Gear: ['']
 Silver: 0
 Liege: 
 Morale: 
 Loyalty: 
+NPCs: []
 
 Notes: ['Brother to Murig', 'dawi crossbowman who survived a massacre by Orcs. He and his brother seek vengeance.']

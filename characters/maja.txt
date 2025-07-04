@@ -1,17 +1,26 @@
-Maja Tilsdotter  
-Lawful Human Female
-Venturer  1 (HD 1 HP 1 SD 0 SP 0)
-AAC: 
+Name: Maja Tilsdotter  
+Alignment: Lawful
+Species: Human
+Gender: Female
+Career: Venturer
+Level:  1
+HD: 1
+HP: 1
+SD: 0
+SP: 0
+AAC: U(U)/U(U)
 Encumbrance: None
-Stats: []
-Feats: 
-Skills: Merchant
-Weapons: 
-Armor:  
-Gear: ["traveler's clothes", 'backpack']
+Stats: ['Cha +1', 'Int +1', 'Str -1']
+Feats: ['']
+Spells: []
+Skills: ['Merchant']
+Weapons: ['']
+Armor:  ['']
+Gear: ['backpack', "traveler's clothes"]
 Silver: 0
 Liege: Drotik
 Morale: -1
 Loyalty: +4
+NPCs: []
 
 Notes: ["Drotik's wife"]

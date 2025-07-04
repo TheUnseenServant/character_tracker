@@ -7,7 +7,6 @@
 # desc    :
 
 
-import argparse
 import copy
 from os import listdir
 from os.path import basename, isfile, join
@@ -24,7 +23,6 @@ character_base = {
     "sd": 0,
     "sp": 0,
     "xp": 0,
-    "hench_to": "",
     "alignment": "",
     "species": "",
     "gender": "",
@@ -32,7 +30,13 @@ character_base = {
     "enc": "",
     "stats": list(),
     "feats": list(),
+    "divine_magic": list(),
+    "powers": list(),
+    "formulae": list(),
+    "tricks": list(),
     "skills": list(),
+    "spells": list(),
+    "secrets": list(),
     "weapons": list(),
     "armor": list(),
     "gear": list(),
@@ -41,13 +45,14 @@ character_base = {
     "morale": "",
     "loyalty": "",
     "combat": list(),
+    "npcs": list(),
     "notes": list(),
 }
 
 
 def remove_cost(string):
     """Removes the (12p/mo) type annotation"""
-    result = re.search("\(\s*\d+.*\)", string, re.IGNORECASE)
+    result = re.search(r"\(\s*\d+.*\)", string, re.IGNORECASE)
     if result is None:
         return string.strip()
     else:
@@ -55,12 +60,12 @@ def remove_cost(string):
 
 
 def parse_career_line(line):
-    """ Takes the career/class line and returns a dict to be merged. """
+    """Takes the career/class line and returns a dict to be merged."""
     updates = dict()
-    line    = line.strip()
-    line    = line.replace("(", "")
-    line    = line.replace(")", "")
-    line    = line.replace(",", "")
+    line = line.strip()
+    line = line.replace("(", "")
+    line = line.replace(")", "")
+    line = line.replace(",", "")
     line_data = line.split()
     updates["career"] = line_data[0].title()
     updates["level"] = line_data[1]
@@ -72,50 +77,56 @@ def parse_career_line(line):
     else:
         updates["sd"] = line_data[7]
         updates["sp"] = line_data[9]
-    
+
     return updates
 
 
 def parse_basic_line(line):
-    """ Takes the alignment/species/gender line and returns a dict to be merged. """
+    """Takes the alignment/species/gender line and returns a dict"""
     updates = dict()
-    line    = line.strip()
+    line = line.strip()
     line_data = line.split()
     updates["alignment"] = line_data[0].title()
     updates["species"] = line_data[1].title()
     updates["gender"] = line_data[2].title()
     return updates
 
-   
+
 def line_to_list(data):
-    """ Take the line, split it, strip each bit, then return the list """
+    """Take the line, split it, strip each bit, then return the list"""
     result = list()
-    for datum in data.split(","):
-        result.append(datum.strip())
+    if ";" in data:
+        for d in data.split(";"):
+            result.append(d.strip())
+    else:
+        for datum in data.split(","):
+            result.append(datum.strip())
     return result
 
 
-def line_or_list(data):
-    """ Returns a list if the line has a comma, else the line stripped """
-    if "," in data:
+def line_or_list(data, key_type):
+    """Returns a list if the line has a comma, else the line stripped"""
+    if key_type is list:
         result = line_to_list(data)
     else:
         result = data.strip()
     return result
 
 
-def parse_data(file, character):
-    """ Parse the file and build the character. """
+def parse_data(file, c):
+    """Parse the file and build the character."""
+    character = copy.deepcopy(c)
     character["key"] = basename(file)
     # Used for testing
-    #print(character["key"])
+    # print(character["key"])
     with open(file, "r") as in_f:
         has_name = False
         in_notes = False
-        align    = False
-        counter  = 0
+        counter = 0
         for line in in_f:
-            line.replace("A&AC", "AAC")
+            line = line.replace("A&AC", "AAC")
+            line = line.replace("Ability Scores", "stats")
+            line = line.replace("Divine Magic", "divine_magic")
             line = line.strip()
             line = remove_cost(line)
             counter += 1
@@ -132,19 +143,44 @@ def parse_data(file, character):
                 in_notes = True
             elif ":" in line:
                 key, value = line.split(":")
-                character[key.lower().strip()] = line_or_list(value)
+                key = key.lower().strip()
+                character[key] = line_or_list(value, type(character[key]))
+
+    for key in character["divine_magic"]:
+        character["feats"].append("Divine Magic({})".format(key))
+    for key in character["powers"]:
+        character["feats"].append("Power({})".format(key))
+    for key in character["formulae"]:
+        character["feats"].append("Formula({})".format(key))
+    for key in character["tricks"]:
+        character["feats"].append("Trickery({})".format(key))
+    for key in character["secrets"]:
+        character["feats"].append("Secret({})".format(key))
+    for group_key in [
+        "secrets",
+        "divine_magic",
+        "powers",
+        "formulae",
+        "tricks",
+    ]:
+        del character[group_key]
+    for key in character.keys():
+        if type(character[key]) is list:
+            character[key].sort()
     return character
 
 
 def render_template(template, character):
-    """ Takes a template and a character DICT, returns text. """ 
+    """Takes a template and a character DICT, returns text."""
     return Template(template).substitute(**character)
 
 
 if __name__ == "__main__":
     source_dir = "characters/base"
     output_dir = "characters"
-    source_files = [f for f in listdir(source_dir) if isfile(join(source_dir, f))]
+    source_files = [
+        f for f in listdir(source_dir) if isfile(join(source_dir, f))
+    ]
 
     template_dir = "templates"
     output_template_file = join(template_dir, "text.tmpl")
@@ -160,4 +196,3 @@ if __name__ == "__main__":
         c = parse_data(filename, character)
         with open(output, "w") as out:
             out.write(render_template(output_template, c))
-

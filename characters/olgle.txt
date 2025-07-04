@@ -1,17 +1,26 @@
-Olgle  
-Neutral Halfling Male
-Ranger  1 (HD 2 HP 2 SD 0 SP 0)
+Name: Olgle  
+Alignment: Neutral
+Species: Halfling
+Gender: Male
+Career: Ranger
+Level:  1
+HD: 2
+HP: 2
+SD: 0
+SP: 0
 AAC: 
 Encumbrance: 
-Stats: []
-Feats: 
-Skills: 
-Weapons: 
-Armor:  
-Gear: 
+Stats: ['']
+Feats: ['']
+Spells: []
+Skills: ['']
+Weapons: ['']
+Armor:  ['']
+Gear: ['']
 Silver: 0
 Liege: Toth
 Morale: 
 Loyalty: 
+NPCs: []
 
 Notes: ['Halfling slinger on walkabout']

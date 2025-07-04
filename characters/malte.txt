@@ -1,17 +1,26 @@
-Malte Tilson  
-Lawful Human Male
-Venturer  1 (HD 1 HP 1 SD 0 SP 0)
-AAC: 
+Name: Malte Tilson  
+Alignment: Lawful
+Species: Human
+Gender: Male
+Career: Venturer
+Level:  1
+HD: 1
+HP: 1
+SD: 0
+SP: 0
+AAC: U(U)/U(U)
 Encumbrance: None
-Stats: []
-Feats: Insight
+Stats: ['Cha +1', 'Int +1', 'Str -1']
+Feats: ['Insight', 'Trickery(Expert Bargainer)']
+Spells: []
 Skills: ['Merchant', 'Scholar']
-Weapons: 
-Armor:  
-Gear: ["traveler's clothes", 'backpack']
+Weapons: ['']
+Armor:  ['']
+Gear: ['backpack', "traveler's clothes"]
 Silver: 0
 Liege: Drotik
 Morale: -1
 Loyalty: +3
+NPCs: []
 
 Notes: ["Drotik's henchman and brother-in-law"]

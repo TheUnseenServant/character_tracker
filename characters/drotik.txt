@@ -1,17 +1,26 @@
-Drotik  
-Lawful Human Male
-Fighter  4 (HD 5 HP 6 SD 0 SP 0)
-AAC: 
+Name: Drotik  
+Alignment: Lawful
+Species: Human
+Gender: Male
+Career: Fighter
+Level:  4
+HD: 5
+HP: 6
+SD: 0
+SP: 0
+AAC: W(h)/W(s)
 Encumbrance: Moderate
-Stats: []
-Feats: ['Pussiance', 'Toughness', 'Heroic Marshall', 'Leader']
-Skills: Cottar
-Weapons: ['sword', 'dagger', 'arbalest and winch', 'small round shield']
-Armor:  Maille hauberk with coif and sallet
-Gear: ['quiver', "traveler's clothes", 'backpack']
+Stats: ['Strength +1']
+Feats: ['Heroic Marshall', 'Leader', 'Pussiance', 'Toughness']
+Spells: []
+Skills: ['Cottar']
+Weapons: ['arbalest and winch', 'dagger', 'small round shield', 'sword']
+Armor:  ['Maille hauberk with coif and sallet']
+Gear: ['backpack', 'quiver', "traveler's clothes"]
 Silver: 0
 Liege: Si-Woo
 Morale: +4
 Loyalty: +4
+NPCs: []
 
 Notes: ['A cottars son conscripted last season and discharged.']

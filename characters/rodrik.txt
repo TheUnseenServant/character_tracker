@@ -1,17 +1,26 @@
-Rodrik  
-Lawful Human Male
-Fighter  0 (HD 1 HP 1 SD 0 SP 0)
+Name: Rodrik  
+Alignment: Lawful
+Species: Human
+Gender: Male
+Career: Fighter
+Level:  0
+HD: 1
+HP: 1
+SD: 0
+SP: 0
 AAC: 
 Encumbrance: 
-Stats: []
-Feats: 
-Skills: 
-Weapons: 
-Armor:  
-Gear: 
+Stats: ['']
+Feats: ['']
+Spells: []
+Skills: ['']
+Weapons: ['']
+Armor:  ['']
+Gear: ['']
 Silver: 0
 Liege: Morphin
 Morale: 
 Loyalty: 
+NPCs: []
 
 Notes: ['Young man taken in by Morphin.']

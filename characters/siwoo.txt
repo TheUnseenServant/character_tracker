@@ -1,17 +1,26 @@
-Jing Si-woo  
-Lawful Human Male
-Fighter  5 (HD 6 HP 7 SD 0 SP 0)
-AAC: 
+Name: Jing Si-woo  
+Alignment: Lawful
+Species: Human
+Gender: Male
+Career: Fighter
+Level:  5
+HD: 6
+HP: 7
+SD: 0
+SP: 0
+AAC: H(w)/H(s)
 Encumbrance: Moderate
-Stats: []
-Feats: ['Heroic Puissance', 'Leader', 'Heroic Prowess', 'Toughness']
-Skills: Lieutenant
-Weapons: ['sword', 'dagger', 'hatchet', 'large round shield', 'longbow', 'arrows', '10 magical arrows.']
-Armor:  Full maille and closed helm
-Gear: ['adventuring pack (basic)', 'traveling clothes', 'quiver', 'rations', '2 torches']
+Stats: ['Constitution +1']
+Feats: ['Heroic Prowess', 'Heroic Puissance', 'Leader', 'Toughness']
+Spells: []
+Skills: ['Lieutenant']
+Weapons: ['10 magical arrows.', 'arrows', 'dagger', 'hatchet', 'large round shield', 'longbow', 'sword']
+Armor:  ['Full maille and closed helm']
+Gear: ['2 torches', 'adventuring pack (basic)', 'quiver', 'rations', 'traveling clothes']
 Silver: 0
 Liege: Ji-ho
 Morale: +5
 Loyalty: +4
+NPCs: []
 
 Notes: ["A distant cousin who grew up in the shadow of Ji-ho's lineage."]

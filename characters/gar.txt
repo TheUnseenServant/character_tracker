@@ -1,17 +1,26 @@
-Gar  
-Neutral Human Male
-Fighter  3 (HD 4 HP 4 SD 0 SP 0)
-AAC: 
+Name: Gar  
+Alignment: Neutral
+Species: Human
+Gender: Male
+Career: Fighter
+Level:  3
+HD: 4
+HP: 4
+SD: 0
+SP: 0
+AAC: W(w)/W(s)
 Encumbrance: Moderate
-Stats: []
-Feats: ['Prowess', 'Pussiance', 'Lucky (+1 all saves)', 'Insight']
-Skills: Guard
-Weapons: ['dagger', 'hatchet', 'shield (large round)', 'spear', 'sword', 'longbow', 'arrows']
-Armor:  Maille hauberk with coif and sallet
+Stats: ['Constitution +1']
+Feats: ['Insight', 'Lucky (+1 all saves)', 'Prowess', 'Pussiance']
+Spells: []
+Skills: ['Guard']
+Weapons: ['arrows', 'dagger', 'hatchet', 'longbow', 'shield (large round)', 'spear', 'sword']
+Armor:  ['Maille hauberk with coif and sallet']
 Gear: ['adventuring pack (basic)', 'traveling clothes']
 Silver: 0
 Liege: Si-woo
 Morale: +4
 Loyalty: +3
+NPCs: []
 
 Notes: ['an ex-con hoping for a second chance.']

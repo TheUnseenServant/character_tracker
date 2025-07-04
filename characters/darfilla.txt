@@ -1,17 +1,26 @@
-Darfilla  
-Neutral Human Female
-Mage  4 (HD 3 HP 3 SD 2 SP 6)
-AAC: 
+Name: Darfilla  
+Alignment: Neutral
+Species: Human
+Gender: Female
+Career: Mage
+Level:  4
+HD: 3
+HP: 3
+SD: 2
+SP: 6
+AAC: P(p)/U(-)
 Encumbrance: Light
-Stats: []
-Feats: ['Intelligence +1', 'Insight', 'Firearms and Explosives']
-Skills: Alchemist
-Weapons: dagger
-Armor:  None
-Gear: ['adventuring pack (basic)', 'traveling clothes', "alchemists' tools"]
+Stats: ['Intelligence +2']
+Feats: ['Firearms and Explosives', 'Formula(Fire Breathing)', 'Formula(Healing)', 'Formula(Sharpness)', 'Insight', 'Intelligence +1', 'Secret(Arcane Magic)', 'Secret(Brew Potions)', 'Secret(Craft Mystic Trinkets)']
+Spells: ['Burning Hands', 'Cantrip', 'Detect Magic', 'Sharpness', 'Stinking Cloud']
+Skills: ['Alchemist']
+Weapons: ['dagger']
+Armor:  ['None']
+Gear: ['adventuring pack (basic)', "alchemists' tools", 'traveling clothes']
 Silver: 0
 Liege: Rolton
 Morale: +2
 Loyalty: +3
+NPCs: []
 
-Notes: ['a reckless but surprisingly pious alchemist (formerly Chaotic)', 'Formulae: Potions (Fire Breathing, Sharpness, Healing)', 'Mage: Arcane Magic, Secret (Brew Potions), Secret (Craft Mystic Trinkets)', 'Spells: Cantrip, Detect Magic, Burning Hands, Sharpness, Stinking Cloud']
+Notes: ['a reckless but surprisingly pious alchemist (formerly Chaotic)']

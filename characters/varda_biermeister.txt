@@ -1,17 +1,26 @@
-Varda Biermeister  
-Lawful Human Female
-Venturer  0 (HD 1 HP 1 SD 0 SP 0)
+Name: Varda Biermeister  
+Alignment: Lawful
+Species: Human
+Gender: Female
+Career: Venturer
+Level:  0
+HD: 1
+HP: 1
+SD: 0
+SP: 0
 AAC: 
 Encumbrance: 
-Stats: []
-Feats: 
-Skills: 
-Weapons: 
-Armor:  
-Gear: 
+Stats: ['']
+Feats: ['']
+Spells: []
+Skills: ['']
+Weapons: ['']
+Armor:  ['']
+Gear: ['']
 Silver: 0
 Liege: Drotik
 Morale: 
 Loyalty: 
+NPCs: []
 
 Notes: ["Rolton's mom"]

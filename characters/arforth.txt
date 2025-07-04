@@ -1,17 +1,26 @@
-Arforth  
-Neutral Human Male
-Mage  1 (HD 1 HP 1 SD 1 SP 2)
-AAC: 
+Name: Arforth  
+Alignment: Neutral
+Species: Human
+Gender: Male
+Career: Mage
+Level:  1
+HD: 1
+HP: 1
+SD: 1
+SP: 2
+AAC: P(p)/U(-)
 Encumbrance: Light
-Stats: []
+Stats: ['']
 Feats: ['+1', 'Arcane Magic', 'Secret(?)']
-Skills: +1
-Weapons: dagger
-Armor:  None
-Gear: ['adventuring pack (basic)', 'traveling clothes', "alchemists' tools"]
+Spells: []
+Skills: ['+1']
+Weapons: ['dagger']
+Armor:  ['None']
+Gear: ['adventuring pack (basic)', "alchemists' tools", 'traveling clothes']
 Silver: 0
 Liege: 
 Morale: 
 Loyalty: 
+NPCs: []
 
 Notes: ['A young mage who came to Borderton following an omen.', 'Spells: Cantrip, +3']

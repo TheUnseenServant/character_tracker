@@ -1,17 +1,26 @@
-Erikir  
-Lawful Human Male
-Fighter  3 (HD 4 HP 4 SD 0 SP 0)
-AAC: 
+Name: Erikir  
+Alignment: Lawful
+Species: Human
+Gender: Male
+Career: Fighter
+Level:  3
+HD: 4
+HP: 4
+SD: 0
+SP: 0
+AAC: W(w)/W(s)
 Encumbrance: Moderate
-Stats: []
-Feats: ['Strider', 'Prowess', 'Endurance', 'Beastfriend']
-Skills: Houndmaster
-Weapons: ['dagger', 'hatchet', 'shield (large round)', 'spear', 'sword', 'longbow', 'arrows']
-Armor:  Maille hauberk with coif and sallet
+Stats: ['Constitution +1', 'Intelligence -1', 'Wisdom +1']
+Feats: ['Beastfriend', 'Endurance', 'Prowess', 'Strider']
+Spells: []
+Skills: ['Houndmaster']
+Weapons: ['arrows', 'dagger', 'hatchet', 'longbow', 'shield (large round)', 'spear', 'sword']
+Armor:  ['Maille hauberk with coif and sallet']
 Gear: ['adventuring pack (basic)', 'traveling clothes']
 Silver: 0
-Liege: 
+Liege: Si-woo
 Morale: +4
 Loyalty: +3
+NPCs: ['2HD)', 'Furge & Szabad (exceptional hunting hounds']
 
-Notes: ['Family head, in 50s.', 'NPCs: Furge & Szabad (exceptional hunting hounds, 2HD)']
+Notes: ['Family head, in 50s.']

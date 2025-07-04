@@ -1,17 +1,26 @@
-Szoke  
-Lawful Human Male
-Ranger  1 (HD 2 HP 2 SD 0 SP 0)
+Name: Szoke  
+Alignment: Lawful
+Species: Human
+Gender: Male
+Career: Ranger
+Level:  1
+HD: 2
+HP: 2
+SD: 0
+SP: 0
 AAC: 
 Encumbrance: 
-Stats: []
-Feats: 
-Skills: 
-Weapons: 
-Armor:  
-Gear: 
+Stats: ['']
+Feats: ['']
+Spells: []
+Skills: ['']
+Weapons: ['']
+Armor:  ['']
+Gear: ['']
 Silver: 0
 Liege: 
 Morale: 
 Loyalty: 
+NPCs: []
 
 Notes: ['A fur-trapper (Ranger 1) looking to bag something impressive.']

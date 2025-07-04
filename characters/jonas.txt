@@ -1,17 +1,26 @@
-Jonas  
-Lawful Human Male
-Ranger  1 (HD 2 HP 2 SD 0 SP 0)
-AAC: 
+Name: Jonas  
+Alignment: Lawful
+Species: Human
+Gender: Male
+Career: Ranger
+Level:  1
+HD: 2
+HP: 2
+SD: 0
+SP: 0
+AAC: W(w)/W(s)
 Encumbrance: Moderate
-Stats: []
-Feats: ['Strider', 'Endurance']
-Skills: Hunter
-Weapons: ['dagger', 'hatchet', 'shield (large round)', 'spear', 'sword', 'longbow', 'arrows']
-Armor:  Maille hauberk with coif and sallet
+Stats: ['Constitution +1', 'Dexterity +1', 'Intelligence -1']
+Feats: ['Endurance', 'Strider']
+Spells: []
+Skills: ['Hunter']
+Weapons: ['arrows', 'dagger', 'hatchet', 'longbow', 'shield (large round)', 'spear', 'sword']
+Armor:  ['Maille hauberk with coif and sallet']
 Gear: ['adventuring pack (basic)', 'traveling clothes']
 Silver: 0
 Liege: Samwood
 Morale: 
 Loyalty: 
+NPCs: []
 
 Notes: ["Erikir's nephew, 30's"]

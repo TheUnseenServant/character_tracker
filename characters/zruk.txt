@@ -1,17 +1,26 @@
-Zruk  
-Neutral Goblin Male
-Fighter  1 (HD 2 HP 2 SD 0 SP 0)
+Name: Zruk  
+Alignment: Neutral
+Species: Goblin
+Gender: Male
+Career: Fighter
+Level:  1
+HD: 2
+HP: 2
+SD: 0
+SP: 0
 AAC: 
 Encumbrance: 
-Stats: []
-Feats: 
-Skills: 
-Weapons: 
-Armor:  
-Gear: 
+Stats: ['']
+Feats: ['']
+Spells: []
+Skills: ['']
+Weapons: ['']
+Armor:  ['']
+Gear: ['']
 Silver: 0
 Liege: Vruid
 Morale: 
 Loyalty: 
+NPCs: []
 
 Notes: ['Goblin wolf rider, leads 50 others.']

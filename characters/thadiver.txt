@@ -1,17 +1,26 @@
-Thadiver  
-Human Lawful Male
-Fighter  2 (HD 3 HP 3 SD 0 SP 0)
-AAC: 
+Name: Thadiver  
+Alignment: Human
+Species: Lawful
+Gender: Male
+Career: Fighter
+Level:  2
+HD: 3
+HP: 3
+SD: 0
+SP: 0
+AAC: ,
 Encumbrance: 
-Stats: []
-Feats: ['Insight', 'Marksman', 'Ability Score (Intelligence)']
-Skills: Engineer
-Weapons: 
-Armor:  
+Stats: ['Intelligence +2']
+Feats: ['Ability Score (Intelligence)', 'Insight', 'Marksman']
+Spells: []
+Skills: ['Engineer']
+Weapons: ['']
+Armor:  ['']
 Gear: []
 Silver: 0
 Liege: 
 Morale: 
 Loyalty: 
+NPCs: []
 
-Notes: ['Attended the College* but lacked the necessary piety to be ordained and the gift needed to master the arcane. He has a keen mind though and took up arms to compliment his engineering talent.', "*There's only one. Its run by the church and is where most mages are trained."]
+Notes: ["*There's only one. Its run by the church and is where most mages are trained.", 'Attended the College* but lacked the necessary piety to be ordained and the gift needed to master the arcane. He has a keen mind though and took up arms to compliment his engineering talent.']

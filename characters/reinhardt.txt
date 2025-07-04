@@ -1,17 +1,26 @@
-Reinhardt  
-Neutral Human Male
-Explorer/Venturer  0 (HD 1 HP 1 SD 0 SP 0)
+Name: Reinhardt  
+Alignment: Neutral
+Species: Human
+Gender: Male
+Career: Explorer/Venturer
+Level:  0
+HD: 1
+HP: 1
+SD: 0
+SP: 0
 AAC: 
 Encumbrance: 
-Stats: []
-Feats: Insight
-Skills: Cartographer
-Weapons: 
-Armor:  
-Gear: 
+Stats: ['Intelligence +1']
+Feats: ['Insight']
+Spells: []
+Skills: ['Cartographer']
+Weapons: ['']
+Armor:  ['']
+Gear: ['']
 Silver: 0
 Liege: Malte
 Morale: 
 Loyalty: 
+NPCs: []
 
 Notes: ['when he levels up you can pick which class he takes']

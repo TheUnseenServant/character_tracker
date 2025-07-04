@@ -1,17 +1,26 @@
-Sir Voros  
-Lawful Human Male
-Fighter  2 (HD 3 HP 3 SD 0 SP 0)
-AAC: 
+Name: Sir Voros  
+Alignment: Lawful
+Species: Human
+Gender: Male
+Career: Fighter
+Level:  2
+HD: 3
+HP: 3
+SD: 0
+SP: 0
+AAC: W(W)/W(W)
 Encumbrance: 
-Stats: []
-Feats: 
-Skills: 
-Weapons: 
-Armor:  
-Gear: 
+Stats: ['']
+Feats: ['']
+Spells: []
+Skills: ['']
+Weapons: ['']
+Armor:  ['']
+Gear: ['']
 Silver: 0
 Liege: Rolton
 Morale: 
 Loyalty: 
+NPCs: []
 
 Notes: []

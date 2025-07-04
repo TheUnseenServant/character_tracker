@@ -1,17 +1,26 @@
-Varda  
-Neutral Human Female
-Mage  1 (HD 1 HP 1 SD 1 SP 1)
+Name: Varda  
+Alignment: Neutral
+Species: Human
+Gender: Female
+Career: Mage
+Level:  1
+HD: 1
+HP: 1
+SD: 1
+SP: 1
 AAC: 
 Encumbrance: 
-Stats: []
-Feats: 
-Skills: 
-Weapons: 
-Armor:  
-Gear: 
+Stats: ['']
+Feats: ['']
+Spells: []
+Skills: ['']
+Weapons: ['']
+Armor:  ['']
+Gear: ['']
 Silver: 0
 Liege: Winifred
 Morale: 
 Loyalty: 
+NPCs: []
 
 Notes: ['A crofter by birth']

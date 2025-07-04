@@ -1,17 +1,26 @@
-Aneq  
-Lawful Human Male
-Fighter  1 (HD 2 HP 2 SD 0 SP 0)
+Name: Aneq  
+Alignment: Lawful
+Species: Human
+Gender: Male
+Career: Fighter
+Level:  1
+HD: 2
+HP: 2
+SD: 0
+SP: 0
 AAC: 
 Encumbrance: 
-Stats: []
-Feats: Mounted Warrior
-Skills: 
-Weapons: 
-Armor:  
-Gear: 
+Stats: ['']
+Feats: ['Mounted Warrior']
+Spells: []
+Skills: ['']
+Weapons: ['']
+Armor:  ['']
+Gear: ['']
 Silver: 0
 Liege: jiho
 Morale: 
 Loyalty: 
+NPCs: []
 
 Notes: ['Plains nomad; good with bow and riding. Leads 16 others.']

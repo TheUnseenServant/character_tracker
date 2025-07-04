@@ -1,17 +1,26 @@
-Sir Rolton Forester  
-Lawful Human Male
-Fighter  4 (HD 5 HP 5 SD 0 SP 0)
-AAC: 
+Name: Sir Rolton Forester  
+Alignment: Lawful
+Species: Human
+Gender: Male
+Career: Fighter
+Level:  4
+HD: 5
+HP: 5
+SD: 0
+SP: 0
+AAC: H(w)/H(s)
 Encumbrance: Moderate
-Stats: []
-Feats: ['Heroic Mounted Warrior', 'Pussiance', 'Prowess', 'Leader']
-Skills: Knight
-Weapons: ['sword', 'dagger', 'spear', 'mace', 'kite shield', 'longbow', 'arrows']
-Armor:  Full maille and closed helm
-Gear: ['courtly suit', "traveler's clothes", 'backpack']
+Stats: ['Constitution +1', 'Dexterity -1', 'Strength+1']
+Feats: ['Heroic Mounted Warrior', 'Leader', 'Prowess', 'Pussiance']
+Spells: []
+Skills: ['Knight']
+Weapons: ['arrows', 'dagger', 'kite shield', 'longbow', 'mace', 'spear', 'sword']
+Armor:  ['Full maille and closed helm']
+Gear: ['backpack', 'courtly suit', "traveler's clothes"]
 Silver: 0
 Liege: Ji-ho
 Morale: +4
 Loyalty: +5
+NPCs: ['Charger with caparison']
 
-Notes: ['A noble bastard trained as a squire.', 'NPCs: Charger with caparison']
+Notes: ['A noble bastard trained as a squire.']

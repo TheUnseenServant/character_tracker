@@ -1,17 +1,26 @@
-Mordu  
-Human (Mostly) Lawful
-Fighter  3 (HD 4 HP 4 SD 0 SP 0)
-AAC: 
+Name: Mordu  
+Alignment: Human
+Species: (Mostly)
+Gender: Lawful
+Career: Fighter
+Level:  3
+HD: 4
+HP: 4
+SD: 0
+SP: 0
+AAC: ,
 Encumbrance: 
-Stats: []
-Feats: ['Insight', 'Beastfriend', 'Puissance', 'Prowess']
-Skills: Engineer
-Weapons: 
-Armor:  
+Stats: ['Charisma -1', 'Constitution +1', 'Dexterity -1', 'Intelligence +1', 'Strength +1']
+Feats: ['Beastfriend', 'Insight', 'Prowess', 'Puissance']
+Spells: []
+Skills: ['Engineer']
+Weapons: ['']
+Armor:  ['']
 Gear: []
 Silver: 0
 Liege: 
 Morale: 
 Loyalty: 
+NPCs: []
 
 Notes: ["A nobleman's bastard son. No one knows anything about his mother but his great strength and strange appearance makes many speculate that she was a tree. He does not get on with people easily and has always been ostracized from the upper class and so had plenty of time for learning."]

@@ -1,17 +1,26 @@
-Winifred  
-Neutral Half-Orc Female
-Rogue  2 (HD 2 HP 2 SD 0 SP 0)
-AAC: 
+Name: Winifred  
+Alignment: Neutral
+Species: Half-Orc
+Gender: Female
+Career: Rogue
+Level:  2
+HD: 2
+HP: 2
+SD: 0
+SP: 0
+AAC: D(d)/D(d)
 Encumbrance: 
-Stats: []
-Feats: ['Prowess', 'Strider']
-Skills: ['Burglar', 'Expertise(Spy)', 'Trickery(Ciphers)']
-Weapons: ['sword', 'self bow', 'arrows', '2 daggers', 'hatchet']
-Armor:  Leather armor
-Gear: ['decent clothes', 'backpack', "thieve's tools"]
+Stats: ['Charisma -1', 'Strength +1', 'Wisdom +1']
+Feats: ['Prowess', 'Strider', 'Trickery(Ciphers)']
+Spells: []
+Skills: ['Burglar', 'Expertise(Spy)']
+Weapons: ['2 daggers', 'arrows', 'hatchet', 'self bow', 'sword']
+Armor:  ['Leather armor']
+Gear: ['backpack', 'decent clothes', "thieve's tools"]
 Silver: 0
 Liege: Gar
 Morale: +2
 Loyalty: +2
+NPCs: []
 
 Notes: []
