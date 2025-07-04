@@ -13,6 +13,15 @@ import random
 
 parser = argparse.ArgumentParser() 
 parser.add_argument(
+    "-d", "--dice", 
+    default=1, 
+    type = int,
+    help= "Number of d6 per roll")
+parser.add_argument(
+    "-c", "--comment", 
+    default="", 
+    help= "Comment")
+parser.add_argument(
     "-n", "--num", 
     default=1, 
     type = int,
@@ -22,11 +31,6 @@ parser.add_argument(
     default=5, 
     type = int,
     help="Target number")
-parser.add_argument(
-    "-d", "--dice", 
-    default=1, 
-    type = int,
-    help= "Number of d6 per roll")
 args = parser.parse_args()
 
 successes = 0
@@ -39,9 +43,10 @@ for x in range(args.num):
     if roll >= args.target:
         successes += 1
 
-
+if len(args.comment):
+    print("\n\n{}".format(args.comment))
 print("Successes:  ", successes)
-print("Rolls (reverse order):  ", sorted(rolls, reverse=True))
+print("Rolls:  ", sorted(rolls, reverse=True))
 
 
 
