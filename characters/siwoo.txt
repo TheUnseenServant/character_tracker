@@ -9,14 +9,14 @@ HP: 7
 SD: 0
 SP: 0
 AAC: H(w)/H(s)
-Encumbrance: Moderate
+Encumbrance: Moderate (7)
 Stats: ['Constitution +1']
 Feats: ['Heroic Prowess', 'Heroic Puissance', 'Leader', 'Toughness']
 Spells: []
 Skills: ['Lieutenant']
 Weapons: ['10 magical arrows.', 'arrows', 'dagger', 'hatchet', 'large round shield', 'longbow', 'sword']
 Armor:  ['Full maille and closed helm']
-Gear: ['2 torches', 'adventuring pack (basic)', 'quiver', 'rations', 'traveling clothes']
+Gear: ['2 torches', 'adventuring pack (basic)', 'quiver', 'rations (1wk)', 'traveling clothes']
 Silver: 0
 Liege: Ji-ho
 Morale: +5

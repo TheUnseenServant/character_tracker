@@ -9,7 +9,7 @@ HP: 3
 SD: 2
 SP: 6
 AAC: P(p)/U(-)
-Encumbrance: Light
+Encumbrance: Light (2)
 Stats: ['Intelligence +2']
 Feats: ['Firearms and Explosives', 'Formula(Fire Breathing)', 'Formula(Healing)', 'Formula(Sharpness)', 'Insight', 'Intelligence +1', 'Secret(Arcane Magic)', 'Secret(Brew Potions)', 'Secret(Craft Mystic Trinkets)']
 Spells: ['Burning Hands', 'Cantrip', 'Detect Magic', 'Sharpness', 'Stinking Cloud']

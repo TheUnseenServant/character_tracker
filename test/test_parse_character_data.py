@@ -42,7 +42,7 @@ class TestParseData(unittest.TestCase):
         self.test_file_names = ["smiles", "lucky", "shorty", "ox"]
         for file in self.test_file_names:
             with open(os.path.join(self.test_dir.name, file), "w") as f:
-                f.write("{} (12p/mo) \n".format(file.title()))
+                f.write("{} \n".format(file.title()))
                 f.write("Neutral Half-Orc Female\n")
                 f.write("Rogue 3 (HD 1, HP 1, SD 0, SP 0)\n")
                 f.write("Ability Scores: Int +1, Cha -1\n")

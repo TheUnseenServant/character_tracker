@@ -23,4 +23,4 @@ Morale:
 Loyalty: 
 NPCs: []
 
-Notes: ['Warhorse. A bastard like Rolton himself']
+Notes: ['Has warhorse. A bastard like Rolton himself']

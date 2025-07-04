@@ -9,7 +9,7 @@ HP: 2
 SD: 0
 SP: 0
 AAC: W(w)/W(s)
-Encumbrance: Moderate
+Encumbrance: Moderate (6)
 Stats: ['Charisma -1', 'Strength +1', 'Wisdom +1']
 Feats: ['Endurance', 'Strider']
 Spells: []

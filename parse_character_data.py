@@ -128,7 +128,7 @@ def parse_data(file, c):
             line = line.replace("Ability Scores", "stats")
             line = line.replace("Divine Magic", "divine_magic")
             line = line.strip()
-            line = remove_cost(line)
+            # line = remove_cost(line)
             counter += 1
             if in_notes and len(line):
                 character["notes"].append(line)
@@ -144,6 +144,7 @@ def parse_data(file, c):
             elif ":" in line:
                 key, value = line.split(":")
                 key = key.lower().strip()
+                # print("VALUE:  ", value)
                 character[key] = line_or_list(value, type(character[key]))
 
     for key in character["divine_magic"]:

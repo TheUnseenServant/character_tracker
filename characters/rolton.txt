@@ -9,7 +9,7 @@ HP: 5
 SD: 0
 SP: 0
 AAC: H(w)/H(s)
-Encumbrance: Moderate
+Encumbrance: Moderate (6)
 Stats: ['Constitution +1', 'Dexterity -1', 'Strength+1']
 Feats: ['Heroic Mounted Warrior', 'Leader', 'Prowess', 'Pussiance']
 Spells: []
@@ -21,6 +21,6 @@ Silver: 0
 Liege: Ji-ho
 Morale: +4
 Loyalty: +5
-NPCs: ['Charger with caparison']
+NPCs: ['2x Rouncey (2HD, 4hp, Lightly Armed, Warhorse Skill)', 'Charger with caparison (3HD, 6hp, Decently Armed (shielded), Warhorse Skill+2)', 'Courser (3HD, 4hp, Decently Armed, Hunt-horse Skill+2)', 'Sumpter (2HD, Poorly Armed, Packhorse Skill)']
 
 Notes: ['A noble bastard trained as a squire.']

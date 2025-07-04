@@ -9,7 +9,7 @@ HP: 6
 SD: 0
 SP: 0
 AAC: W(h)/W(s)
-Encumbrance: Moderate
+Encumbrance: Moderate (8)
 Stats: ['Strength +1']
 Feats: ['Heroic Marshall', 'Leader', 'Pussiance', 'Toughness']
 Spells: []

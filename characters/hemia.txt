@@ -9,7 +9,7 @@ HP: 5
 SD: 2
 SP: 5
 AAC: W(u)/W(w)
-Encumbrance: Moderate
+Encumbrance: Moderate (6)
 Stats: ['Wisdom +1']
 Feats: ['Divine Power (Greater Channeling', 'Divine Power (Master Spells(Bless))', 'Empowered Channeling)', 'Leader', 'Toughess']
 Spells: []

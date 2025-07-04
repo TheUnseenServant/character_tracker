@@ -9,7 +9,7 @@ HP: 1
 SD: 1
 SP: 2
 AAC: P(p)/U(-)
-Encumbrance: Light
+Encumbrance: Light (2)
 Stats: ['']
 Feats: ['+1', 'Arcane Magic', 'Secret(?)']
 Spells: []

@@ -9,14 +9,14 @@ HP: 6
 SD: 0
 SP: 0
 AAC: H(W)/H(s)
-Encumbrance: Moderate
+Encumbrance: Moderate (6)
 Stats: ['Constitution +1', 'Intelligence -1', 'Strength +1']
 Feats: ['Heroic Leader', 'Prowess', 'Pussiance', 'Toughness']
 Spells: []
 Skills: ['Sergeant']
 Weapons: ['arrows', 'dagger', 'hatchet', 'longbow', 'shield (large round)', 'spear', 'sword']
 Armor:  ['Full maille and closed helm (in storage for Rodrik - maille hauberk with coif and sallet)']
-Gear: ['2 torches', 'adventuring pack (basic)', 'oil of sharpness', 'rations', 'traveling clothes']
+Gear: ['2 torches', 'adventuring pack (basic)', 'oil of sharpness', 'rations (1wk)', 'traveling clothes']
 Silver: 0
 Liege: Ji-ho
 Morale: +3
