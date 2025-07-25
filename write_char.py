@@ -32,6 +32,8 @@ class Character:
         self.morale = data.get("morale", "")
         self.loyalty = data.get("loyalty", "")
         self.alignment = data.get("alignment", "")
+        self.species = data.get("species", "")
+        self.gender = data.get("gender", "")
         self.aac = data.get("aac", "")
         self.enc = data.get("enc", "")
         self.stats = data.get("stats", "")
@@ -41,6 +43,9 @@ class Character:
         self.armor = data.get("armor", "")
         self.gear = data.get("gear", "")
         self.silver = data.get("silver", 0)
+        self.spells = data.get("spells", [])
+        self.npcs = data.get("npcs", [])
+        self.notes = data.get("notes", [])
 
 
 def build_party(character_file):

@@ -12,15 +12,21 @@ import unittest
 import write_char as wc
 
 data = {
+    "key": "smiles",
     "name": "Smiles",
-    "title": "",
     "career": "Rogue",
     "level": 1,
     "hd": 1,
     "hp": 1,
     "sd": 0,
     "sp": 0,
+    "xp": 0,
+    "liege": "Gar",
+    "morale": 0,
+    "loyalty": 0,
     "alignment": "Lawful",
+    "species": "half-orc",
+    "gender": "female",
     "aac": "",
     "enc": "",
     "stats": ["int +1"],
@@ -30,34 +36,51 @@ data = {
     "armor": ["Leather", "Shield"],
     "gear": ["Rogue's tools"],
     "silver": 5,
-    "liege": "Gar",
-    "morale": 0,
-    "loyalty": 0,
 }
 
 
 class TestCharacter(unittest.TestCase):
     def setUp(self):
-        char_1_data = {
-            "key": "jiho",
-            "name": "Jing Ji-ho",
-            "career": "Fighter",
-        }
-        self.char_1 = wc.Character(char_1_data)
-        self.char_2 = wc.Character(char_1_data)
+        self.char_1 = wc.Character(data)
+        self.char_2 = wc.Character(data)
 
     def test_character(self):
-        self.assertEqual(self.char_1.key, "jiho")
-        self.assertEqual(self.char_1.name, "Jing Ji-ho")
-        self.assertEqual(self.char_1.career, "Fighter")
+        self.assertEqual(self.char_1.key, "smiles")
+        self.assertEqual(self.char_1.name, "Smiles")
+        self.assertEqual(self.char_1.career, "Rogue")
+        self.assertEqual(self.char_1.level, 1)
+        self.assertEqual(self.char_1.hd, 1)
+        self.assertEqual(self.char_1.hp, 1)
+        self.assertEqual(self.char_1.sd, 0)
+        self.assertEqual(self.char_1.sp, 0)
+        self.assertEqual(self.char_1.xp, 0)
+        self.assertEqual(self.char_1.liege, "Gar")
+        self.assertEqual(self.char_1.morale, 0)
+        self.assertEqual(self.char_1.loyalty, 0)
+        self.assertEqual(self.char_1.alignment, "Lawful")
+        self.assertEqual(self.char_1.species, "half-orc")
+        self.assertEqual(self.char_1.gender, "female")
+        self.assertEqual(self.char_1.aac, "")
+        self.assertEqual(self.char_1.enc, "")
+        self.assertEqual(self.char_1.stats, ["int +1"])
+        self.assertEqual(self.char_1.feats, ["Ciphers"])
+        self.assertEqual(self.char_1.skills, ["Spy"])
+        self.assertEqual(self.char_1.weapons, ["Short sword", "Self bow"])
+        self.assertEqual(self.char_1.armor, ["Leather", "Shield"])
+        self.assertEqual(self.char_1.gear, ["Rogue's tools"])
+        self.assertEqual(self.char_1.silver, 5)
+        self.assertEqual(self.char_1.spells, [])
+        self.assertEqual(self.char_1.npcs, [])
+        self.assertEqual(self.char_1.notes, [])
 
     def test_update_character(self):
-        empty_data = {"level": 1, "hd": 1, "hp": 1, "sd": 0, "sp": 0}
+        pass
+        empty_data = {"level": 4, "hd": 4, "hp": 1, "sd": 0, "sp": 0}
         self.char_2 = wc.update_character(self.char_2, empty_data)
         self.assertTrue(hasattr(self.char_2, "level"))
-        self.assertEqual(self.char_2.level, 1)
-        self.assertTrue(hasattr(self.char_2, "sp"))
-        self.assertEqual(self.char_2.sp, 0)
+        self.assertEqual(self.char_2.level, 4)
+        self.assertTrue(hasattr(self.char_2, "hd"))
+        self.assertEqual(self.char_2.hd, 4)
 
 
 class TestRenderTemplate(unittest.TestCase):

@@ -1,10 +1,18 @@
-Jing Ji-ho  
-Lawful
-Fighter  4 (HD 4 HP 5 SD 0 SP 0)
-A&AC: W(w)/W(s)
+Name: Jing Ji-ho  
+Alignment: Lawful
+Species: 
+Gender: 
+Career: Fighter
+Level:  4
+HD: 4
+HP: 5
+SD: 0
+SP: 0
+AAC: W(w)/W(s)
 Encumbrance: Moderate (7)
 Stats: Charisma +1
 Feats: Heroic Leader, Puissance (melee), Toughness
+Spells: []
 Skills: Captain
 Weapons: sword, dagger, hatchet, spear, longbow, arrows, 11 magical selfbow arrows
 Armor:  Maille hauberk with coif and sallet
@@ -13,124 +21,194 @@ Silver:
 Liege: 
 Morale: 
 Loyalty: 
+NPCs: []
+
+Notes: []
 
 
-
-Si-woo  
-
-fighter  0 (HD 1 HP 1 SD 0 SP 0)
-A&AC: 
+Name: Jing Si-woo  
+Alignment: Lawful
+Species: Human
+Gender: Male
+Career: Fighter
+Level:  5
+HD: 6
+HP: 7
+SD: 0
+SP: 0
+AAC: H(w)/H(s)
 Encumbrance: 
-Stats: []
-Feats: ['Heroic Puissance', 'Leader', 'Heroic Prowess', 'Toughness']
-Skills: []
-Weapons: []
-Armor:  []
-Gear: []
+Stats: ['Constitution +1']
+Feats: ['Heroic Prowess', 'Heroic Puissance', 'Leader', 'Toughness']
+Spells: []
+Skills: ['Lieutenant']
+Weapons: ['10 magical arrows.', 'arrows', 'dagger', 'hatchet', 'large round shield', 'longbow', 'sword']
+Armor:  ['Full maille and closed helm']
+Gear: ['2 torches', 'adventuring pack (basic)', 'quiver', 'rations (1wk)', 'traveling clothes']
 Silver: 0
-Liege: 
+Liege: Ji-ho
 Morale: +5
 Loyalty: +4
+NPCs: []
+
+Notes: ["A distant cousin who grew up in the shadow of Ji-ho's lineage."]
 
 
-
-Rolton  
-
-fighter  0 (HD 1 HP 1 SD 0 SP 0)
-A&AC: 
+Name: Sir Rolton Forester  
+Alignment: Lawful
+Species: Human
+Gender: Male
+Career: Fighter
+Level:  4
+HD: 5
+HP: 5
+SD: 0
+SP: 0
+AAC: H(w)/H(s)
 Encumbrance: 
-Stats: []
-Feats: ['Heroic Mounted Warrior', 'Pussiance', 'Prowess', 'Leader']
-Skills: []
-Weapons: []
-Armor:  []
-Gear: []
+Stats: ['Constitution +1', 'Dexterity -1', 'Strength+1']
+Feats: ['Heroic Mounted Warrior', 'Leader', 'Prowess', 'Pussiance']
+Spells: []
+Skills: ['Knight']
+Weapons: ['arrows', 'dagger', 'kite shield', 'longbow', 'mace', 'spear', 'sword']
+Armor:  ['Full maille and closed helm']
+Gear: ['backpack', 'courtly suit', "traveler's clothes"]
 Silver: 0
-Liege: 
+Liege: Ji-ho
 Morale: +4
 Loyalty: +5
+NPCs: ['2x Rouncey (2HD, 4hp, Lightly Armed, Warhorse Skill)', 'Charger with caparison (3HD, 6hp, Decently Armed (shielded), Warhorse Skill+2)', 'Courser (3HD, 4hp, Decently Armed, Hunt-horse Skill+2)', 'Sumpter (2HD, Poorly Armed, Packhorse Skill)']
+
+Notes: ['A noble bastard trained as a squire.']
 
 
-
-Drotik  
-
-fighter  0 (HD 1 HP 1 SD 0 SP 0)
-A&AC: 
+Name: Drotik  
+Alignment: Lawful
+Species: Human
+Gender: Male
+Career: Fighter
+Level:  4
+HD: 5
+HP: 6
+SD: 0
+SP: 0
+AAC: W(h)/W(s)
 Encumbrance: 
-Stats: []
-Feats: ['Pussiance', 'Toughness', 'Heroic Marshall', 'Leader']
-Skills: []
-Weapons: []
-Armor:  []
-Gear: []
+Stats: ['Strength +1']
+Feats: ['Heroic Marshall', 'Leader', 'Pussiance', 'Toughness']
+Spells: []
+Skills: ['Cottar']
+Weapons: ['arbalest and winch', 'dagger', 'small round shield', 'sword']
+Armor:  ['Maille hauberk with coif and sallet']
+Gear: ['backpack', 'quiver', "traveler's clothes"]
 Silver: 0
-Liege: 
+Liege: Si-Woo
 Morale: +4
 Loyalty: +4
+NPCs: []
+
+Notes: ['A cottars son conscripted last season and discharged.']
 
 
-
-Hemia  
-
-cleric  0 (HD 1 HP 1 SD 0 SP 0)
-A&AC: 
+Name: Reverend Hemia, Chaplain of the Order of the Black Sword, Templar of the Law  
+Alignment: Lawful
+Species: Human
+Gender: Female
+Career: Cleric
+Level:  5
+HD: 4
+HP: 5
+SD: 2
+SP: 5
+AAC: W(u)/W(w)
 Encumbrance: 
-Stats: []
-Feats: ['Toughess', 'Leader', 'Divine Power (Master Spells(Bless))', 'Divine Power (Greater Channeling', 'Empowered Channeling)']
-Skills: []
-Weapons: []
-Armor:  []
-Gear: []
+Stats: ['Wisdom +1']
+Feats: ['Divine Power (Greater Channeling', 'Divine Power (Master Spells(Bless))', 'Empowered Channeling)', 'Leader', 'Toughess']
+Spells: []
+Skills: ['Healer']
+Weapons: ['Blessed Mace (magical', 'dagger', 'divine implement)', 'large round shield', 'walking stick/cudgel']
+Armor:  ['Archaic armor with permanent Protection from Evil (attracts undead)']
+Gear: ['(former) Maille hauberk with coif and sallet', 'Adventurers pack', "acolyte's clothes", 'holy symbol (nice)', 'wooden holy symbol']
 Silver: 0
-Liege: 
+Liege: Si-woo
 Morale: +5
 Loyalty: +4
+NPCs: []
+
+Notes:  ['She was a novice of the Church who ran away from her convent.', 'divine_magic Channel Divinity (Turn Undead, Harness Power), Mastered Spells (Cure Wounds, Protection from Evil, Light, Bless)']
 
 
-
-Morphin  
-
-fighter  0 (HD 1 HP 1 SD 0 SP 0)
-A&AC: 
+Name: Morphin  
+Alignment: Lawful
+Species: Human
+Gender: Male
+Career: Fighter
+Level:  4
+HD: 5
+HP: 6
+SD: 0
+SP: 0
+AAC: H(W)/H(s)
 Encumbrance: 
-Stats: []
-Feats: ['Toughness', 'Heroic Leader', 'Pussiance', 'Prowess']
-Skills: []
-Weapons: []
-Armor:  []
-Gear: []
+Stats: ['Constitution +1', 'Intelligence -1', 'Strength +1']
+Feats: ['Heroic Leader', 'Prowess', 'Pussiance', 'Toughness']
+Spells: []
+Skills: ['Sergeant']
+Weapons: ['arrows', 'dagger', 'hatchet', 'longbow', 'shield (large round)', 'spear', 'sword']
+Armor:  ['Full maille and closed helm (in storage for Rodrik - maille hauberk with coif and sallet)']
+Gear: ['2 torches', 'adventuring pack (basic)', 'oil of sharpness', 'rations (1wk)', 'traveling clothes']
 Silver: 0
-Liege: 
+Liege: Ji-ho
 Morale: +3
 Loyalty: +4
+NPCs: []
+
+Notes: ['A caravan guard that met a stranger and became a leader']
 
 
-
-Gar  
-
-fighter  0 (HD 1 HP 1 SD 0 SP 0)
-A&AC: 
+Name: Gar  
+Alignment: Neutral
+Species: Human
+Gender: Male
+Career: Fighter
+Level:  3
+HD: 4
+HP: 4
+SD: 0
+SP: 0
+AAC: W(w)/W(s)
 Encumbrance: 
-Stats: []
-Feats: ['Prowess', 'Pussiance', 'Lucky (+1 all saves)', 'Insight']
-Skills: []
-Weapons: []
-Armor:  []
-Gear: []
+Stats: ['Constitution +1']
+Feats: ['Insight', 'Lucky (+1 all saves)', 'Prowess', 'Pussiance']
+Spells: []
+Skills: ['Guard']
+Weapons: ['arrows', 'dagger', 'hatchet', 'longbow', 'shield (large round)', 'spear', 'sword']
+Armor:  ['Maille hauberk with coif and sallet']
+Gear: ['adventuring pack (basic)', 'traveling clothes']
 Silver: 0
-Liege: 
+Liege: Si-woo
 Morale: +4
 Loyalty: +3
+NPCs: []
+
+Notes: ['an ex-con hoping for a second chance.']
 
 
-
-Darfilla  
-
-mage  0 (HD 1 HP 1 SD 0 SP 0)
-A&AC: 
+Name: Darfilla  
+Alignment: 
+Species: 
+Gender: 
+Career: mage
+Level:  0
+HD: 1
+HP: 1
+SD: 0
+SP: 0
+AAC: 
 Encumbrance: 
 Stats: 
 Feats: 
+Spells: []
 Skills: 
 Weapons: 
 Armor:  
@@ -139,16 +217,26 @@ Silver: 0
 Liege: 
 Morale: 
 Loyalty: 
+NPCs: []
+
+Notes: []
 
 
-
-Winifred  
-
-rogue  0 (HD 1 HP 1 SD 0 SP 0)
-A&AC: 
+Name: Winifred  
+Alignment: 
+Species: 
+Gender: 
+Career: rogue
+Level:  0
+HD: 1
+HP: 1
+SD: 0
+SP: 0
+AAC: 
 Encumbrance: 
 Stats: 
 Feats: 
+Spells: []
 Skills: 
 Weapons: 
 Armor:  
@@ -157,124 +245,194 @@ Silver: 0
 Liege: 
 Morale: 
 Loyalty: 
+NPCs: []
+
+Notes: []
 
 
-
-Erikir  
-
-ranger  0 (HD 1 HP 1 SD 0 SP 0)
-A&AC: 
+Name: Erikir  
+Alignment: Lawful
+Species: Human
+Gender: Male
+Career: Fighter
+Level:  3
+HD: 4
+HP: 4
+SD: 0
+SP: 0
+AAC: W(w)/W(s)
 Encumbrance: 
-Stats: []
-Feats: ['Strider', 'Prowess', 'Endurance', 'Beastfriend']
-Skills: []
-Weapons: []
-Armor:  []
-Gear: []
+Stats: ['Constitution +1', 'Intelligence -1', 'Wisdom +1']
+Feats: ['Beastfriend', 'Endurance', 'Prowess', 'Strider']
+Spells: []
+Skills: ['Houndmaster']
+Weapons: ['arrows', 'dagger', 'hatchet', 'longbow', 'shield (large round)', 'spear', 'sword']
+Armor:  ['Maille hauberk with coif and sallet']
+Gear: ['adventuring pack (basic)', 'traveling clothes']
 Silver: 0
-Liege: 
+Liege: Si-woo
 Morale: +4
 Loyalty: +3
+NPCs: ['2HD)', 'Furge & Szabad (exceptional hunting hounds']
+
+Notes: ['Family head, in 50s.']
 
 
-
-Toth  
-
-ranger  0 (HD 1 HP 1 SD 0 SP 0)
-A&AC: 
+Name: Toth  
+Alignment: Lawful
+Species: Human
+Gender: Female
+Career: Ranger
+Level:  2
+HD: 3
+HP: 3
+SD: 0
+SP: 0
+AAC: W(w)/W(s)
 Encumbrance: 
-Stats: []
-Feats: ['Strider', 'Beastfriend', 'Endurance']
-Skills: []
-Weapons: []
-Armor:  []
-Gear: []
+Stats: ['Wisdom +1']
+Feats: ['Beastfriend', 'Endurance', 'Strider']
+Spells: []
+Skills: ['Falconer']
+Weapons: ['arrows', 'dagger', 'hatchet', 'longbow', 'shield (large round)', 'spear', 'sword']
+Armor:  ['Maille hauberk with coif and sallet']
+Gear: ['adventuring pack (basic)', 'traveling clothes']
+Silver: 0
+Liege: Morphin
+Morale: 
+Loyalty: 
+NPCs: []
+
+Notes: ["Erikir's daughter, 30's."]
+
+
+Name: Jonas  
+Alignment: Lawful
+Species: Human
+Gender: Male
+Career: Ranger
+Level:  1
+HD: 2
+HP: 2
+SD: 0
+SP: 0
+AAC: W(w)/W(s)
+Encumbrance: 
+Stats: ['Constitution +1', 'Dexterity +1', 'Intelligence -1']
+Feats: ['Endurance', 'Strider']
+Spells: []
+Skills: ['Hunter']
+Weapons: ['arrows', 'dagger', 'hatchet', 'longbow', 'shield (large round)', 'spear', 'sword']
+Armor:  ['Maille hauberk with coif and sallet']
+Gear: ['adventuring pack (basic)', 'traveling clothes']
+Silver: 0
+Liege: Samwood
+Morale: 
+Loyalty: 
+NPCs: []
+
+Notes: ["Erikir's nephew, 30's"]
+
+
+Name: Laszlo  
+Alignment: Lawful
+Species: Human
+Gender: Male
+Career: Ranger
+Level:  1
+HD: 2
+HP: 2
+SD: 0
+SP: 0
+AAC: W(w)/W(s)
+Encumbrance: 
+Stats: ['Charisma -1', 'Strength +1', 'Wisdom +1']
+Feats: ['Endurance', 'Strider']
+Spells: []
+Skills: ['Trapper']
+Weapons: ['']
+Armor:  ['']
+Gear: ['']
 Silver: 0
 Liege: 
 Morale: 
 Loyalty: 
+NPCs: []
+
+Notes: ["Eirikr's nephew, 20s."]
 
 
-
-Jonas  
-
-ranger  0 (HD 1 HP 1 SD 0 SP 0)
-A&AC: 
+Name: Malte Tilson  
+Alignment: Lawful
+Species: Human
+Gender: Male
+Career: Venturer
+Level:  1
+HD: 1
+HP: 1
+SD: 0
+SP: 0
+AAC: U(U)/U(U)
 Encumbrance: 
-Stats: []
-Feats: ['Strider', 'Endurance']
-Skills: []
-Weapons: []
-Armor:  []
-Gear: []
+Stats: ['Cha +1', 'Int +1', 'Str -1']
+Feats: ['Insight', 'Trickery(Expert Bargainer)']
+Spells: []
+Skills: ['Merchant', 'Scholar']
+Weapons: ['']
+Armor:  ['']
+Gear: ['backpack', "traveler's clothes"]
 Silver: 0
-Liege: 
-Morale: 
-Loyalty: 
-
-
-
-Laszlo  
-
-ranger  0 (HD 1 HP 1 SD 0 SP 0)
-A&AC: 
-Encumbrance: 
-Stats: []
-Feats: ['Strider', 'Endurance']
-Skills: []
-Weapons: []
-Armor:  []
-Gear: []
-Silver: 0
-Liege: 
-Morale: 
-Loyalty: 
-
-
-
-Malte  
-
-venturer  0 (HD 1 HP 1 SD 0 SP 0)
-A&AC: 
-Encumbrance: 
-Stats: []
-Feats: ['Insight']
-Skills: []
-Weapons: []
-Armor:  []
-Gear: []
-Silver: 0
-Liege: 
+Liege: Drotik
 Morale: -1
 Loyalty: +3
+NPCs: []
+
+Notes: ["Drotik's henchman and brother-in-law"]
 
 
-
-Maja  
-
-unk  0 (HD 1 HP 1 SD 0 SP 0)
-A&AC: 
+Name: Maja Tilsdotter  
+Alignment: Lawful
+Species: Human
+Gender: Female
+Career: Venturer
+Level:  1
+HD: 1
+HP: 1
+SD: 0
+SP: 0
+AAC: U(U)/U(U)
 Encumbrance: 
-Stats: []
+Stats: ['Cha +1', 'Int +1', 'Str -1']
 Feats: ['']
-Skills: []
-Weapons: []
-Armor:  []
-Gear: []
+Spells: []
+Skills: ['Merchant']
+Weapons: ['']
+Armor:  ['']
+Gear: ['backpack', "traveler's clothes"]
 Silver: 0
-Liege: 
+Liege: Drotik
 Morale: -1
 Loyalty: +4
+NPCs: []
+
+Notes: ["Drotik's wife"]
 
 
-
-Morwen  
-
-mage  0 (HD 1 HP 1 SD 0 SP 0)
-A&AC: 
+Name: Morwen  
+Alignment: 
+Species: 
+Gender: 
+Career: mage
+Level:  0
+HD: 1
+HP: 1
+SD: 0
+SP: 0
+AAC: 
 Encumbrance: 
 Stats: 
 Feats: 
+Spells: []
 Skills: 
 Weapons: 
 Armor:  
@@ -283,16 +441,26 @@ Silver: 0
 Liege: 
 Morale: 
 Loyalty: 
+NPCs: []
+
+Notes: []
 
 
-
-Macnav  
-
-fighter  0 (HD 1 HP 1 SD 0 SP 0)
-A&AC: 
+Name: Macnav  
+Alignment: 
+Species: 
+Gender: 
+Career: fighter
+Level:  0
+HD: 1
+HP: 1
+SD: 0
+SP: 0
+AAC: 
 Encumbrance: 
 Stats: 
 Feats: 
+Spells: []
 Skills: 
 Weapons: 
 Armor:  
@@ -301,16 +469,26 @@ Silver: 0
 Liege: 
 Morale: 
 Loyalty: 
+NPCs: []
+
+Notes: []
 
 
-
-Cuivne  
-
-mage  0 (HD 1 HP 1 SD 0 SP 0)
-A&AC: 
+Name: Cuivne  
+Alignment: 
+Species: 
+Gender: 
+Career: mage
+Level:  0
+HD: 1
+HP: 1
+SD: 0
+SP: 0
+AAC: 
 Encumbrance: 
 Stats: 
 Feats: 
+Spells: []
 Skills: 
 Weapons: 
 Armor:  
@@ -319,16 +497,26 @@ Silver: 0
 Liege: 
 Morale: 
 Loyalty: 
+NPCs: []
+
+Notes: []
 
 
-
-Morrig  
-
-mage  0 (HD 1 HP 1 SD 0 SP 0)
-A&AC: 
+Name: Morrig  
+Alignment: 
+Species: 
+Gender: 
+Career: mage
+Level:  0
+HD: 1
+HP: 1
+SD: 0
+SP: 0
+AAC: 
 Encumbrance: 
 Stats: 
 Feats: 
+Spells: []
 Skills: 
 Weapons: 
 Armor:  
@@ -337,16 +525,26 @@ Silver: 0
 Liege: 
 Morale: 
 Loyalty: 
+NPCs: []
+
+Notes: []
 
 
-
-Hraefi  
-
-fighter  0 (HD 1 HP 1 SD 0 SP 0)
-A&AC: 
+Name: Hraefi  
+Alignment: 
+Species: 
+Gender: 
+Career: fighter
+Level:  0
+HD: 1
+HP: 1
+SD: 0
+SP: 0
+AAC: 
 Encumbrance: 
 Stats: 
 Feats: 
+Spells: []
 Skills: 
 Weapons: 
 Armor:  
@@ -355,16 +553,26 @@ Silver: 0
 Liege: 
 Morale: 
 Loyalty: 
+NPCs: []
+
+Notes: []
 
 
-
-Baeyik  
-
-rogue  0 (HD 1 HP 1 SD 0 SP 0)
-A&AC: 
+Name: Baeyik  
+Alignment: 
+Species: 
+Gender: 
+Career: rogue
+Level:  0
+HD: 1
+HP: 1
+SD: 0
+SP: 0
+AAC: 
 Encumbrance: 
 Stats: 
 Feats: 
+Spells: []
 Skills: 
 Weapons: 
 Armor:  
@@ -373,16 +581,26 @@ Silver: 0
 Liege: 
 Morale: 
 Loyalty: 
+NPCs: []
+
+Notes: []
 
 
-
-Dramm  
-
-paladin  0 (HD 1 HP 1 SD 0 SP 0)
-A&AC: 
+Name: Dramm  
+Alignment: 
+Species: 
+Gender: 
+Career: paladin
+Level:  0
+HD: 1
+HP: 1
+SD: 0
+SP: 0
+AAC: 
 Encumbrance: 
 Stats: 
 Feats: 
+Spells: []
 Skills: 
 Weapons: 
 Armor:  
@@ -391,16 +609,26 @@ Silver: 0
 Liege: 
 Morale: 
 Loyalty: 
+NPCs: []
+
+Notes: []
 
 
-
-Barnaby  
-
-bard  0 (HD 1 HP 1 SD 0 SP 0)
-A&AC: 
+Name: Barnaby  
+Alignment: 
+Species: 
+Gender: 
+Career: bard
+Level:  0
+HD: 1
+HP: 1
+SD: 0
+SP: 0
+AAC: 
 Encumbrance: 
 Stats: 
 Feats: 
+Spells: []
 Skills: 
 Weapons: 
 Armor:  
@@ -409,16 +637,26 @@ Silver: 0
 Liege: 
 Morale: 
 Loyalty: 
+NPCs: []
+
+Notes: []
 
 
-
-Earnan  
-
-spellthief  0 (HD 1 HP 1 SD 0 SP 0)
-A&AC: 
+Name: Earnan  
+Alignment: 
+Species: 
+Gender: 
+Career: spellthief
+Level:  0
+HD: 1
+HP: 1
+SD: 0
+SP: 0
+AAC: 
 Encumbrance: 
 Stats: 
 Feats: 
+Spells: []
 Skills: 
 Weapons: 
 Armor:  
@@ -427,16 +665,26 @@ Silver: 0
 Liege: 
 Morale: 
 Loyalty: 
+NPCs: []
+
+Notes: []
 
 
-
-Maggara  
-
-fighter  0 (HD 1 HP 1 SD 0 SP 0)
-A&AC: 
+Name: Maggara  
+Alignment: 
+Species: 
+Gender: 
+Career: fighter
+Level:  0
+HD: 1
+HP: 1
+SD: 0
+SP: 0
+AAC: 
 Encumbrance: 
 Stats: 
 Feats: 
+Spells: []
 Skills: 
 Weapons: 
 Armor:  
@@ -445,16 +693,26 @@ Silver: 0
 Liege: 
 Morale: 
 Loyalty: 
+NPCs: []
+
+Notes: []
 
 
-
-Beletreda  
-
-fighter  0 (HD 1 HP 1 SD 0 SP 0)
-A&AC: 
+Name: Beletreda  
+Alignment: 
+Species: 
+Gender: 
+Career: fighter
+Level:  0
+HD: 1
+HP: 1
+SD: 0
+SP: 0
+AAC: 
 Encumbrance: 
 Stats: 
 Feats: 
+Spells: []
 Skills: 
 Weapons: 
 Armor:  
@@ -463,16 +721,26 @@ Silver: 0
 Liege: 
 Morale: 
 Loyalty: 
+NPCs: []
+
+Notes: []
 
 
-
-Bardin  
-
-rogue  0 (HD 1 HP 1 SD 0 SP 0)
-A&AC: 
+Name: Bardin  
+Alignment: 
+Species: 
+Gender: 
+Career: rogue
+Level:  0
+HD: 1
+HP: 1
+SD: 0
+SP: 0
+AAC: 
 Encumbrance: 
 Stats: 
 Feats: 
+Spells: []
 Skills: 
 Weapons: 
 Armor:  
@@ -481,16 +749,26 @@ Silver: 0
 Liege: 
 Morale: 
 Loyalty: 
+NPCs: []
+
+Notes: []
 
 
-
-Grimnir  
-
-fighter  0 (HD 1 HP 1 SD 0 SP 0)
-A&AC: 
+Name: Grimnir  
+Alignment: 
+Species: 
+Gender: 
+Career: fighter
+Level:  0
+HD: 1
+HP: 1
+SD: 0
+SP: 0
+AAC: 
 Encumbrance: 
 Stats: 
 Feats: 
+Spells: []
 Skills: 
 Weapons: 
 Armor:  
@@ -499,16 +777,26 @@ Silver: 0
 Liege: 
 Morale: 
 Loyalty: 
+NPCs: []
+
+Notes: []
 
 
-
-Gurav  
-
-fighter  0 (HD 1 HP 1 SD 0 SP 0)
-A&AC: 
+Name: Gurav  
+Alignment: 
+Species: 
+Gender: 
+Career: fighter
+Level:  0
+HD: 1
+HP: 1
+SD: 0
+SP: 0
+AAC: 
 Encumbrance: 
 Stats: 
 Feats: 
+Spells: []
 Skills: 
 Weapons: 
 Armor:  
@@ -517,16 +805,26 @@ Silver: 0
 Liege: 
 Morale: 
 Loyalty: 
+NPCs: []
+
+Notes: []
 
 
-
-Borav Kograk  
-
-cleric  0 (HD 1 HP 1 SD 0 SP 0)
-A&AC: 
+Name: Borav Kograk  
+Alignment: 
+Species: 
+Gender: 
+Career: cleric
+Level:  0
+HD: 1
+HP: 1
+SD: 0
+SP: 0
+AAC: 
 Encumbrance: 
 Stats: 
 Feats: 
+Spells: []
 Skills: 
 Weapons: 
 Armor:  
@@ -535,16 +833,26 @@ Silver: 0
 Liege: 
 Morale: 
 Loyalty: 
+NPCs: []
+
+Notes: []
 
 
-
-Hodlar Morrgrak  
-
-rogue  0 (HD 1 HP 1 SD 0 SP 0)
-A&AC: 
+Name: Hodlar Morrgrak  
+Alignment: 
+Species: 
+Gender: 
+Career: rogue
+Level:  0
+HD: 1
+HP: 1
+SD: 0
+SP: 0
+AAC: 
 Encumbrance: 
 Stats: 
 Feats: 
+Spells: []
 Skills: 
 Weapons: 
 Armor:  
@@ -553,16 +861,26 @@ Silver: 0
 Liege: 
 Morale: 
 Loyalty: 
+NPCs: []
+
+Notes: []
 
 
-
-Korev Graker  
-
-fighter  0 (HD 1 HP 1 SD 0 SP 0)
-A&AC: 
+Name: Korev Graker  
+Alignment: 
+Species: 
+Gender: 
+Career: fighter
+Level:  0
+HD: 1
+HP: 1
+SD: 0
+SP: 0
+AAC: 
 Encumbrance: 
 Stats: 
 Feats: 
+Spells: []
 Skills: 
 Weapons: 
 Armor:  
@@ -571,6 +889,8 @@ Silver: 0
 Liege: 
 Morale: 
 Loyalty: 
+NPCs: []
 
+Notes: []
 
 
