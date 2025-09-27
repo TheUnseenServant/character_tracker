@@ -14,7 +14,6 @@ import allocate_shares as a_s
 
 
 class TestMonster(unittest.TestCase):
-
     def setUp(self):
         self.test_dir = tempfile.TemporaryDirectory()
         self.mm_file = os.path.join(self.test_dir.name, "monster_manual.csv")

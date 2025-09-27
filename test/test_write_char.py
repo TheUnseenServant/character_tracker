@@ -84,7 +84,6 @@ class TestCharacter(unittest.TestCase):
 
 
 class TestRenderTemplate(unittest.TestCase):
-
     def setUp(self):
         self.character = wc.Character(data)
 

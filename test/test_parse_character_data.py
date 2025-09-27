@@ -15,7 +15,6 @@ import parse_character_data as pcd
 
 
 class TestRemoveCost(unittest.TestCase):
-
     def test_remove_cost_with_data(self):
         data = "Winifred (12p/mo)"
         expected = "Winifred"
@@ -36,7 +35,6 @@ class TestRemoveCost(unittest.TestCase):
 
 
 class TestParseData(unittest.TestCase):
-
     def setUp(self):
         self.test_dir = tempfile.TemporaryDirectory()
         self.test_file_names = ["smiles", "lucky", "shorty", "ox"]
@@ -162,7 +160,6 @@ class TestParseBasicLine(unittest.TestCase):
 
 
 class TestRenderTemplate(unittest.TestCase):
-
     def test_render_template_base(self):
         data = {"name": "Smiles", "career": "Rogue"}
         template = "$name $career"
@@ -172,7 +169,6 @@ class TestRenderTemplate(unittest.TestCase):
 
 
 class TestLineToList(unittest.TestCase):
-
     def test_weapons(self):
         line = "Short sword, self bow, several knives\n"
         expected = ["Short sword", "self bow", "several knives"]

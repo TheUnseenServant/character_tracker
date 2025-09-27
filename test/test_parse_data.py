@@ -15,7 +15,6 @@ import parse_data as pd
 
 
 class TestScrub(unittest.TestCase):
-
     def test_scrub_line(self):
         line_in_1 = "[b]Drotik[/b] (1s,6p/mo) (Currently Questing)"
         expected_line_1 = "Drotik (1s,6p/mo) (Currently Questing)"
