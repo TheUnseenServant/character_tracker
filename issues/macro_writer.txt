@@ -1,0 +1,10 @@
+## add macro writer
+Needs to account for Hit Dice and Pussiance(melee, missile) feats.
+Seperate lines for Missile and Melee.
+
+Similar to:
+
+Ji-ho Melee attacks: [1d6+1] [1d6+1] [1d6+1] [1d6+1]
+Ji-Ho Missile Attacks [_4d6], Missile Damage [_4d6]
+
+

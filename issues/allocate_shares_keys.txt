@@ -1,0 +1,8 @@
+## allocate_shares: allow option to pull just based on keys
+Something like -g "jjh,dramm,morwen,earnan,maggara", and it would do the shares just for those characters.
+
+Add shares to data files
+
+Rework allocate_shares to use data files
+ - with a --keys option to get actual keys
+

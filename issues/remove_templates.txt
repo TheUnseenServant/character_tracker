@@ -1,0 +1,4 @@
+## remove_templates
+Remove use of templates
+ - While keeping ability for BBcode
+

@@ -1,0 +1,4 @@
+## remove concat feats
+
+Remove concatenation of magical, rogue, etc abilities into Feats
+

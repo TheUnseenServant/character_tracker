@@ -1,0 +1,5 @@
+
+## integrate Feats into stats/states
+Currently Feats are not considered at all. This goes into a much longer character data string.
+
+

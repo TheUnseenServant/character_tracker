@@ -1,0 +1,8 @@
+## insert default data when datalines being pulled into objects/dicts
+In this case, a character missing data from a field killed the whole program.
+
+This is caused by the default value of a missing field to be None, in csv.Dictreader.
+https://docs.python.org/3/library/csv.html#csv.DictReader
+
+
+

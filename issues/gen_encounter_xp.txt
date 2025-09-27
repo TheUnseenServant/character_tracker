@@ -1,0 +1,8 @@
+## generate XP for encounters
+Roughly similar to the DMG lists.
+Proof of Concept works.
+Have question out to primary user about requirements and ideas.
+Fixed issue where new process was required.
+Need to make its own command, and pull out of allocate_shares.py.
+
+
